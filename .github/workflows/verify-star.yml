@@ -1,0 +1,68 @@
+name: Verify Alpie-Core star
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  verify-star:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR author starred 169Pi/Alpie-Core
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const author = context.payload.pull_request.user.login;
+            const owner = "169Pi";
+            const repo = "Alpie-Core";
+
+            let starred = false;
+            for await (const response of github.paginate.iterator(
+              github.rest.activity.listStargazersForRepo,
+              { owner, repo, per_page: 100 }
+            )) {
+              if (response.data.some((user) => user.login.toLowerCase() === author.toLowerCase())) {
+                starred = true;
+                break;
+              }
+            }
+
+            const label = "starred-alpie-core";
+            const { data: labels } = await github.rest.issues.listLabelsOnIssue({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+            const hasLabel = labels.some((l) => l.name === label);
+
+            if (starred) {
+              if (!hasLabel) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  labels: [label],
+                });
+              }
+              console.log(`@${author} has starred 169Pi/Alpie-Core.`);
+            } else {
+              if (hasLabel) {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  name: label,
+                });
+              }
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `Hey @${author} — looks like you haven't starred [169Pi/Alpie-Core](https://github.com/169Pi/Alpie-Core) yet! ⭐ Star it and I'll re-check automatically on your next push.`,
+              });
+              core.setFailed(`@${author} has not starred 169Pi/Alpie-Core yet.`);
+            }

@@ -1,40 +1,50 @@
-# Contributing to 169pi
+# 🤝 Contributing to 169pi
 
-Thanks for stopping by! Contributions to this repo mean one specific thing:
-**adding your creative representation of [Alpie-Core](https://github.com/169Pi/Alpie-Core)
-to the [Make this README yours](profile/README.md#-make-this-readme-yours)** section
-of our org profile.
+👋 Hey — glad you're here.
 
-If you're looking to contribute code, models, or benchmarks, head over to
-[`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) instead — that's where the
-model itself lives.
+The [profile/README.md](profile/README.md) on our org page isn't ours. It's a
+space we've set aside for the people building alongside us. The
+**[Make this README yours](profile/README.md#-make-this-readme-yours)** section
+is where you can plant a flag, in whatever form feels like *you*, using
+anything we've built at **169pi** as your reference point — a model, a
+benchmark, a capability, a design decision. Today that's mostly
+[Alpie-Core](https://github.com/169Pi/Alpie-Core); more is on the way.
+
+You get the byline; we get to point at your work and say *look what our
+community is making.* That's the whole trade.
+
+Looking to contribute code, weights, or benchmarks? Head to the model repo
+itself — currently [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core).
 
 ---
 
-## The idea
+## 💡 The idea
 
-> What's the most creative way to represent what Alpie-Core does?
+169pi builds open reasoning tools out of India. Right now that means
+Alpie-Core — a 4-bit reasoning model that punches above its weight — and there
+are more models and features on the way. Pick anything we've shipped that
+resonates with you and turn *that* into something worth signing. The math
+behind quantization, a benchmark you find striking, the vibe of a small model
+doing big-model work, a design choice you noticed — your call.
 
-Pick a capability — reasoning, math, coding, quantization efficiency, size, speed,
-anything real about the model — and turn it into something that would make a
-stranger stop scrolling on our org profile.
+This isn't a marketing ask. It's your slot on the wall.
 
-### The bar
+### 🎯 What we're looking for
 
-We're looking for **quality, considered work**. Plain-text one-liners, generic
-haikus, and copy-paste snippets won't make it in. Think of the level of craft
-you'd want your own name attached to on a public page.
+We want the wall to feel like a portfolio of people, not a scroll of samey
+snippets. So we hold entries to the standard of work you'd link from your own
+site. Plain-text one-liners, generic haikus, and copy-paste code won't make it
+in — not because they're "bad," but because they don't showcase you.
 
-A well-executed entry usually falls into one of these:
+Well-executed entries tend to look like:
 
 - **Custom SVG art or a hero image** — inline, light/dark-aware, made by you
 - **A diagram that teaches something** — how 4-bit quantization preserves
-  reasoning, how the model's context window compares to alternatives, etc.
-  Mermaid, ASCII, or hand-drawn SVG all welcome, but it has to *explain*, not
-  just decorate
-- **A benchmark visualization** — GSM8K, MMLU, SWE-Bench rendered as an inline
-  chart, not just numbers in a table
-- **A runnable micro-demo** — a short self-contained snippet that computes,
+  reasoning, how the context window compares, and so on. Mermaid, ASCII, or
+  hand-drawn SVG all welcome, as long as it *explains* rather than just decorates
+- **A benchmark visualization** — GSM8K, MMLU, SWE-Bench rendered as a chart,
+  not just numbers in a table
+- **A runnable micro-demo** — a short, self-contained snippet that computes,
   simulates, or visualises a real property of the model and prints something
   delightful
 - **Structured ASCII art** — multi-line, actually depicting something (the
@@ -43,77 +53,83 @@ A well-executed entry usually falls into one of these:
   formatting, typography, and imagery carry as much weight as the words
 - **Something we haven't imagined yet** — surprise us
 
-Your entry must genuinely reflect something real about Alpie-Core, not just
-the "169pi" name in the abstract. If it could be described in one sentence and
-nothing would be lost, it's not there yet.
-
-For a feel of what a memorable org profile looks like, see
-[PostHog's](https://github.com/PostHog).
+If your entry could be described in one sentence and nothing would be lost,
+it's not there yet.
 
 ---
 
-## How to add yours — in 5 steps
+## 🛠️ How to add yours — in 5 steps
 
-1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) *(a bot checks this on your PR)*
-2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) and say hi
+1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
+   *(a bot checks this — we like knowing who's on the wall)*
+2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) — this is
+   where the community actually hangs out, and where we celebrate merges
 3. 🍴 **Fork** this repo *(button, top-right of the GitHub page)*
 4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside the
    **Make this README yours** section, keeping the surrounding structure intact
-5. 🚀 **Open a PR** titled `[169pi] Your Name — Your Medium`
-   (e.g. `[169pi] Ada Lovelace — ASCII Diagram`)
+5. 🚀 **Open a PR** titled `@your-github-handle: <what you're calling it>`
+   (e.g. `@ada-lovelace: A tiny quantization diagram`)
 
-That's it. We review bi-weekly; merged PRs get **169pi swag** shipped to them. 🎁
+We review every two weeks. When your PR merges, we'll ship you **169pi swag**
+as a thank-you 🎁 — and shout you out on Discord.
 
-Before you start, poke around the [Alpie-Core repo](https://github.com/169Pi/Alpie-Core)
-so you know what you're representing — hard to do the model justice without it.
+New to our work? Poke around
+[169pi on GitHub](https://github.com/169Pi) first — the wall works best when
+your entry reflects something you actually connected with.
 
 ---
 
-## Entry format
+## 📝 Entry format
 
-Add your entry as its own block inside the "Make this README yours" section. A minimal template:
+Add your entry as its own block inside the "Make this README yours" section.
+A minimal template:
 
 ```markdown
-### Your Name — Your Medium
+### @your-github-handle — <what you're calling it>
 
 <!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
 
-*What it represents:* one line on which Alpie-Core capability this reflects.
+*What it represents:* one line on the 169pi model, capability, or feature this reflects.
+*Find me:* optional — site, socials, or however you want to be reachable.
 ```
 
-Keep entries self-contained — no external images that could break, no scripts, no
-tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
+Keep entries self-contained — no external images that could break, no scripts,
+no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
 
 ---
 
-## Ground rules
+## 📋 Ground rules
 
-- ⭐ You must have **starred Alpie-Core** (checked automatically).
-- 💬 You must have **joined the Discord**.
-- Your contribution must be **original** — your own work, or clearly attributed.
-- It must genuinely represent **something real about Alpie-Core** (a capability,
-  benchmark, or feature).
-- One open PR per person at a time — make it count.
-- Keep it **respectful and inclusive**. No harassment, slurs, or targeted content.
-  We follow the standard [Contributor Covenant](https://www.contributor-covenant.org/)
+- Your entry must be **original** — your own work, or clearly attributed.
+- It must genuinely reflect **something real about 169pi** — a model,
+  capability, benchmark, or feature we've shipped — so the wall stays coherent.
+- Be **respectful and inclusive**. No harassment, slurs, or targeted content.
+  We follow the [Contributor Covenant](https://www.contributor-covenant.org/)
   spirit.
-- By submitting, you agree your entry can live in this repo permanently. Older
-  entries may be rotated out of the live README as the wall grows, but they're
-  preserved in git history — nothing gets deleted.
+- One open PR per person at a time — put your best foot forward.
+- Star + Discord are how we know who's on the wall; we're not chasing metrics,
+  we're building a room.
+- Entries stay in the repo permanently. As the wall grows, older ones may
+  rotate out of the visible section, but nothing gets deleted — git history
+  keeps every signature.
 
 ---
 
-## Review cadence
+## 🗓️ Review cadence
 
 **Bi-weekly merges.** Next merge: **October 6, 2026**.
-Get your PR in before then to qualify for exclusive swag.
+Get your PR in before then to be on the next drop.
 
 ---
 
-## Questions?
+## 🤔 Questions?
 
-- Open an [issue](../../issues)
-- Ping us on [Discord](https://discord.gg/REPLACE_WITH_INVITE)
-- Or reach us at [169pi.ai](https://169pi.ai/)
+Stuck on your entry, the setup, or just what to build?
+
+- 🧭 **Docs & guides:** [169pi-kappa.vercel.app](https://169pi-kappa.vercel.app)
+- 🤖 **Ask Alpie:** [Alpie.ai](https://alpie.ai) — our own model can walk you through it
+- 💬 **Talk to a human:** [Discord](https://discord.gg/REPLACE_WITH_INVITE)
+- 🐛 **Bug or repo issue:** open an [issue](../../issues)
+- 🌐 [169pi.ai](https://169pi.ai/)
 
 Happy hacking. 🧠

@@ -10,7 +10,7 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
   community README contest)
 - **`CONTRIBUTING.md`** → how to add your entry to the profile README
 
-> Looking to represent Alpie-Core creatively and earn swag? Head to
+> Looking to represent something we've built at 169pi and earn swag? Head to
 > [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---

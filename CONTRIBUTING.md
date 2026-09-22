@@ -7,11 +7,7 @@ space we've set aside for the people building alongside us. The
 **[Make this README yours](profile/README.md#-make-this-readme-yours)** section
 is where you can plant a flag, in whatever form feels like *you*, using
 anything we've built at **169pi** as your reference point — a model, a
-benchmark, a capability, a design decision. Today that's mostly
-[Alpie-Core](https://github.com/169Pi/Alpie-Core); more is on the way.
-
-You get the byline; we get to point at your work and say *look what our
-community is making.* That's the whole trade.
+benchmark, a capability, a design decision.
 
 Looking to contribute code, weights, or benchmarks? Head to the model repo
 itself — currently [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core).
@@ -27,12 +23,12 @@ resonates with you and turn *that* into something worth signing. The math
 behind quantization, a benchmark you find striking, the vibe of a small model
 doing big-model work, a design choice you noticed — your call.
 
-This isn't a marketing ask. It's your slot on the wall.
+In short - make your dent on our wall.
 
 ### 🎯 What we're looking for
 
-We want the wall to feel like a portfolio of people, not a scroll of samey
-snippets. So we hold entries to the standard of work you'd link from your own
+We want the wall to feel like a portfolio of people, not a scroll of snippets.
+So we hold entries to the standard of work you'd link from your own
 site. Plain-text one-liners, generic haikus, and copy-paste code won't make it
 in — not because they're "bad," but because they don't showcase you.
 

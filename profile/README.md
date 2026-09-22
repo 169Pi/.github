@@ -41,10 +41,6 @@ belongs on our front door.
 snippets won't make it in. We're looking for entries that would make a stranger
 stop scrolling — the kind of thing you'd want to show off.
 
-For a feel of what a memorable org profile looks like, see
-[PostHog's](https://github.com/PostHog) — a single, considered piece of visual
-work that carries the whole page.
-
 ### 💡 What "good" can look like
 
 Any *one* of these, done well, is a great submission:

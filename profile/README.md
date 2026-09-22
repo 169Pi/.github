@@ -70,6 +70,9 @@ We want to see it. **Open a PR and show us.**
 
 No complex setup. No prerequisites. Just curiosity and creativity.
 
+> 📖 Full details, entry format, and ground rules live in
+> **[CONTRIBUTING.md](../CONTRIBUTING.md)**.
+
 ---
 
 ## 🏆 Wall of Fame

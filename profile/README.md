@@ -25,14 +25,9 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ---
 
-## 🎨 Make this README yours
+<img width="2816" height="1536" alt="Gemini_Generated_Image_efihhpefihhpefih" src="https://github.com/user-attachments/assets/3a99dcd3-d4ec-414b-9109-36f8dceb393c" />
 
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
-
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+Made by @kindavishal with Nano Banana
 
 ---
 

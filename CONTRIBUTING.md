@@ -52,28 +52,20 @@ For a feel of what a memorable org profile looks like, see
 
 ---
 
-## Before you start
+## How to add yours — in 5 steps
 
-1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core).
-   A bot verifies this automatically when you open your PR.
-2. 💬 **Join** the [169pi Discord](https://discord.gg/REPLACE_WITH_INVITE).
-3. 👀 **Read** the Alpie-Core README so you know what you're representing.
+1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) *(a bot checks this on your PR)*
+2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) and say hi
+3. 🍴 **Fork** this repo *(button, top-right of the GitHub page)*
+4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside the
+   **Make this README yours** section, keeping the surrounding structure intact
+5. 🚀 **Open a PR** titled `[169pi] Your Name — Your Medium`
+   (e.g. `[169pi] Ada Lovelace — ASCII Diagram`)
 
----
+That's it. We review bi-weekly; merged PRs get **169pi swag** shipped to them. 🎁
 
-## How to contribute
-
-1. **Fork** this repo.
-2. **Edit** [`profile/README.md`](profile/README.md) and add your entry inside the
-   **Make this README yours** section, right below the "add your block" marker
-   comment. Keep the surrounding structure intact.
-3. **Commit** on a branch in your fork.
-4. **Open a Pull Request** back to this repo with:
-   - **Title:** `[169pi] Your Name — Your Medium`
-     (e.g. `[169pi] Ada Lovelace — ASCII Diagram`)
-   - **Description:** filled-in checklist from the PR template
-5. **Wait for review.** We usually respond within a few days.
-6. **Get merged →** swag ships your way. 🎁
+Before you start, poke around the [Alpie-Core repo](https://github.com/169Pi/Alpie-Core)
+so you know what you're representing — hard to do the model justice without it.
 
 ---
 
@@ -84,7 +76,7 @@ Add your entry as its own block inside the "Make this README yours" section. A m
 ```markdown
 ### Your Name — Your Medium
 
-<!-- Your representation goes here: code fence, image, ASCII block, poem, etc. -->
+<!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
 
 *What it represents:* one line on which Alpie-Core capability this reflects.
 ```

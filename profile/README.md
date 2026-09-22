@@ -27,52 +27,12 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ## 🎨 Make this README yours
 
-This README is co-authored by the community. Pick a capability of Alpie-Core —
-its reasoning, math, coding, 4-bit efficiency, the fact that it runs on ~16GB
-of VRAM, anything real about the model — and turn it into something that
-belongs on our front door.
-
-### 🎯 The bar
-
-**Bring real craft.** Plain sentences, tiny text tweaks, and copy-paste generic
-snippets won't make it in. We're looking for entries that would make a stranger
-stop scrolling — the kind of thing you'd want to show off.
-
-### 💡 What "good" can look like
-
-Any *one* of these, done well, is a great submission:
-
-- **Custom SVG art or a hero image** representing the model — inline SVG,
-  light/dark-aware, drawn (or generated) by you
-- **A hand-crafted diagram** of how a 4-bit quantized model preserves reasoning
-  (Mermaid, ASCII, or SVG — as long as it teaches something)
-- **A benchmark visualization** — GSM8K / MMLU / SWE-Bench rendered as an
-  inline chart, not just a table with numbers
-- **A runnable micro-demo** — a short, self-contained snippet that computes,
-  simulates, or visualises a real property (efficiency ratio, context length,
-   4-bit vs 16-bit memory) and prints something delightful
-- **ASCII art with structure** — not a one-liner; a piece that spans multiple
-  lines and actually depicts something (the model, a benchmark curve, an idea)
-- **A poem, story, or metaphor with a visual layout** — the writing has to
-  earn its place; formatting, typography, and imagery matter as much as words
-- **Something we haven't imagined yet** — surprise us
-
-If your entry could be described in one sentence and nothing would be lost,
-it's probably not there yet. Sit with it a little longer.
-
-### How to add yours — in 5 steps
-
-1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) *(a bot checks this on your PR)*
-2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) and say hi
-3. 🍴 **Fork** this repo *(button, top-right of this page)*
-4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside this section
-5. 🚀 **Open a PR** titled `[169pi] Your Name — Your Medium`
-
-That's it. Merged PRs get **169pi swag** shipped to them. 🎁
+Pick a capability of Alpie-Core and turn it into something that belongs on our
+front door — art, a diagram, a demo, a visualization. **Merged PRs get exclusive
+169pi swag. 🎁**
 
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify for exclusive swag. 🎁
-> Full rules, entry template, and FAQ → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 ---
 

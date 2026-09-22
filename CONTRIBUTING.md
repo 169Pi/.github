@@ -113,13 +113,8 @@ tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
 
 ## Review cadence
 
-While we're launching this, we review and merge PRs **every two weeks**. That
-means fast turnaround for you and a wall that fills up visibly. As submission
-volume grows, we'll stretch to a longer cadence (likely monthly, then
-quarterly) — we'll update this doc when it changes.
-
-Past entries stay in the repo. As the live wall grows, older ones may rotate
-out of the visible section, but they remain in git history.
+**Bi-weekly merges.** Next merge: **October 6, 2026**.
+Get your PR in before then to qualify for exclusive swag.
 
 ---
 

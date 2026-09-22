@@ -2,7 +2,8 @@
 
 Thanks for stopping by! Contributions to this repo mean one specific thing:
 **adding your creative representation of [Alpie-Core](https://github.com/169Pi/Alpie-Core)
-to the [Wall of Fame](profile/README.md#-wall-of-fame)** on our org profile.
+to the [Make this README yours](profile/README.md#-make-this-readme-yours)** section
+of our org profile.
 
 If you're looking to contribute code, models, or benchmarks, head over to
 [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) instead — that's where the
@@ -15,18 +16,39 @@ model itself lives.
 > What's the most creative way to represent what Alpie-Core does?
 
 Pick a capability — reasoning, math, coding, quantization efficiency, size, speed,
-anything real about the model — and represent *that* in whatever medium you like:
+anything real about the model — and turn it into something that would make a
+stranger stop scrolling on our org profile.
 
-- A math formula or short proof
-- ASCII art or a diagram
-- A haiku or short poem
-- A code snippet that computes or visualises it
-- A benchmark turned into art
-- An analogy, joke, or metaphor
-- Something we haven't thought of yet
+### The bar
 
-The only constraint: it must genuinely reflect something real about Alpie-Core, not
-just the "169pi" name in the abstract.
+We're looking for **quality, considered work**. Plain-text one-liners, generic
+haikus, and copy-paste snippets won't make it in. Think of the level of craft
+you'd want your own name attached to on a public page.
+
+A well-executed entry usually falls into one of these:
+
+- **Custom SVG art or a hero image** — inline, light/dark-aware, made by you
+- **A diagram that teaches something** — how 4-bit quantization preserves
+  reasoning, how the model's context window compares to alternatives, etc.
+  Mermaid, ASCII, or hand-drawn SVG all welcome, but it has to *explain*, not
+  just decorate
+- **A benchmark visualization** — GSM8K, MMLU, SWE-Bench rendered as an inline
+  chart, not just numbers in a table
+- **A runnable micro-demo** — a short self-contained snippet that computes,
+  simulates, or visualises a real property of the model and prints something
+  delightful
+- **Structured ASCII art** — multi-line, actually depicting something (the
+  model, a curve, a metaphor), not a one-liner
+- **Writing with a visual layout** — a poem, story, or metaphor where the
+  formatting, typography, and imagery carry as much weight as the words
+- **Something we haven't imagined yet** — surprise us
+
+Your entry must genuinely reflect something real about Alpie-Core, not just
+the "169pi" name in the abstract. If it could be described in one sentence and
+nothing would be lost, it's not there yet.
+
+For a feel of what a memorable org profile looks like, see
+[PostHog's](https://github.com/PostHog).
 
 ---
 
@@ -42,8 +64,9 @@ just the "169pi" name in the abstract.
 ## How to contribute
 
 1. **Fork** this repo.
-2. **Edit** [`profile/README.md`](profile/README.md) and add your entry under the
-   **Wall of Fame** section. Keep the surrounding structure intact.
+2. **Edit** [`profile/README.md`](profile/README.md) and add your entry inside the
+   **Make this README yours** section, right below the "add your block" marker
+   comment. Keep the surrounding structure intact.
 3. **Commit** on a branch in your fork.
 4. **Open a Pull Request** back to this repo with:
    - **Title:** `[169pi] Your Name — Your Medium`
@@ -56,7 +79,7 @@ just the "169pi" name in the abstract.
 
 ## Entry format
 
-Add your entry as its own block under the Wall of Fame section. A minimal template:
+Add your entry as its own block inside the "Make this README yours" section. A minimal template:
 
 ```markdown
 ### Your Name — Your Medium
@@ -89,12 +112,12 @@ tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
 
 ## Quarterly refresh
 
-The Wall of Fame refreshes each quarter. Anything merged before the quarter's cutoff
-makes that quarter's Wall. Past walls are preserved in the git history and in an
+The wall refreshes each quarter. Anything merged before the quarter's cutoff
+makes that quarter's wall. Past walls are preserved in the git history and in an
 archive section over time.
 
-Current quarter and cutoff are shown at the top of the
-[Wall of Fame](profile/README.md#-wall-of-fame).
+Current quarter and cutoff are shown inside
+[Make this README yours](profile/README.md#-make-this-readme-yours).
 
 ---
 

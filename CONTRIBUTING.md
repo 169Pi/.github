@@ -101,23 +101,25 @@ tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
 - Your contribution must be **original** — your own work, or clearly attributed.
 - It must genuinely represent **something real about Alpie-Core** (a capability,
   benchmark, or feature).
-- One PR per person per quarter — make it count.
+- One open PR per person at a time — make it count.
 - Keep it **respectful and inclusive**. No harassment, slurs, or targeted content.
   We follow the standard [Contributor Covenant](https://www.contributor-covenant.org/)
   spirit.
-- By submitting, you agree your entry can live in this repo permanently. Past Walls
-  are archived after the quarterly refresh; they're not deleted.
+- By submitting, you agree your entry can live in this repo permanently. Older
+  entries may be rotated out of the live README as the wall grows, but they're
+  preserved in git history — nothing gets deleted.
 
 ---
 
-## Quarterly refresh
+## Review cadence
 
-The wall refreshes each quarter. Anything merged before the quarter's cutoff
-makes that quarter's wall. Past walls are preserved in the git history and in an
-archive section over time.
+While we're launching this, we review and merge PRs **every two weeks**. That
+means fast turnaround for you and a wall that fills up visibly. As submission
+volume grows, we'll stretch to a longer cadence (likely monthly, then
+quarterly) — we'll update this doc when it changes.
 
-Current quarter and cutoff are shown inside
-[Make this README yours](profile/README.md#-make-this-readme-yours).
+Past entries stay in the repo. As the live wall grows, older ones may rotate
+out of the visible section, but they remain in git history.
 
 ---
 

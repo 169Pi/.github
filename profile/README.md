@@ -79,7 +79,9 @@ it's probably not there yet. Sit with it a little longer.
 
 That's it. Merged PRs get **169pi swag** shipped to them. 🎁
 
-> 🗓️ Current round: **Q4 2026** · closes December 31, 2026
+> 🗓️ We review and merge PRs **every two weeks** while we're getting off the
+> ground. As this scales, we'll shift to a longer cadence — for now, expect
+> fast turnaround.
 > Full rules, entry template, and FAQ → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 ### ✨ The wall

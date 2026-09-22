@@ -46,17 +46,6 @@ Full rules and entry format → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 ---
 
-## 🔗 Elsewhere
-
-- 🌐 [169pi.ai](https://169pi.ai/)
-- 🤗 [Hugging Face](https://huggingface.co/169Pi)
-- 🦙 [Ollama](https://ollama.com/169pi)
-- 📊 [Kaggle](https://www.kaggle.com/169pi)
-- 💬 [Discord](https://discord.gg/REPLACE_WITH_INVITE)
-- 🐛 [Open an issue](../../issues)
-
----
-
 <p align="center">
   Made with curiosity by the <strong>169pi</strong> team
 </p>

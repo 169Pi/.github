@@ -74,7 +74,7 @@ it's probably not there yet. Sit with it a little longer.
 1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core) *(a bot checks this on your PR)*
 2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) and say hi
 3. 🍴 **Fork** this repo *(button, top-right of this page)*
-4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) just below the marker further down
+4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside this section
 5. 🚀 **Open a PR** titled `[169pi] Your Name — Your Medium`
 
 That's it. Merged PRs get **169pi swag** shipped to them. 🎁
@@ -82,19 +82,6 @@ That's it. Merged PRs get **169pi swag** shipped to them. 🎁
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
 > Get your PR in before then to qualify for exclusive swag. 🎁
 > Full rules, entry template, and FAQ → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
-
-### ✨ The wall
-
-<!--
-  👇 New contributor — add your block right below this comment.
-  Copy the template, fill it in, and open a PR. Keep the marker in place.
-
-  ### Your Name — Your Medium
-  <your representation here: code, ASCII, haiku, formula, whatever>
-  *What it represents:* one line on the Alpie-Core capability this reflects.
--->
-
-*The wall is empty. Be the first to sign it.* 👋
 
 ---
 

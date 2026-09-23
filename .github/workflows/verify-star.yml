@@ -1,68 +1,72 @@
-name: Verify Alpie-Core star
+
+# .github/workflows/verify-star.yml
+name: Verify Star
 
 on:
   pull_request_target:
     types: [opened, synchronize, reopened]
 
+# Explicitly declare token permissions (principle of least privilege)
 permissions:
-  contents: read
-  pull-requests: write
+  pull-requests: write   # Needed to comment on the PR
+  contents: read         # Needed for basic repo access
+  metadata: read         # Needed for repo metadata
 
 jobs:
-  verify-star:
+  check-star:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if PR author starred 169Pi/Alpie-Core
+      - name: Check if PR author has starred the repo
         uses: actions/github-script@v7
+        env:
+          # Use PAT instead of GITHUB_TOKEN for cross-user stargazer lookup
+          STAR_CHECK_TOKEN: ${{ secrets.STAR_CHECK_TOKEN }}
         with:
+          # Use the PAT explicitly — GITHUB_TOKEN cannot list stargazers reliably
+          github-token: ${{ secrets.STAR_CHECK_TOKEN }}
           script: |
-            const author = context.payload.pull_request.user.login;
-            const owner = "169Pi";
-            const repo = "Alpie-Core";
+            const prAuthor = context.payload.pull_request.user.login;
+            const owner = '169Pi';
+            const repo = 'Alpie-Core';
 
-            let starred = false;
-            for await (const response of github.paginate.iterator(
-              github.rest.activity.listStargazersForRepo,
-              { owner, repo, per_page: 100 }
-            )) {
-              if (response.data.some((user) => user.login.toLowerCase() === author.toLowerCase())) {
-                starred = true;
+            console.log(`Checking if ${prAuthor} has starred ${owner}/${repo}...`);
+
+            let hasStarred = false;
+            let page = 1;
+
+            // Paginate through stargazers to find the PR author
+            while (true) {
+              const { data: stargazers } = await github.rest.activity.listStargazersForRepo({
+                owner,
+                repo,
+                per_page: 100,
+                page,
+              });
+
+              if (stargazers.length === 0) break;
+
+              const found = stargazers.some(user => user.login === prAuthor);
+              if (found) {
+                hasStarred = true;
                 break;
               }
+
+              // Stop paginating if we got fewer than 100 results (last page)
+              if (stargazers.length < 100) break;
+              page++;
             }
 
-            const label = "starred-alpie-core";
-            const { data: labels } = await github.rest.issues.listLabelsOnIssue({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-            });
-            const hasLabel = labels.some((l) => l.name === label);
-
-            if (starred) {
-              if (!hasLabel) {
-                await github.rest.issues.addLabels({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  labels: [label],
-                });
-              }
-              console.log(`@${author} has starred 169Pi/Alpie-Core.`);
-            } else {
-              if (hasLabel) {
-                await github.rest.issues.removeLabel({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  name: label,
-                });
-              }
+            if (!hasStarred) {
+              // Post a comment asking them to star the repo
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: `Hey @${author} — looks like you haven't starred [169Pi/Alpie-Core](https://github.com/169Pi/Alpie-Core) yet! ⭐ Star it and I'll re-check automatically on your next push.`,
+                issue_number: context.payload.pull_request.number,
+                body: `👋 Hey @${prAuthor}! Please ⭐ star the [${owner}/${repo}](https://github.com/${owner}/${repo}) repository before your PR can be reviewed. Once done, re-run the check!`,
               });
-              core.setFailed(`@${author} has not starred 169Pi/Alpie-Core yet.`);
+
+              // Fail the workflow to block the PR
+              core.setFailed(`@${prAuthor} has not starred ${owner}/${repo}.`);
+            } else {
+              console.log(`✅ ${prAuthor} has starred the repo. Proceeding.`);
             }

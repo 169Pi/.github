@@ -6,7 +6,7 @@ This is our org profile; the good stuff lives across our repos and model hubs.
 
 <p align="center">
   <a href="https://github.com/169Pi/Alpie-Core" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/169Pi/Alpie-Core?style=social&label=Star%20Alpie-Core" alt="Star Alpie-Core"></a>
-  <a href="https://discord.gg/REPLACE_WITH_INVITE" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-Join%20us-5865F2?logo=discord&logoColor=white" alt="Join our Discord"></a>
+  <a href="https://discord.gg/QqkrMmvt4" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-Join%20us-5865F2?logo=discord&logoColor=white" alt="Join our Discord"></a>
   <a href="https://169pi.ai/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🌐%20Website-169Pi%20AI-blue" alt="Website"></a>
   <a href="https://huggingface.co/169Pi/Alpie-Core" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🤗-Hugging%20Face-yellow" alt="Hugging Face"></a>
   <a href="https://ollama.com/169pi" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🦙-Ollama-000000" alt="Ollama"></a>

@@ -58,7 +58,7 @@ it's not there yet.
 
 1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
    *(a bot checks this — we like knowing who's on the wall)*
-2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) — this is
+2. 💬 **Join** our [Discord](https://discord.com/invite/QqkrMmvt4) — this is
    where the community actually hangs out, and where we celebrate merges
 3. 🍴 **Fork** this repo *(button, top-right of the GitHub page)*
 4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside the
@@ -124,7 +124,7 @@ Stuck on your entry, the setup, or just what to build?
 
 - 🧭 **Docs & guides:** [169pi-kappa.vercel.app](https://169pi-kappa.vercel.app)
 - 🤖 **Ask Alpie:** [Alpie.ai](https://alpie.ai) — our own model can walk you through it
-- 💬 **Talk to a human:** [Discord](https://discord.gg/REPLACE_WITH_INVITE)
+- 💬 **Talk to a human:** [Discord](https://discord.com/invite/QqkrMmvt4)
 - 🐛 **Bug or repo issue:** open an [issue](../../issues)
 - 🌐 [169pi.ai](https://169pi.ai/)
 

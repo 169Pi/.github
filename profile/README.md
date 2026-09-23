@@ -23,19 +23,18 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 |---|---|---|---|---|
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
----
 
-## 🎨 Make this README yours
 
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
-
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
-
----
+<br>
 
 <p align="center">
-  Made with curiosity by the <strong>169pi</strong> team
+  <img width="1024" height="1024" alt="Alpie-Core Architecture & Overview" src="https://github.com/user-attachments/assets/99950fb1-fd75-4ec8-9e45-6885bc5a36e2" />
+</p>
+
+<p align="center">
+  ✨ Crafted with passion by <a href="https://github.com/VishalXDev/.github/edit/main/profile/README.md">@VishalXDev</a> using Alpie Core & Gemini ✨
+</p>
+
+<p align="center">
+  Made with curiosity by the <strong>169pi</strong> team 💡
 </p>

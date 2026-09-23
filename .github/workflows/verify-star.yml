@@ -18,6 +18,9 @@ jobs:
       - name: Check if PR author has starred the repo
         uses: actions/github-script@v7
         with:
+          # Classic PAT with `public_repo` scope — the built-in GITHUB_TOKEN
+          # is scoped to this repo and cannot read stargazers on Alpie-Core.
+          github-token: ${{ secrets.STAR_CHECK_TOKEN }}
           script: |
             const prAuthor = context.payload.pull_request.user.login;
             const owner = '169Pi';

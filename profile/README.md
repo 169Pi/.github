@@ -23,7 +23,7 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 |---|---|---|---|---|
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
----
+
 
 ## 🎨 Make this README yours
 
@@ -36,6 +36,18 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 ---
 
+### A new dawn of reason emerges from open intelligence.
+
+<img width="2528" height="1686" alt="Gemini_Generated_Image_7b5aia7b5aia7b5a" src="https://github.com/user-attachments/assets/75a0f63f-a9d7-4561-b020-f7ea3a192947" />
+
+
+
+Alpie Core is a flagship 32B parameter AI reasoning model engineered to handle complex, multi-step tasks across enterprise workflows. Designed to combine high-level logic with operational efficiency, the model specializes in key capabilities including automated task execution, scalable infrastructure integration, advanced problem-solving, code generation, and deep research synthesis. By bridging multi-step reasoning with practical automation, Aims to deliver higher-order intelligence to power smarter, highly reliable enterprise AI solutions
+
+---
+
 <p align="center">
   Made with curiosity by the <strong>169pi</strong> team
 </p>
+
+

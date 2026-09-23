@@ -25,9 +25,9 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ---
 
-<img width="2816" height="1536" alt="Gemini_Generated_Image_efihhpefihhpefih" src="https://github.com/user-attachments/assets/3a99dcd3-d4ec-414b-9109-36f8dceb393c" />
+<img width="2752" height="1536" alt="Gemini_Generated_Image_rfesiwrfesiwrfes" src="https://github.com/user-attachments/assets/b79627d4-fcb3-42c2-8c04-99a004a0c006" />
 
-Made by @kindavishal with Nano Banana
+Made by @kindavishal with Alpie Core & Nano Banana
 
 ---
 

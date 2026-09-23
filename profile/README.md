@@ -30,7 +30,7 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 ### [@parshurambagade](https://github.com/parshurambagade) — Alpie-Core Capabilities
 
 
-<img width="1536" height="1024" alt="Alpie-core" src="https://github.com/user-attachments/assets/3ae283eb-6fc2-4792-940d-21ecea73e54d" />
+![Alpie-Core](../Alpie-core.png)
 
 *An overview of Alpie-Core's capabilities, including advanced reasoning, code generation, long-context understanding, efficient inference, KV-cache optimization, and real-world applications.*
 

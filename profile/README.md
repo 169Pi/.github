@@ -36,7 +36,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 ### @Shreyas-009 — A Vision of Alpie-Core
 
-![Alpie-Core Concept](../assets/hero.png)
+![Alpie-Core Concept](../assets/hero2.png)
 
 *What it represents:* A bold representation of Alpie-Core breaking barriers in 4-bit reasoning.
 *Find me:* [GitHub](https://github.com/Shreyas-009)

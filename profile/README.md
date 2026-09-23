@@ -1,4 +1,3 @@
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -33,6 +32,28 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
+---
+
+### What it gives. What it takes.
+
+**[@Shiva-ui18](https://github.com/Shiva-ui18)** · illustration
+
+<img width="2816" height="1536" alt="Gemini_Generated_Image_1egcsw1egcsw1egc" src="https://github.com/user-attachments/assets/db28f667-3b7e-4554-9c97-0f88dec8d65f" />
+
+Look at what is holding it up.
+
+Everything this model knows, and the whole weight of it rests on something the
+size of a die. One computer. The kind you can already own.
+
+I kept redrawing this until it stopped looking precarious, because precarious is
+the wrong word. The slab is not balanced. It is supported. This is not a large
+model cut down until it wobbles. It is a large model that turned out to need far
+less underneath it than anyone was paying for.
+
+That gap is the only reason any of this can be open. A model that needs a server
+room belongs to whoever owns the server room. A model that needs a desk belongs
+to whoever has a desk.
 
 ---
 

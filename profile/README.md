@@ -25,16 +25,26 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ---
 
-## 🎨 Make this README yours
 
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+<img width="1024" height="572" alt="wmremove-transformed" src="https://github.com/user-attachments/assets/df1bf34a-11ef-46fe-affd-e8bf24e86d67" />
 
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
 
 ---
+# 169Pi AI Ecosystem
+
+A sophisticated, unified platform focused on **Reasoning, Built Open.** This visualization showcases the 169Pi ecosystem, which integrates advanced models, flexible tools, and real-world applications within a premium, technical interface.
+
+### The Ecosystem Architecture
+
+The layout illustrates a complete product journey—**Reason → Plan → Build → Deploy**—centered around a core reasoning engine and six key, floating orbital modules:
+
+*   **Alpie Core:** Powerful reasoning at the foundation.
+*   **Deep Research:** Tools for extracting deeper insights.
+*   **Vibe Coding:** Accelerating the journey from idea to application.
+*   **API + SDK:** A comprehensive suite to integrate and build.
+*   **Deploy Anywhere:** Flexible, cloud-agnostic AI deployment.
+*   **Alpie Learn:** Resources to learn, practice, and grow.
 
 <p align="center">
   Made with curiosity by the <strong>169pi</strong> team

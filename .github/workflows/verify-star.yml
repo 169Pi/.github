@@ -31,6 +31,22 @@ jobs:
             // thread on every push (this workflow runs on `synchronize` too).
             const MARKER = '<!-- verify-star-bot -->';
 
+            // Only act on wall-entry PRs — ones that touch profile/README.md.
+            // Infra/maintainer PRs (workflows, CONTRIBUTING, README, etc.) are
+            // left untouched: no label, no star gate, no comment.
+            const ENTRY_FILE = 'profile/README.md';
+            const changedFiles = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              per_page: 100,
+            });
+            const isEntryPR = changedFiles.some(f => f.filename === ENTRY_FILE);
+            if (!isEntryPR) {
+              console.log(`PR does not modify ${ENTRY_FILE} — not a wall entry, skipping.`);
+              return;
+            }
+
             // Auto-label new entry PRs. Only on `opened` so a maintainer can
             // remove the label later without the next push re-adding it.
             // `addLabels` creates the label if it doesn't exist yet.

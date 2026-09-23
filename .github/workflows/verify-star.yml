@@ -15,7 +15,7 @@ jobs:
   check-star:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if PR author has starred the repo
+      - name: Check star and welcome the contributor
         uses: actions/github-script@v7
         with:
           # Classic PAT with `public_repo` scope — the built-in GITHUB_TOKEN
@@ -25,6 +25,44 @@ jobs:
             const prAuthor = context.payload.pull_request.user.login;
             const owner = '169Pi';
             const repo = 'Alpie-Core';
+            const repoLink = `[${owner}/${repo}](https://github.com/${owner}/${repo})`;
+
+            // Hidden marker so we update one comment instead of spamming the
+            // thread on every push (this workflow runs on `synchronize` too).
+            const MARKER = '<!-- verify-star-bot -->';
+
+            // Only act on wall-entry PRs — ones that touch profile/README.md.
+            // Infra/maintainer PRs (workflows, CONTRIBUTING, README, etc.) are
+            // left untouched: no label, no star gate, no comment.
+            const ENTRY_FILE = 'profile/README.md';
+            const changedFiles = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              per_page: 100,
+            });
+            const isEntryPR = changedFiles.some(f => f.filename === ENTRY_FILE);
+            if (!isEntryPR) {
+              console.log(`PR does not modify ${ENTRY_FILE} — not a wall entry, skipping.`);
+              return;
+            }
+
+            // Auto-label new entry PRs. Only on `opened` so a maintainer can
+            // remove the label later without the next push re-adding it.
+            // `addLabels` creates the label if it doesn't exist yet.
+            if (context.payload.action === 'opened') {
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  labels: ['good first alpie'],
+                });
+                console.log('Added "good first alpie" label.');
+              } catch (e) {
+                console.log(`Could not add label: ${e.message}`);
+              }
+            }
 
             console.log(`Checking if ${prAuthor} has starred ${owner}/${repo}...`);
 
@@ -42,8 +80,7 @@ jobs:
 
               if (stargazers.length === 0) break;
 
-              const found = stargazers.some(user => user.login === prAuthor);
-              if (found) {
+              if (stargazers.some(user => user.login === prAuthor)) {
                 hasStarred = true;
                 break;
               }
@@ -53,16 +90,72 @@ jobs:
               page++;
             }
 
-            if (!hasStarred) {
-              // Post a comment asking them to star the repo
+            // Shared process checklist — mirrors CONTRIBUTING.md. The star item
+            // is rendered checked/unchecked depending on what we found.
+            const starItem = hasStarred
+              ? `- [x] ⭐ Starred ${repoLink}`
+              : `- [ ] ⭐ **Star ${repoLink}** — required before review`;
+
+            const checklist = [
+              starItem,
+              '- [ ] Title follows `@your-handle: <what you\'re calling it>`',
+              '- [ ] Entry added inside the **Make this README yours** section of `profile/README.md`',
+              '- [ ] Original work, and self-contained (inline SVG / ASCII / Markdown — no external images or scripts)',
+              '- [ ] This is your only open PR right now',
+            ].join('\n');
+
+            const body = hasStarred
+              ? [
+                  MARKER,
+                  `🎉 Thanks for your entry, @${prAuthor} — welcome to the wall!`,
+                  '',
+                  'Your star checks out. ⭐ Before a maintainer reviews, give this a quick once-over so your entry lands cleanly:',
+                  '',
+                  checklist,
+                  '',
+                  'New here? The full guide is in [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). We review every two weeks — hang out on [Discord](https://discord.com/invite/QqkrMmvt4) while you wait. 🧠',
+                ].join('\n')
+              : [
+                  MARKER,
+                  `👋 Hey @${prAuthor}, thanks for contributing to the wall!`,
+                  '',
+                  `One thing first: please ⭐ star ${repoLink} — a bot checks this, and it's how we know who's on the wall. Once you've starred, push any commit (or re-run this check) and it'll go green.`,
+                  '',
+                  'While you\'re here, a quick checklist so your entry lands cleanly:',
+                  '',
+                  checklist,
+                  '',
+                  'Full guide: [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). Questions? [Discord](https://discord.com/invite/QqkrMmvt4). 🧠',
+                ].join('\n');
+
+            // Upsert: find our previous comment (by marker) and edit it,
+            // otherwise create a fresh one.
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              per_page: 100,
+            });
+            const existing = comments.find(c => c.body && c.body.includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
               await github.rest.issues.createComment({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 issue_number: context.payload.pull_request.number,
-                body: `👋 Hey @${prAuthor}! Please ⭐ star the [${owner}/${repo}](https://github.com/${owner}/${repo}) repository before your PR can be reviewed. Once done, re-run the check!`,
+                body,
               });
+            }
 
-              // Fail the workflow to block the PR
+            if (!hasStarred) {
+              // Fail the workflow to block the PR until they star.
               core.setFailed(`@${prAuthor} has not starred ${owner}/${repo}.`);
             } else {
               console.log(`✅ ${prAuthor} has starred the repo. Proceeding.`);

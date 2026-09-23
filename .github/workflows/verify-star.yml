@@ -25,27 +25,38 @@ jobs:
 
             console.log(`Checking if ${prAuthor} has starred ${owner}/${repo}...`);
 
+            // Listing stargazers is a public endpoint, but the workflow's
+            // built-in GITHUB_TOKEN is a GitHub App scoped to this repo only —
+            // it can't reach 169Pi/Alpie-Core and returns 403. So we call the
+            // endpoint unauthenticated; the response is public data either way.
             let hasStarred = false;
             let page = 1;
 
-            // Paginate through stargazers to find the PR author
             while (true) {
-              const { data: stargazers } = await github.rest.activity.listStargazersForRepo({
-                owner,
-                repo,
-                per_page: 100,
-                page,
-              });
+              const res = await fetch(
+                `https://api.github.com/repos/${owner}/${repo}/stargazers?per_page=100&page=${page}`,
+                {
+                  headers: {
+                    'Accept': 'application/vnd.github+json',
+                    'User-Agent': 'verify-star-workflow',
+                    'X-GitHub-Api-Version': '2022-11-28',
+                  },
+                }
+              );
 
-              if (stargazers.length === 0) break;
+              if (!res.ok) {
+                core.setFailed(`Stargazer lookup failed: ${res.status} ${res.statusText}`);
+                return;
+              }
 
-              const found = stargazers.some(user => user.login === prAuthor);
-              if (found) {
+              const stargazers = await res.json();
+              if (!Array.isArray(stargazers) || stargazers.length === 0) break;
+
+              if (stargazers.some(u => u.login.toLowerCase() === prAuthor.toLowerCase())) {
                 hasStarred = true;
                 break;
               }
 
-              // Stop paginating if we got fewer than 100 results (last page)
               if (stargazers.length < 100) break;
               page++;
             }

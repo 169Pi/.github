@@ -31,6 +31,23 @@ jobs:
             // thread on every push (this workflow runs on `synchronize` too).
             const MARKER = '<!-- verify-star-bot -->';
 
+            // Auto-label new entry PRs. Only on `opened` so a maintainer can
+            // remove the label later without the next push re-adding it.
+            // `addLabels` creates the label if it doesn't exist yet.
+            if (context.payload.action === 'opened') {
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  labels: ['good first alpie'],
+                });
+                console.log('Added "good first alpie" label.');
+              } catch (e) {
+                console.log(`Could not add label: ${e.message}`);
+              }
+            }
+
             console.log(`Checking if ${prAuthor} has starred ${owner}/${repo}...`);
 
             let hasStarred = false;

@@ -113,7 +113,7 @@ jobs:
                   '',
                   checklist,
                   '',
-                  'New here? The full guide is in [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). We review every two weeks — hang out on [Discord](https://discord.com/invite/QqkrMmvt4) while you wait. 🧠',
+                  'New here? The full guide is in [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). We review every two weeks — hang out on [Discord](https://discord.gg/GwJP7MsZp7) while you wait. 🧠',
                 ].join('\n')
               : [
                   MARKER,
@@ -125,7 +125,7 @@ jobs:
                   '',
                   checklist,
                   '',
-                  'Full guide: [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). Questions? [Discord](https://discord.com/invite/QqkrMmvt4). 🧠',
+                  'Full guide: [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). Questions? [Discord](https://discord.gg/GwJP7MsZp7). 🧠',
                 ].join('\n');
 
             // Upsert: find our previous comment (by marker) and edit it,

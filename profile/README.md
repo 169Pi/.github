@@ -19,7 +19,7 @@ This is our org profile; the good stuff lives across our repos and model hubs.
 
 Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
-| GSM8K | MMLU | SWE-Bench Verified | Context | VRAM |
+| GSM8K | MMLU | SWE-Bench Verified | Context Length | VRAM |
 |---|---|---|---|---|
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 

@@ -10,7 +10,6 @@ on:
 permissions:
   pull-requests: write   # Needed to comment on the PR
   contents: read         # Needed for basic repo access
-  metadata: read         # Needed for repo metadata
 
 jobs:
   check-star:

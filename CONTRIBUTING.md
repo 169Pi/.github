@@ -61,8 +61,10 @@ it's not there yet.
 2. 💬 **Join** our [Discord](https://discord.com/invite/QqkrMmvt4) — this is
    where the community actually hangs out, and where we celebrate merges
 3. 🍴 **Fork** this repo *(button, top-right of the GitHub page)*
-4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside the
-   **Make this README yours** section, keeping the surrounding structure intact
+4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) between the
+   `<!-- ENTRIES:START -->` and `<!-- ENTRIES:END -->` markers in the
+   **Make this README yours** section — newest entries go at the top, right under
+   `ENTRIES:START`. Don't touch anything outside those markers
 5. 🚀 **Open a PR** titled `@your-github-handle: <what you're calling it>`
    (e.g. `@ada-lovelace: A tiny quantization diagram`)
 
@@ -77,8 +79,8 @@ your entry reflects something you actually connected with.
 
 ## 📝 Entry format
 
-Add your entry as its own block inside the "Make this README yours" section.
-A minimal template:
+Add your entry as its own block **between the `<!-- ENTRIES:START -->` and
+`<!-- ENTRIES:END -->` markers**, at the top of the list. A minimal template:
 
 ```markdown
 ### @your-github-handle — <what you're calling it>
@@ -86,8 +88,12 @@ A minimal template:
 <!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
 
 *What it represents:* one line on the 169pi model, capability, or feature this reflects.
+**Contributed by [@your-github-handle](https://github.com/your-github-handle)**
 *Find me:* optional — site, socials, or however you want to be reachable.
 ```
+
+The **Contributed by** line is required — it's how you get publicly credited on
+the wall. Link it to your GitHub profile (or another profile that's clearly you).
 
 Keep entries self-contained — no external images that could break, no scripts,
 no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.

@@ -34,6 +34,25 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
+<!-- ────────────────────────────────────────────────────────────────── -->
+<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
+<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
+<!--     Don't edit anything outside the markers. Attribution required:  -->
+<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
+<!-- ────────────────────────────────────────────────────────────────── -->
+
+<!-- ENTRIES:START -->
+
+### @169pi — the first brick 🧱
+
+This wall is yours to build on. Fork the repo, add your entry right here, and
+open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@169pi](https://github.com/169Pi)**
+
+<!-- ENTRIES:END -->
+
 ---
 
 <p align="center">

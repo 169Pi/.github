@@ -235,33 +235,52 @@ jobs:
             const passing = autoItems.filter(i => i.status === 'pass').length;
             const summary = `**Auto-checks: ${passing}/${autoItems.length} passing.** These update automatically each time you push.`;
 
-            const body = hasStarred
-              ? [
-                  MARKER,
-                  `🎉 Thanks for your entry, @${prAuthor} — welcome to the wall!`,
-                  '',
-                  'Your star checks out. ⭐ Here\'s where your entry stands — I re-check these on every push:',
-                  '',
-                  summary,
-                  '',
-                  checklist,
-                  '',
-                  'New here? The full guide is in [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). We review every two weeks — hang out on [Discord](https://discord.com/invite/QqkrMmvt4) while you wait. 🧠',
-                ].join('\n')
-              : [
-                  MARKER,
-                  `👋 Hey @${prAuthor}, thanks for contributing to the wall!`,
-                  '',
-                  `One thing first: please ⭐ star ${repoLink} — a bot checks this, and it's how we know who's on the wall. Once you've starred, push any commit (or re-run this check) and it'll go green.`,
-                  '',
-                  'While you\'re here, here\'s where the rest of your entry stands — I re-check these on every push:',
-                  '',
-                  summary,
-                  '',
-                  checklist,
-                  '',
-                  'Full guide: [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). Questions? [Discord](https://discord.com/invite/QqkrMmvt4). 🧠',
-                ].join('\n');
+            // First-timers get the full warm onboarding; returning contributors
+            // (anyone who has landed a PR here before, plus members/owners) get a
+            // shorter "welcome back". `author_association` is GitHub's own signal:
+            // FIRST_TIME_CONTRIBUTOR/FIRST_TIMER/NONE until they have a merged PR.
+            const RETURNING = ['CONTRIBUTOR', 'MEMBER', 'OWNER', 'COLLABORATOR'];
+            const firstTimer = !RETURNING.includes(
+              context.payload.pull_request.author_association);
+
+            const CONTRIB_LINK = '[`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md)';
+            const DISCORD_LINK = '[Discord](https://discord.com/invite/QqkrMmvt4)';
+
+            const greeting = !hasStarred
+              ? (firstTimer
+                  ? `👋 Hey @${prAuthor}, thanks for contributing to the wall!`
+                  : `👋 Welcome back, @${prAuthor}!`)
+              : (firstTimer
+                  ? `🎉 Thanks for your entry, @${prAuthor} — welcome to the wall!`
+                  : `🎉 Welcome back to the wall, @${prAuthor}!`);
+
+            const starAsk = hasStarred
+              ? null
+              : `One thing first: please ⭐ star ${repoLink} — a bot checks this, and it's how we know who's on the wall. Once you've starred, push any commit (or re-run this check) and it'll go green.`;
+
+            const statusLine = hasStarred
+              ? (firstTimer
+                  ? 'Your star checks out. ⭐ Here\'s where your entry stands — I re-check these on every push:'
+                  : 'Star\'s good. ⭐ Quick status on this entry — re-checked on every push:')
+              : 'While you\'re here, here\'s where the rest of your entry stands — I re-check these on every push:';
+
+            const footer = firstTimer
+              ? `New here? The full guide is in ${CONTRIB_LINK}. We review every two weeks — hang out on ${DISCORD_LINK} while you wait. 🧠`
+              : `You know the drill — ${CONTRIB_LINK} if you need a refresher, and the crew's on ${DISCORD_LINK}. See you at the next merge. 🧠`;
+
+            const body = [
+              MARKER,
+              greeting,
+              '',
+              ...(starAsk ? [starAsk, ''] : []),
+              statusLine,
+              '',
+              summary,
+              '',
+              checklist,
+              '',
+              footer,
+            ].join('\n');
 
             // Upsert: find our previous comment (by marker) and edit it,
             // otherwise create a fresh one.

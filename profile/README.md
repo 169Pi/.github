@@ -24,17 +24,7 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
 ---
-
-## 🎨 Make this README yours
-
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
-
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
-
-### @Shreyas-009 — A Vision of Alpie-Core
+## Vision of Alpie-Core
 
 ![Alpie-Core Concept](../assets/hero.png)
 
@@ -56,10 +46,6 @@ The connected paths show these capabilities working together.
 **Ideas → Reasoning → Applications → Impact**
 
 **Open Today → A More Open Tomorrow**
-
-*What it represents:* A bold representation of Alpie-Core breaking barriers in 4-bit reasoning.
-
-*Find me:* [GitHub](https://github.com/Shreyas-009)
 
 ---
 

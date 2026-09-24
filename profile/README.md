@@ -36,7 +36,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 ### @Shreyas-009 — A Vision of Alpie-Core
 
-![Alpie-Core Concept](../assets/hero2.png)
+![Alpie-Core Concept](../assets/hero.png)
 
 # Vision of 169Pi — Open Reasoning AI
 

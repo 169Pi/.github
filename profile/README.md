@@ -38,7 +38,27 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 ![Alpie-Core Concept](../assets/hero2.png)
 
+# Vision of 169Pi — Open Reasoning AI
+
+A visual story of **169Pi's open reasoning ecosystem**  with reasoning at the core and tools, products, and applications growing around it.
+
+### What it represents
+
+- **Alpie-Core** : Reasoning, coding, math, and research.
+- **Alpie** : Chat, research, tools, files, and web.
+- **Pi169-SDK** : APIs, SDKs, and integrations.
+- **AlpieCode** : Reasoning for software development.
+- **alpie-rag** : Grounded knowledge from data and documents.
+- **Deploy Anywhere** : Bringing AI into real applications.
+
+The connected paths show these capabilities working together.
+
+**Ideas → Reasoning → Applications → Impact**
+
+**Open Today → A More Open Tomorrow**
+
 *What it represents:* A bold representation of Alpie-Core breaking barriers in 4-bit reasoning.
+
 *Find me:* [GitHub](https://github.com/Shreyas-009)
 
 ---

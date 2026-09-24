@@ -30,7 +30,16 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 Pick anything we've built at 169pi — a model, a capability, a benchmark — and
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+---
 
+<!-- ────────────────────────────────────────────────────────────────── -->
+<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
+<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
+<!--     Don't edit anything outside the markers. Attribution required:  -->
+<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
+<!-- ────────────────────────────────────────────────────────────────── -->
+
+<!-- ENTRIES:START -->
 Alpie-Core at a Glance
 
 The numbers above give a quick picture of what Alpie-Core is designed to handle: a 32B-parameter reasoning model using a 4-bit format, with a 65K context window and an estimated ~16 GB VRAM requirement.
@@ -47,6 +56,8 @@ Rather than viewing each score separately, the benchmark snapshot provides a com
 💡 Why these numbers matter
 
 The combination of model size, quantization, context length, and benchmark results gives developers useful context when considering how Alpie-Core could fit into their own experiments and applications.
+
+<!-- ENTRIES:END -->
 ---
 
 <p align="center">

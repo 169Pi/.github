@@ -23,7 +23,16 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 |---|---|---|---|---|
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
----
+
+### 🌐 Alpie-Core Ecosystem
+
+<p align="center">
+  <img
+    src="./alpie-core-ecosystem.png"
+    alt="Alpie-Core Ecosystem"
+    width="100%"
+  />
+</p>
 
 ## 🎨 Make this README yours
 

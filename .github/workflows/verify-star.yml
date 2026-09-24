@@ -90,43 +90,197 @@ jobs:
               page++;
             }
 
-            // Shared process checklist — mirrors CONTRIBUTING.md. The star item
-            // is rendered checked/unchecked depending on what we found.
-            const starItem = hasStarred
-              ? `- [x] ⭐ Starred ${repoLink}`
-              : `- [ ] ⭐ **Star ${repoLink}** — required before review`;
+            // ── Auto-verify each contribution step ─────────────────────────
+            // Every item below is checked programmatically. The star stays the
+            // only hard gate (it fails the workflow); the rest are advisory —
+            // they render green/pending so contributors can self-correct before
+            // a maintainer reviews. All of it re-runs on every push.
+            const ENTRY_MARKER_START = 'ENTRIES:START';
+            const ENTRY_MARKER_END = 'ENTRIES:END';
+            const profileUrl = `https://github.com/${prAuthor}`;
 
-            const checklist = [
-              starItem,
-              '- [ ] Title follows `@your-handle: <what you\'re calling it>`',
-              '- [ ] Entry added inside the **Make this README yours** section of `profile/README.md`',
-              '- [ ] Original work, and self-contained (inline SVG / ASCII / Markdown — no external images or scripts)',
-              '- [ ] This is your only open PR right now',
+            // Diff + final content of the entry file, fetched once and reused.
+            const entryFile = changedFiles.find(f => f.filename === ENTRY_FILE);
+            const patch = (entryFile && entryFile.patch) || '';
+            const addedLines = patch
+              .split('\n')
+              .filter(l => l.startsWith('+') && !l.startsWith('+++'))
+              .map(l => l.slice(1));
+
+            // New-file line numbers of every added line, parsed from the diff.
+            const addedLineNos = [];
+            {
+              let newLine = 0;
+              for (const l of patch.split('\n')) {
+                const h = l.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
+                if (h) { newLine = parseInt(h[1], 10); continue; }
+                if (l.startsWith('+++') || l.startsWith('---')) continue;
+                if (l.startsWith('+')) { addedLineNos.push(newLine); newLine++; }
+                else if (l.startsWith('-')) { /* old-side only, no new line */ }
+                else { newLine++; }
+              }
+            }
+
+            // Final (head) content, to locate the ENTRIES markers by line.
+            let headLines = null;
+            try {
+              const { data: fileData } = await github.rest.repos.getContent({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                path: ENTRY_FILE,
+                ref: context.payload.pull_request.head.sha,
+              });
+              headLines = Buffer.from(fileData.content, 'base64')
+                .toString('utf8')
+                .split('\n');
+            } catch (e) {
+              console.log(`Could not fetch head content of ${ENTRY_FILE}: ${e.message}`);
+            }
+
+            // 1. Title format: `@handle: <something>`
+            const title = context.payload.pull_request.title || '';
+            const titleOk = /^@[A-Za-z0-9-]+:\s*\S+/.test(title);
+
+            // 2. Entry lives strictly between the ENTRIES markers.
+            let zoneStatus = 'skip';
+            let zoneNote = '';
+            if (headLines) {
+              const startIdx = headLines.findIndex(l => l.includes(ENTRY_MARKER_START));
+              const endIdx = headLines.findIndex(l => l.includes(ENTRY_MARKER_END));
+              if (startIdx === -1 || endIdx === -1 || startIdx >= endIdx) {
+                zoneStatus = 'fail';
+                zoneNote = 'keep both `<!-- ENTRIES:START -->` and `<!-- ENTRIES:END -->` markers in place';
+              } else if (addedLineNos.length === 0) {
+                zoneStatus = 'fail';
+                zoneNote = 'no new lines detected in `profile/README.md`';
+              } else {
+                const startLine = startIdx + 1; // getContent is 0-indexed; diff is 1-indexed
+                const endLine = endIdx + 1;
+                const outside = addedLineNos.some(n => n <= startLine || n >= endLine);
+                zoneStatus = outside ? 'fail' : 'pass';
+                if (outside) zoneNote = 'some changes are outside the entry zone — add your entry between the markers only';
+              }
+            }
+
+            // 3. Public attribution: a linked "Contributed by" line in the additions.
+            const attributionOk = addedLines.some(l =>
+              /contributed by\s*\[[^\]]+\]\(https?:\/\/[^)]+\)/i.test(l));
+
+            // 4. Self-contained: no external images or scripts in the additions.
+            const externalAsset = addedLines.some(l =>
+              /<script\b/i.test(l) ||
+              /<img\b[^>]*src\s*=\s*["']https?:/i.test(l) ||
+              /!\[[^\]]*\]\(https?:\/\//.test(l));
+            const selfContainedOk = !externalAsset;
+
+            // 5. Single open PR by this author in this repo.
+            let onePrStatus = 'skip';
+            try {
+              const openPRs = await github.paginate(github.rest.pulls.list, {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                per_page: 100,
+              });
+              const mine = openPRs.filter(p => p.user && p.user.login === prAuthor);
+              onePrStatus = mine.length <= 1 ? 'pass' : 'fail';
+            } catch (e) {
+              console.log(`Could not list open PRs: ${e.message}`);
+            }
+
+            // Render one checklist line from a status + label (+ optional hint).
+            const renderItem = (status, label, note) =>
+              status === 'pass'
+                ? `- [x] ${label}`
+                : status === 'skip'
+                  ? `- [ ] ${label} — couldn't auto-check, please self-confirm`
+                  : `- [ ] ${label}${note ? ` — ${note}` : ''}`;
+
+            const items = [
+              {
+                status: hasStarred ? 'pass' : 'fail',
+                label: hasStarred
+                  ? `⭐ Starred ${repoLink}`
+                  : `⭐ **Star ${repoLink}** — required before review`,
+              },
+              {
+                status: titleOk ? 'pass' : 'fail',
+                label: 'Title follows `@your-handle: <what you\'re calling it>`',
+                note: 'rename the PR to `@your-handle: <title>`',
+              },
+              {
+                status: zoneStatus,
+                label: 'Entry added between the `ENTRIES:START` / `ENTRIES:END` markers in `profile/README.md`',
+                note: zoneNote,
+              },
+              {
+                status: attributionOk ? 'pass' : 'fail',
+                label: 'Public attribution so you get credited on the wall',
+                note: `add a \`**Contributed by [@you](${profileUrl})**\` line to your entry`,
+              },
+              {
+                status: selfContainedOk ? 'pass' : 'fail',
+                label: 'Original & self-contained (inline SVG / ASCII / Markdown — no external images or scripts)',
+                note: 'remove external images/scripts and inline your work',
+              },
+              {
+                status: onePrStatus,
+                label: 'This is your only open PR right now',
+              },
+            ];
+
+            const checklist = items.map(i => renderItem(i.status, i.label, i.note)).join('\n');
+
+            const autoItems = items.filter(i => i.status !== 'skip');
+            const passing = autoItems.filter(i => i.status === 'pass').length;
+            const summary = `**Auto-checks: ${passing}/${autoItems.length} passing.** These update automatically each time you push.`;
+
+            // First-timers get the full warm onboarding; returning contributors
+            // (anyone who has landed a PR here before, plus members/owners) get a
+            // shorter "welcome back". `author_association` is GitHub's own signal:
+            // FIRST_TIME_CONTRIBUTOR/FIRST_TIMER/NONE until they have a merged PR.
+            const RETURNING = ['CONTRIBUTOR', 'MEMBER', 'OWNER', 'COLLABORATOR'];
+            const firstTimer = !RETURNING.includes(
+              context.payload.pull_request.author_association);
+
+            const CONTRIB_LINK = '[`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md)';
+            const DISCORD_LINK = '[Discord](https://discord.gg/GwJP7MsZp7)';
+
+            const greeting = !hasStarred
+              ? (firstTimer
+                  ? `👋 Hey @${prAuthor}, thanks for contributing to the wall!`
+                  : `👋 Welcome back, @${prAuthor}!`)
+              : (firstTimer
+                  ? `🎉 Thanks for your entry, @${prAuthor} — welcome to the wall!`
+                  : `🎉 Welcome back to the wall, @${prAuthor}!`);
+
+            const starAsk = hasStarred
+              ? null
+              : `One thing first: please ⭐ star ${repoLink} — a bot checks this, and it's how we know who's on the wall. Once you've starred, push any commit (or re-run this check) and it'll go green.`;
+
+            const statusLine = hasStarred
+              ? (firstTimer
+                  ? 'Your star checks out. ⭐ Here\'s where your entry stands — I re-check these on every push:'
+                  : 'Star\'s good. ⭐ Quick status on this entry — re-checked on every push:')
+              : 'While you\'re here, here\'s where the rest of your entry stands — I re-check these on every push:';
+
+            const footer = firstTimer
+              ? `New here? The full guide is in ${CONTRIB_LINK}. We review every two weeks — hang out on ${DISCORD_LINK} while you wait. 🧠`
+              : `You know the drill — ${CONTRIB_LINK} if you need a refresher, and the crew's on ${DISCORD_LINK}. See you at the next merge. 🧠`;
+
+            const body = [
+              MARKER,
+              greeting,
+              '',
+              ...(starAsk ? [starAsk, ''] : []),
+              statusLine,
+              '',
+              summary,
+              '',
+              checklist,
+              '',
+              footer,
             ].join('\n');
-
-            const body = hasStarred
-              ? [
-                  MARKER,
-                  `🎉 Thanks for your entry, @${prAuthor} — welcome to the wall!`,
-                  '',
-                  'Your star checks out. ⭐ Before a maintainer reviews, give this a quick once-over so your entry lands cleanly:',
-                  '',
-                  checklist,
-                  '',
-                  'New here? The full guide is in [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). We review every two weeks — hang out on [Discord](https://discord.gg/GwJP7MsZp7) while you wait. 🧠',
-                ].join('\n')
-              : [
-                  MARKER,
-                  `👋 Hey @${prAuthor}, thanks for contributing to the wall!`,
-                  '',
-                  `One thing first: please ⭐ star ${repoLink} — a bot checks this, and it's how we know who's on the wall. Once you've starred, push any commit (or re-run this check) and it'll go green.`,
-                  '',
-                  'While you\'re here, a quick checklist so your entry lands cleanly:',
-                  '',
-                  checklist,
-                  '',
-                  'Full guide: [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md). Questions? [Discord](https://discord.gg/GwJP7MsZp7). 🧠',
-                ].join('\n');
 
             // Upsert: find our previous comment (by marker) and edit it,
             // otherwise create a fresh one.

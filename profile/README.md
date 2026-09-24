@@ -30,9 +30,7 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 Pick anything we've built at 169pi — a model, a capability, a benchmark — and
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
-
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+---
 
 <!-- ────────────────────────────────────────────────────────────────── -->
 <!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
@@ -42,17 +40,24 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+Alpie-Core at a Glance
 
-### @169pi — the first brick 🧱
+The numbers above give a quick picture of what Alpie-Core is designed to handle: a 32B-parameter reasoning model using a 4-bit format, with a 65K context window and an estimated ~16 GB VRAM requirement.
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+📊 Benchmark Snapshot
+GSM8K: 92.75%
+MMLU: 81.28%
+SWE-Bench Verified: 57.8%
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+These benchmarks highlight different aspects of the model, from mathematical reasoning and general knowledge to software-engineering tasks.
+
+Rather than viewing each score separately, the benchmark snapshot provides a compact way to understand the range of capabilities represented by Alpie-Core.
+
+💡 Why these numbers matter
+
+The combination of model size, quantization, context length, and benchmark results gives developers useful context when considering how Alpie-Core could fit into their own experiments and applications.
 
 <!-- ENTRIES:END -->
-
 ---
 
 <p align="center">

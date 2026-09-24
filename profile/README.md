@@ -27,12 +27,12 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ## 🎨 Make this README yours
 
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+### [@parshurambagade](https://github.com/parshurambagade) — Alpie-Core Capabilities
 
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
+![Alpie-Core](../Alpie-core.png)
+
+*An overview of Alpie-Core's capabilities, including advanced reasoning, code generation, long-context understanding, efficient inference, KV-cache optimization, and real-world applications.*
 
 ---
 

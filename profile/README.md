@@ -31,9 +31,22 @@ Pick anything we've built at 169pi — a model, a capability, a benchmark — an
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+Alpie-Core at a Glance
 
+The numbers above give a quick picture of what Alpie-Core is designed to handle: a 32B-parameter reasoning model using a 4-bit format, with a 65K context window and an estimated ~16 GB VRAM requirement.
+
+📊 Benchmark Snapshot
+GSM8K: 92.75%
+MMLU: 81.28%
+SWE-Bench Verified: 57.8%
+
+These benchmarks highlight different aspects of the model, from mathematical reasoning and general knowledge to software-engineering tasks.
+
+Rather than viewing each score separately, the benchmark snapshot provides a compact way to understand the range of capabilities represented by Alpie-Core.
+
+💡 Why these numbers matter
+
+The combination of model size, quantization, context length, and benchmark results gives developers useful context when considering how Alpie-Core could fit into their own experiments and applications.
 ---
 
 <p align="center">

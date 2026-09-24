@@ -1,0 +1,96 @@
+
+# .github/workflows/welcome-first-timer.yml
+name: Welcome First-Timer
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+# Least privilege: we only need to comment.
+permissions:
+  pull-requests: write   # Comment on PRs
+  issues: write          # Comment on issues
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    # GitHub sets author_association to FIRST_TIME_CONTRIBUTOR for someone
+    # whose first-ever contribution to this repo is the one that triggered us
+    # — the same signal behind the "First-time contributor" badge in the UI.
+    if: github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR' || github.event.issue.author_association == 'FIRST_TIME_CONTRIBUTOR'
+    steps:
+      - name: Roll out the ASCII welcome
+        uses: actions/github-script@v7
+        env:
+          # Kept as a literal block so the art survives byte-for-byte — no JS
+          # string escaping to mangle the block characters.
+          BANNER: |
+            ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗
+            ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝
+            ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗
+            ██║███╗██║██╔══╝  ██║     ██║     ██║   ██║██║╚██╔╝██║██╔══╝
+            ╚███╔███╔╝███████╗███████╗╚██████╗╚██████╔╝██║ ╚═╝ ██║███████╗
+             ╚══╝╚══╝ ╚══════╝╚══════╝ ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚══════╝
+            ████████╗ ██████╗      ██╗ ██████╗ █████╗ ██████╗ ██╗
+            ╚══██╔══╝██╔═══██╗    ███║██╔════╝██╔══██╗██╔══██╗██║
+               ██║   ██║   ██║    ╚██║███████╗╚██████║██████╔╝██║
+               ██║   ██║   ██║     ██║██╔═══██╗╚═══██║██╔═══╝ ██║
+               ██║   ╚██████╔╝     ██║╚██████╔╝█████╔╝██║     ██║
+               ╚═╝    ╚═════╝      ╚═╝ ╚═════╝ ╚════╝ ╚═╝     ╚═╝
+
+                    an open reasoning project · out of India 🧠
+        with:
+          script: |
+            const isPR = !!context.payload.pull_request;
+            const target = isPR ? context.payload.pull_request : context.payload.issue;
+            const author = target.user.login;
+            const number = target.number;
+            const thing = isPR ? 'PR' : 'issue';
+
+            // Hidden marker so re-runs update one comment instead of spamming.
+            const MARKER = '<!-- welcome-first-timer-bot -->';
+            const FENCE = '```';
+
+            const body = [
+              MARKER,
+              FENCE,
+              process.env.BANNER.replace(/\s+$/, ''),
+              FENCE,
+              '',
+              `### Welcome, @${author} 👋`,
+              '',
+              `This is your **first ${thing}** here — and we love that you led with curiosity. 🧠`,
+              '',
+              "You're now part of an open reasoning project built out of India. A maintainer will take a look soon; merges land **bi-weekly**, and merged PRs earn **exclusive 169pi swag**. 🎁",
+              '',
+              'While you wait, come think out loud with us on [Discord](https://discord.gg/GwJP7MsZp7). New here? The [`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md) guide has everything.',
+            ].join('\n');
+
+            // Upsert by marker so a reopened/edited thread isn't spammed.
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: number,
+              per_page: 100,
+            });
+            const existing = comments.find(c => c.body && c.body.includes(MARKER));
+
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: number,
+                body,
+              });
+            }
+
+            console.log(`Welcomed first-timer @${author} on ${thing} #${number}.`);

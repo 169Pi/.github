@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#07111f"/><stop offset="100%" stop-color="#0d1728"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#2563eb"/></linearGradient>
+  <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/></linearGradient>
+  <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#f97316"/></linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker>
+  <style>
+    .title{font:800 34px Inter,Arial,sans-serif;fill:#f8fafc}.subtitle{font:17px Inter,Arial,sans-serif;fill:#94a3b8}
+    .section{font:700 18px Inter,Arial,sans-serif;fill:#f8fafc}.body{font:14px Inter,Arial,sans-serif;fill:#cbd5e1}
+    .small{font:12px Inter,Arial,sans-serif;fill:#94a3b8}.step{font:700 14px Inter,Arial,sans-serif;fill:#fff}
+    .metric{font:800 25px Inter,Arial,sans-serif;fill:#f8fafc}.metric-label{font:600 11px Inter,Arial,sans-serif;fill:#94a3b8}
+    .token{font:600 13px Inter,Arial,sans-serif;fill:#e2e8f0}.mono{font:12px Consolas,monospace;fill:#cbd5e1}
+  </style>
+</defs>
+
+<rect width="1200" height="900" rx="24" fill="url(#bg)"/>
+<rect x="12" y="12" width="1176" height="876" rx="20" fill="none" stroke="#1e3a5f"/>
+
+<!-- Header -->
+<circle cx="65" cy="68" r="27" fill="url(#blue)"/>
+<text x="65" y="77" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="800" fill="#fff">A</text>
+<text x="108" y="63" class="title">Alpie-Core</text>
+<text x="108" y="91" font-family="Inter,Arial,sans-serif" font-size="20" font-weight="700" fill="#93c5fd">Inference &amp; KV-Cache Visualization</text>
+<text x="108" y="119" class="subtitle">A conceptual view of autoregressive transformer inference and KV-cache reuse.</text>
+
+<!-- Model facts: only documented values -->
+<rect x="805" y="35" width="350" height="105" rx="16" fill="#0b1627" stroke="#334155"/>
+<text x="825" y="61" class="section">Model at a glance</text>
+<line x1="917" y1="73" x2="917" y2="123" stroke="#334155"/>
+<line x1="1035" y1="73" x2="1035" y2="123" stroke="#334155"/>
+<text x="842" y="94" class="metric" fill="#60a5fa">32B</text><text x="840" y="113" class="metric-label">PARAMETERS</text>
+<text x="952" y="94" class="metric" fill="#34d399">4-bit</text><text x="952" y="113" class="metric-label">QUANTIZATION</text>
+<text x="1070" y="94" class="metric" fill="#c4b5fd">65K</text><text x="1068" y="113" class="metric-label">CONTEXT</text>
+
+<!-- Pipeline -->
+<rect x="35" y="165" width="210" height="125" rx="15" fill="#0b1728" stroke="#2563eb"/>
+<circle cx="60" cy="191" r="17" fill="url(#blue)"/><text x="60" y="197" text-anchor="middle" class="step">1</text>
+<text x="86" y="197" class="section">User Prompt</text>
+<text x="52" y="226" class="body">Text is provided to the model.</text>
+<rect x="52" y="250" width="175" height="45" rx="8" fill="#111f35" stroke="#334155"/>
+<text x="139" y="278" text-anchor="middle" class="token">“The capital of France is”</text>
+
+<line x1="245" y1="228" x2="265" y2="228" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="270" y="165" width="210" height="125" rx="15" fill="#0b1728" stroke="#22d3ee"/>
+<circle cx="295" cy="191" r="17" fill="#06b6d4"/><text x="295" y="197" text-anchor="middle" class="step">2</text>
+<text x="321" y="197" class="section">Tokenization</text>
+<text x="287" y="226" class="body">Text becomes a sequence</text><text x="287" y="245" class="body">of model tokens.</text>
+<rect x="287" y="258" width="46" height="24" rx="6" fill="#172554"/><rect x="339" y="258" width="58" height="24" rx="6" fill="#172554"/><rect x="403" y="258" width="42" height="24" rx="6" fill="#172554"/><rect x="451" y="258" width="20" height="24" rx="6" fill="#172554"/>
+<text x="310" y="275" text-anchor="middle" class="small">The</text><text x="368" y="275" text-anchor="middle" class="small">capital</text><text x="424" y="275" text-anchor="middle" class="small">of</text><text x="461" y="275" text-anchor="middle" class="small">…</text>
+
+<line x1="480" y1="228" x2="500" y2="228" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="505" y="165" width="210" height="125" rx="15" fill="#0b1728" stroke="#8b5cf6"/>
+<circle cx="530" cy="191" r="17" fill="url(#purple)"/><text x="530" y="197" text-anchor="middle" class="step">3</text>
+<text x="556" y="197" class="section">Embeddings</text>
+<text x="522" y="226" class="body">Tokens are mapped into</text><text x="522" y="245" class="body">numerical representations.</text>
+<g transform="translate(523,258)"><rect width="24" height="24" rx="4" fill="#164e63"/><rect x="28" width="24" height="24" rx="4" fill="#1e3a8a"/><rect x="56" width="24" height="24" rx="4" fill="#4c1d95"/><rect x="84" width="24" height="24" rx="4" fill="#581c87"/><rect x="112" width="24" height="24" rx="4" fill="#312e81"/><rect x="140" width="24" height="24" rx="4" fill="#164e63"/></g>
+
+<line x1="715" y1="228" x2="735" y2="228" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="740" y="165" width="425" height="125" rx="15" fill="#0b1728" stroke="#f59e0b"/>
+<circle cx="765" cy="191" r="17" fill="url(#orange)"/><text x="765" y="197" text-anchor="middle" class="step">4</text>
+<text x="791" y="197" class="section">Transformer Layers</text>
+<text x="757" y="225" class="body">The representations pass through repeated</text><text x="757" y="244" class="body">transformer computation, including attention.</text>
+<rect x="757" y="253" width="110" height="27" rx="7" fill="#312e81"/><text x="812" y="271" text-anchor="middle" class="small">Attention</text>
+<rect x="880" y="253" width="110" height="27" rx="7" fill="#164e63"/><text x="935" y="271" text-anchor="middle" class="small">Feed Forward</text>
+<rect x="1003" y="253" width="135" height="27" rx="7" fill="#064e3b"/><text x="1070" y="271" text-anchor="middle" class="small">KV cache*</text>
+<text x="1070" y="286" text-anchor="middle" class="small">*conceptual</text>
+
+<!-- Attention / KV cache -->
+<rect x="35" y="315" width="730" height="305" rx="18" fill="#091523" stroke="#475569"/>
+<text x="60" y="348" class="section">Attention with KV Cache — Conceptual View</text>
+<text x="60" y="370" class="small">During autoregressive decoding, cached Key/Value states can be reused for prior tokens.</text>
+
+<text x="67" y="412" class="body">Current token</text><text x="67" y="431" class="small">Query (Q)</text>
+<rect x="145" y="395" width="62" height="48" rx="8" fill="#172554" stroke="#60a5fa"/>
+<text x="176" y="425" text-anchor="middle" font-size="18" font-weight="700" fill="#93c5fd">Q</text>
+
+<rect x="70" y="482" width="170" height="105" rx="12" fill="#101c2d" stroke="#a78bfa"/>
+<text x="155" y="507" text-anchor="middle" class="section" fill="#c4b5fd">KV CACHE</text>
+<text x="87" y="530" class="small">Prior token states</text>
+<rect x="88" y="543" width="60" height="25" rx="5" fill="#064e3b"/><rect x="154" y="543" width="60" height="25" rx="5" fill="#064e3b"/>
+<text x="118" y="560" text-anchor="middle" class="small">K</text><text x="184" y="560" text-anchor="middle" class="small">V</text>
+<text x="87" y="580" class="small">Reused on later decoding steps</text>
+
+<rect x="290" y="395" width="62" height="48" rx="8" fill="#052e2b" stroke="#34d399"/><text x="321" y="425" text-anchor="middle" font-size="18" font-weight="700" fill="#6ee7b7">K</text>
+<rect x="290" y="455" width="62" height="48" rx="8" fill="#3f2b05" stroke="#fbbf24"/><text x="321" y="485" text-anchor="middle" font-size="18" font-weight="700" fill="#fcd34d">V</text>
+<line x1="240" y1="530" x2="290" y2="430" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5 5"/>
+<line x1="240" y1="550" x2="290" y2="480" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+<rect x="390" y="410" width="130" height="75" rx="12" fill="#312e81" stroke="#8b5cf6"/>
+<text x="455" y="440" text-anchor="middle" class="section">Attention</text><text x="455" y="463" text-anchor="middle" class="small">Q × Kᵀ → weights</text>
+<line x1="207" y1="419" x2="390" y2="430" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="352" y1="419" x2="390" y2="430" stroke="#34d399" stroke-width="2" marker-end="url(#arrow)"/>
+<line x1="352" y1="479" x2="390" y2="465" stroke="#fbbf24" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="550" y="410" width="80" height="75" rx="10" fill="#0f2740" stroke="#60a5fa"/>
+<text x="590" y="438" text-anchor="middle" class="small">Weights</text>
+<rect x="566" y="456" width="12" height="12" fill="#2563eb"/><rect x="581" y="456" width="12" height="12" fill="#1d4ed8"/><rect x="596" y="456" width="12" height="12" fill="#60a5fa"/><rect x="611" y="456" width="12" height="12" fill="#93c5fd"/>
+<line x1="520" y1="447" x2="550" y2="447" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="660" y="410" width="80" height="75" rx="10" fill="#172554" stroke="#a78bfa"/>
+<text x="700" y="438" text-anchor="middle" class="small">Context</text><text x="700" y="456" text-anchor="middle" class="small">vector</text>
+<line x1="630" y1="447" x2="660" y2="447" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+
+<rect x="285" y="525" width="455" height="70" rx="12" fill="#111827" stroke="#7c3aed" stroke-dasharray="6 4"/>
+<text x="305" y="550" class="body">KV cache stores previously computed Key (K) and Value (V)</text>
+<text x="305" y="570" class="body">states so they can be reused instead of recomputed.</text>
+
+<!-- Next-token prediction -->
+<rect x="790" y="315" width="375" height="305" rx="18" fill="#091523" stroke="#10b981"/>
+<circle cx="820" cy="347" r="17" fill="url(#green)"/><text x="820" y="353" text-anchor="middle" class="step">5</text>
+<text x="848" y="353" class="section">Next-Token Prediction</text>
+<text x="815" y="382" class="body">The model produces logits for possible</text><text x="815" y="401" class="body">next tokens, then a decoding method selects one.</text>
+
+<!-- No fake probabilities: conceptual decoding -->
+<rect x="815" y="430" width="320" height="42" rx="9" fill="#111f35" stroke="#334155"/>
+<text x="975" y="456" text-anchor="middle" class="token">Logits → decoding / sampling → token</text>
+<rect x="815" y="490" width="320" height="70" rx="10" fill="#052e2b" stroke="#10b981"/>
+<text x="975" y="518" text-anchor="middle" class="small">Illustrative example</text>
+<text x="975" y="542" text-anchor="middle" font-size="17" font-weight="700" fill="#6ee7b7">next token: “Paris”</text>
+<text x="815" y="586" class="small">“Paris” is an example output, not a measured model probability.</text>
+
+<!-- Bottom -->
+<rect x="35" y="650" width="1130" height="205" rx="18" fill="#081421" stroke="#334155"/>
+<text x="60" y="682" class="section">6–7. Update the KV Cache → Repeat</text>
+
+<rect x="60" y="705" width="475" height="120" rx="13" fill="#0b1b2a" stroke="#10b981"/>
+<text x="82" y="732" class="section" fill="#6ee7b7">6. Update KV Cache</text>
+<text x="82" y="756" class="body">The generated token becomes part of the sequence.</text>
+<text x="82" y="777" class="body">Its Key/Value states can be added to the cache.</text>
+<rect x="82" y="792" width="56" height="24" rx="5" fill="#172554"/><rect x="143" y="792" width="65" height="24" rx="5" fill="#172554"/><rect x="213" y="792" width="45" height="24" rx="5" fill="#172554"/><rect x="263" y="792" width="65" height="24" rx="5" fill="#172554"/><rect x="333" y="792" width="30" height="24" rx="5" fill="#172554"/><rect x="368" y="792" width="70" height="24" rx="5" fill="#064e3b" stroke="#34d399"/>
+<text x="110" y="809" text-anchor="middle" class="small">The</text><text x="175" y="809" text-anchor="middle" class="small">capital</text><text x="235" y="809" text-anchor="middle" class="small">of</text><text x="295" y="809" text-anchor="middle" class="small">France</text><text x="348" y="809" text-anchor="middle" class="small">is</text><text x="403" y="809" text-anchor="middle" font-size="12" font-weight="700" fill="#6ee7b7">Paris</text>
+
+<rect x="560" y="705" width="350" height="120" rx="13" fill="#0b1b2a" stroke="#8b5cf6"/>
+<text x="582" y="732" class="section" fill="#c4b5fd">7. Repeat</text>
+<text x="582" y="757" class="body">The updated sequence is decoded again</text><text x="582" y="777" class="body">to generate the next token.</text>
+<path d="M640 800 C610 820 610 830 660 830 C710 830 720 800 690 790" fill="none" stroke="#a78bfa" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="750" y="810" class="small">generate → cache → repeat</text>
+
+<rect x="935" y="705" width="205" height="120" rx="13" fill="#0b1b2a" stroke="#38bdf8"/>
+<text x="957" y="732" class="section">Explore Alpie-Core</text>
+<text x="957" y="757" class="small">Project access points:</text>
+<text x="957" y="780" font-size="13" font-weight="700" fill="#f8fafc">Hugging Face · Ollama · Kaggle</text>
+<text x="957" y="802" class="small">Use the official project links.</text>
+
+<text x="600" y="875" text-anchor="middle" font-size="12" font-family="Inter,Arial,sans-serif" fill="#64748b">
+Conceptual transformer inference visualization • KV-cache reuse reduces redundant computation during autoregressive generation
+</text>
+</svg>

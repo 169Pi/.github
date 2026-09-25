@@ -31,6 +31,13 @@ Pick anything we've built at 169pi — a model, a capability, a benchmark — an
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
+
+### @deepanshu12tt — Alpie-Core Inference & KV-Cache
+
+![Alpie-Core Inference & KV-Cache](./assets/alpie-inference-kv-cache.svg)
+
+*What it represents:* how a transformer processes tokens autoregressively and reuses cached Key/Value states during generation.
+
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 

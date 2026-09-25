@@ -24,15 +24,28 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
 ---
+## Vision of Alpie-Core
 
-## 🎨 Make this README yours
+![Alpie-Core Concept](../assets/hero.png)
 
-Pick anything we've built at 169pi — a model, a capability, a benchmark — and
-turn it into something that belongs on our front door: art, a diagram, a demo,
-a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+# Vision of 169Pi — Open Reasoning AI
 
-> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+A visual story of **169Pi's open reasoning ecosystem**  with reasoning at the core and tools, products, and applications growing around it.
+
+### What it represents
+
+- **Alpie-Core** : Reasoning, coding, math, and research.
+- **Alpie** : Chat, research, tools, files, and web.
+- **Pi169-SDK** : APIs, SDKs, and integrations.
+- **AlpieCode** : Reasoning for software development.
+- **alpie-rag** : Grounded knowledge from data and documents.
+- **Deploy Anywhere** : Bringing AI into real applications.
+
+The connected paths show these capabilities working together.
+
+**Ideas → Reasoning → Applications → Impact**
+
+**Open Today → A More Open Tomorrow**
 
 <!-- ────────────────────────────────────────────────────────────────── -->
 <!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->

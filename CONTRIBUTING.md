@@ -135,7 +135,7 @@ Get your PR in before then to be on the next drop.
 
 Stuck on your entry, the setup, or just what to build?
 
-- 🧭 **Docs & guides:** [169pi-kappa.vercel.app](https://169pi-kappa.vercel.app)
+- 🧭 **Docs & guides:** [goodfirst.alpie.ai](https://goodfirst.alpie.ai)
 - 🤖 **Ask Alpie:** [Alpie.ai](https://alpie.ai) — our own model can walk you through it
 - 💬 **Talk to a human:** [Discord](https://discord.gg/GwJP7MsZp7)
 - 🐛 **Bug or repo issue:** open an [issue](../../issues)

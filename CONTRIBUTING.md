@@ -89,11 +89,18 @@ Add your entry as its own block **between the `<!-- ENTRIES:START -->` and
 
 *What it represents:* one line on the 169pi model, capability, or feature this reflects.
 **Contributed by [@your-github-handle](https://github.com/your-github-handle)**
+**Club:** Your Club Name  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
 *Find me:* optional — site, socials, or however you want to be reachable.
 ```
 
 The **Contributed by** line is required — it's how you get publicly credited on
 the wall. Link it to your GitHub profile (or another profile that's clearly you).
+
+The **Club** line is optional — include it only if you're contributing as part of a
+club, campus group, or meetup. When you do, every member's PR counts toward your club
+on the live **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the
+top club wins prizes. Contributing on your own? Leave it out — nothing about the wall
+requires a club.
 
 Keep entries self-contained — no external images that could break, no scripts,
 no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.

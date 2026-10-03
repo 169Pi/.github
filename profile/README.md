@@ -53,9 +53,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 
 ### @thunder-thigh — life in the smallest package
-
-<img width="459" height="414" alt="chipkali" src="https://github.com/user-attachments/assets/a9ff3719-0436-4b1a-94fe-1f78528ceb9f" />
-
+![life in small packages](https://files.catbox.moe/gpqyec.png)
 *What it represents:* How the smallest things can carry the largest lives.
 **Contributed by [@thunder-thigh](https://github.com/thunder-thigh)**
 **Club:** CodingClubSATI  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->

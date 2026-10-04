@@ -51,6 +51,20 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @shreyamahajan39690-hue — < Live in peace>
+                                
+                                
+                            
+
+<!-- Your reprez       A_A_R_D_V_A_R_K_O          //////////////_   w.kang
+   Z                   __\\\\@   //^^        _-    \///////
+Z    z   o       _____((_     \-/ ____/ /   {   { \\       }
+           o    0__________\\\---//____/----//__|-^\\\\\\\\sentation goes here: SVG, code, ASCII, diagram, whatever. -->
+
+*What it represents:* one line on the 169pi model, capability, or feature this reflects.
+**Contributed by [@your-github-handle](https://github.com/your-github-handle)**
+**Club:** Your Club Name  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
+*Find me:* optional — site, socials, or however you want to be reachable.
 
 ### @169pi — the first brick 🧱
 

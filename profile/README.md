@@ -51,6 +51,20 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+ ████ █   █  ███  █     █        █████ █   █ ███ █   █  ███   ████ 
+█     ██ ██ █   █ █     █          █   █   █  █  ██  █ █     █     
+ ███  █ █ █ █████ █     █          █   █████  █  █ █ █ █  ██  ███  
+    █ █   █ █   █ █     █          █   █   █  █  █  ██ █   █     █ 
+████  █   █ █   █ █████ █████      █   █   █ ███ █   █  ███  ████  
+
+### @ravikewat397 — <samll things >
+
+<!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
+
+*What it represents:* one line on the 169pi model, capability, or feature this reflects.
+**Contributed by [@ravikewat397](https://github.com/ravikewat397)**
+**Club:** CodingClubSATI  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
+*Find me:* optional — site, socials, or however you want to be reachable.
 
 ### @169pi — the first brick 🧱
 

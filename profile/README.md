@@ -150,7 +150,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 ++++++++++++======---------:----=*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*======+++=========++++++++++++++
 +++++++++++++====---===----:::::=#@@@@@@@@@@@@@@@#+%@@@@@@@@@@@@@@%*=-------------=======+++++++++++
 
-*What it represents:* A boy of freedom
+*What it represents:* A boy of FREEDOM
 **Contributed by [@adityaraikwar-01]([https://github.com/adityaraikwar-01])**
 **Club:** CodingClub SATI <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
 *Find me:* optional — site, socials, or however you want to be reachable.

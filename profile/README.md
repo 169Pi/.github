@@ -27,6 +27,31 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ## 🎨 Make this README yours
 
+Pick anything we've built at 169pi — a model, a capability, a benchmark — and
+turn it into something that belongs on our front door: art, a diagram, a demo,
+a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+
+> 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
+> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
+> 🏫 **Contributing with a club, campus group or meetup?** Add one line —
+> `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
+> member's PR then counts toward your club on the live
+> **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
+>
+> **Flying solo? Ignore this — just add your entry. No club required.** 🧱
+
+<!-- ────────────────────────────────────────────────────────────────── -->
+<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
+<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
+<!--     Don't edit anything outside the markers. Attribution required:  -->
+<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
+<!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
+<!--     Contributing on your own? Ignore it — no club needed.           -->
+<!-- ────────────────────────────────────────────────────────────────── -->
+
+<!-- ENTRIES:START -->
+
 ### @sayandeep-the-coder — Open Reasoning, Built in India 🇮🇳
 
 <p align="center">
@@ -45,9 +70,6 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 **Contributed by [@sayandeep-the-coder](https://github.com/Sayandeep-the-coder)**  
 **Club:** Developers' Community KGEC
-
-
-<!-- ENTRIES:START -->
 
 ### @169pi — the first brick 🧱
 

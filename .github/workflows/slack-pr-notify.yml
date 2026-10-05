@@ -30,6 +30,8 @@ jobs:
           # Which file's creative we care about (this is the "make it yours" canvas).
           TARGET_FILE: profile/README.md
         with:
+          # Retry transient API errors (5xx, rate limits) instead of failing the run.
+          retries: 3
           script: |
             if (!process.env.SLACK_WEBHOOK_URL) {
               core.setFailed('SLACK_WEBHOOK_URL secret is not set — add it in repo/org secrets.');

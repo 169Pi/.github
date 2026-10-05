@@ -136,7 +136,9 @@ looks at your entry once **every item is green** — until then the PR is labell
 second PR from you is closed automatically). If your PR stays red, the bot
 follows up **3 and 7 days** after your last push; if there's still no new push
 **3 days after the final reminder**, the PR is closed. Every push resets the
-clock, and once it's fixed you can always open a fresh one.
+clock, and once it's fixed you can always open a fresh one. Red PRs are also
+re-checked once a day, so a star added after you opened the PR is picked up
+without a new push.
 
 ---
 

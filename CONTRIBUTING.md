@@ -132,10 +132,11 @@ looks at your entry once **every item is green** — until then the PR is labell
 - It's self-contained — no extra files, external images, or embedded pictures
 - It's your only open PR
 
-**To fix a failing check, push to the same branch** — don't open a new PR. A
-second PR from you is closed automatically, and a PR that stays red for
-**72 hours** after its last push is closed too. Once it's fixed, just open a
-fresh one.
+**To fix a failing check, push to the same branch** — don't open a new PR (a
+second PR from you is closed automatically). If your PR stays red, the bot
+follows up **3 and 7 days** after your last push; if there's still no new push
+**3 days after the final reminder**, the PR is closed. Every push resets the
+clock, and once it's fixed you can always open a fresh one.
 
 ---
 

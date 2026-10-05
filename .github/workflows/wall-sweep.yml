@@ -1,9 +1,10 @@
 # .github/workflows/wall-sweep.yml
 name: Wall Sweep
 
-# Daily: close wall-entry PRs that have sat on `needs-changes` for 72h with no
-# new push. Run it by hand with `recheck` to put the current backlog through
-# the latest checks (it labels + comments, it doesn't fail anything).
+# Daily: nudge wall-entry PRs sitting on `needs-changes` (day 3, day 7 after
+# the last push), and close them if the final nudge goes unanswered (day 10).
+# Run it by hand with `recheck` to put the current backlog through the latest
+# checks (it labels + comments, it doesn't fail anything).
 on:
   schedule:
     - cron: '30 3 * * *'   # 09:00 IST
@@ -14,7 +15,7 @@ on:
         type: boolean
         default: false
       dry_run:
-        description: 'Log which PRs would be closed, without closing them'
+        description: 'Log which PRs would be nudged or closed, without acting'
         type: boolean
         default: true
 

@@ -18,7 +18,12 @@ const LABEL_OK = 'ready-for-review';
 const LABEL_COLORS = { [LABEL_FAIL]: 'D93F0B', [LABEL_OK]: '0E8A16' };
 const MAINTAINERS = ['OWNER', 'MEMBER', 'COLLABORATOR'];
 const RETURNING = ['CONTRIBUTOR', ...MAINTAINERS];
-const STALE_HOURS = 72;
+// Red PRs get follow-ups (days since flagged / last push), then close if the
+// last one goes unanswered — 3 + 7 + 3 = closed on day 10, inside one
+// bi-weekly merge cycle. A push at any point resets the clock.
+const FOLLOWUP_MARKER = '<!-- wall-followup -->';
+const FOLLOWUP_DAYS = [3, 7];
+const CLOSE_DAYS_AFTER_LAST = 3;
 
 const CONTRIB_LINK = '[`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md)';
 const DISCORD_LINK = '[Discord](https://discord.gg/GwJP7MsZp7)';
@@ -400,8 +405,8 @@ async function evaluate({ github, context, core, pr, action, index }) {
     ? `**All ${items.length} checks pass.** ✅ Your entry is queued for human review at the next merge.`
     : `**${failing.length} of ${items.length} checks need fixing** before a maintainer will review this. ` +
       `Push a fix to this branch and I'll re-check automatically.\n\n` +
-      `> ⏳ PRs that stay red for ${STALE_HOURS} hours after their last push are closed automatically. ` +
-      `No hard feelings — open a fresh PR once it's fixed.`;
+      `> ⏳ If this stays red, I'll follow up after ${FOLLOWUP_DAYS.join(' and ')} days. ` +
+      `With no new push after that, the PR is closed — no hard feelings, just open a fresh one once it's fixed.`;
 
   const footer = firstTimer
     ? `New here? The full guide is in ${CONTRIB_LINK}. We review every two weeks — hang out on ${DISCORD_LINK} while you wait. 🧠`
@@ -438,12 +443,14 @@ async function sweep({ github, context, core, recheck, dryRun }) {
   }
 
   const now = Date.now();
-  let closed = 0;
+  const DAY = 864e5;
+  let nudged = 0, closed = 0;
   for (const p of candidates) {
     const { data: fresh } = await github.rest.pulls.get({ ...repo, pull_number: p.number });
     if (fresh.state !== 'open' || !fresh.labels.some(l => l.name === LABEL_FAIL)) continue;
 
     // The clock starts at whichever is later: being flagged, or the last push.
+    // Any push resets it, so only follow-ups since then count.
     const events = await github.paginate(github.rest.issues.listEvents, {
       ...repo, issue_number: p.number, per_page: 100,
     });
@@ -456,21 +463,53 @@ async function sweep({ github, context, core, recheck, dryRun }) {
     const lastCommit = commits.length
       ? Date.parse(commits[commits.length - 1].commit.committer.date) : 0;
     const since = Math.max(lastCommit, ...flagged, 0);
-    const hours = (now - since) / 36e5;
-    if (hours < STALE_HOURS) continue;
 
-    console.log(`${dryRun ? '[dry run] would close' : 'Closing'} #${p.number} — red for ${Math.floor(hours)}h.`);
+    const comments = await github.paginate(github.rest.issues.listComments, {
+      ...repo, issue_number: p.number, per_page: 100,
+    });
+    const followups = comments
+      .filter(c => c.body && c.body.includes(FOLLOWUP_MARKER) && Date.parse(c.created_at) > since)
+      .map(c => Date.parse(c.created_at));
+    const sent = followups.length;
+    const redDays = (now - since) / DAY;
+
+    // Still owed a follow-up: nudge once it's due.
+    if (sent < FOLLOWUP_DAYS.length) {
+      if (redDays < FOLLOWUP_DAYS[sent]) continue;
+      const last = sent === FOLLOWUP_DAYS.length - 1;
+      console.log(`${dryRun ? '[dry run] would nudge' : 'Nudging'} #${p.number} (${sent + 1}/${FOLLOWUP_DAYS.length}) — red for ${Math.floor(redDays)}d.`);
+      if (dryRun) continue;
+      await github.rest.issues.createComment({
+        ...repo, issue_number: p.number,
+        body: `${FOLLOWUP_MARKER}\n👋 @${p.author}, friendly nudge — your entry still has failing checks ` +
+          `(see the checklist above), and we only review green PRs at the bi-weekly merge. ` +
+          `Push a fix to this branch and it re-checks automatically.` +
+          (last
+            ? `\n\n> ⏳ **Last reminder:** if there's no new push in the next ${CLOSE_DAYS_AFTER_LAST} days, ` +
+              `this PR will be closed. You can always open a fresh one once it's fixed.`
+            : '') +
+          `\n\nStuck? Ask on ${DISCORD_LINK} — someone will help.`,
+      });
+      nudged++;
+      continue;
+    }
+
+    // Every follow-up went unanswered: close once the final grace period is up.
+    const sinceLast = (now - Math.max(...followups)) / DAY;
+    if (sinceLast < CLOSE_DAYS_AFTER_LAST) continue;
+
+    console.log(`${dryRun ? '[dry run] would close' : 'Closing'} #${p.number} — no push after ${sent} follow-ups.`);
     if (dryRun) continue;
     await github.rest.issues.createComment({
       ...repo, issue_number: p.number,
-      body: `Closing this for now, @${p.author} — the checks above have been failing for over ` +
-        `${STALE_HOURS} hours with no new push. Nothing personal! When your entry passes the checklist, ` +
+      body: `Closing this for now, @${p.author} — the checks are still failing and there's been no new ` +
+        `push since our ${sent} reminders. Nothing personal! When your entry passes the checklist, ` +
         `open a fresh PR and the bot will pick it up. Guide: ${CONTRIB_LINK} · Help: ${DISCORD_LINK}`,
     });
     await github.rest.pulls.update({ ...repo, pull_number: p.number, state: 'closed' });
     closed++;
   }
-  console.log(`Sweep done: ${candidates.length} open entry PR(s), ${closed} closed.`);
+  console.log(`Sweep done: ${candidates.length} open entry PR(s), ${nudged} nudged, ${closed} closed.`);
 }
 
 module.exports = { evaluate, sweep, analyzePatch, titleCheck, parsePatch };

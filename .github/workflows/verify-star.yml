@@ -31,6 +31,8 @@ jobs:
       - name: Check the entry and update the checklist
         uses: actions/github-script@v7
         with:
+          # Retry transient API errors (5xx, rate limits) instead of failing the run.
+          retries: 3
           # Classic PAT with `public_repo` scope — the built-in GITHUB_TOKEN
           # is scoped to this repo and cannot read stargazers on Alpie-Core.
           # Labels it adds also trigger slack-pr-notify (GITHUB_TOKEN's wouldn't).

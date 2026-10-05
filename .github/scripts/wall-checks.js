@@ -15,9 +15,13 @@ const MARKER = '<!-- verify-star-bot -->';
 const LABEL_ENTRY = 'good first alpie';
 const LABEL_FAIL = 'needs-changes';
 const LABEL_OK = 'ready-for-review';
-const LABEL_COLORS = { [LABEL_FAIL]: 'D93F0B', [LABEL_OK]: '0E8A16' };
-const MAINTAINERS = ['OWNER', 'MEMBER', 'COLLABORATOR'];
-const RETURNING = ['CONTRIBUTOR', ...MAINTAINERS];
+// Maintainer-only escape hatch (only triage+ can label): skips the gate and the sweep.
+const LABEL_EXEMPT = 'wall-exempt';
+const LABEL_COLORS = { [LABEL_FAIL]: 'D93F0B', [LABEL_OK]: '0E8A16', [LABEL_EXEMPT]: 'BFD4F2' };
+// Repo permission, not author_association: 169Pi org memberships are private,
+// so teammates show up as NONE/CONTRIBUTOR in webhook payloads.
+const WRITERS = ['admin', 'maintain', 'write'];
+const RETURNING = ['CONTRIBUTOR', 'OWNER', 'MEMBER', 'COLLABORATOR'];
 // Red PRs get follow-ups (days since flagged / last push), then close if the
 // last one goes unanswered — 3 + 7 + 3 = closed on day 10, inside one
 // bi-weekly merge cycle. A push at any point resets the clock.
@@ -182,6 +186,42 @@ async function entryPatch(github, repo, number) {
   return { files, entry, patch: (entry && entry.patch) || '' };
 }
 
+const permissionCache = new Map();
+async function canWrite(github, repo, username) {
+  if (!permissionCache.has(username)) {
+    let permission = 'none';
+    try {
+      ({ data: { permission } } = await github.rest.repos.getCollaboratorPermissionLevel({ ...repo, username }));
+    } catch (e) { /* not a collaborator */ }
+    permissionCache.set(username, WRITERS.includes(permission));
+  }
+  return permissionCache.get(username);
+}
+
+// Infra PRs from people with write access skip the gate. Anything that touches
+// the wall is checked for everyone, teammates included, unless a maintainer
+// opts it out with the exempt label.
+async function exemptReason(github, repo, pr, touchesEntry) {
+  if ((pr.labels || []).some(l => l.name === LABEL_EXEMPT)) return `labelled \`${LABEL_EXEMPT}\``;
+  if (!touchesEntry && await canWrite(github, repo, pr.user.login)) return `infra PR by a writer`;
+  return null;
+}
+
+// The account the workflow token acts as, so we only ever edit or count our
+// own comments — a contributor pasting our marker can't hijack them.
+let botLogin;
+async function getBotLogin(github) {
+  if (botLogin === undefined) {
+    try { botLogin = (await github.rest.users.getAuthenticated()).data.login; }
+    catch (e) { botLogin = null; } // GitHub App installation tokens can't call /user
+  }
+  return botLogin;
+}
+function isOurs(comment, login) {
+  if (!comment.user) return false;
+  return login ? comment.user.login === login : comment.user.type === 'Bot';
+}
+
 // Everything a run needs about *other* PRs, fetched once. The sweep reuses
 // one index across the whole backlog so we don't refetch per PR.
 async function buildIndex(github, repo) {
@@ -190,12 +230,12 @@ async function buildIndex(github, repo) {
   });
   const prs = [];
   for (const p of open) {
-    const { patch } = await entryPatch(github, repo, p.number);
+    const { entry, patch } = await entryPatch(github, repo, p.number);
     const { added } = parsePatch(patch);
     prs.push({
       number: p.number,
       author: p.user.login,
-      association: p.author_association,
+      exempt: await exemptReason(github, repo, p, !!entry),
       fingerprint: analyzeAdditions(added.map(a => a.text)).fingerprint,
       pr: p,
     });
@@ -234,7 +274,8 @@ async function upsertComment(github, repo, number, body) {
   const comments = await github.paginate(github.rest.issues.listComments, {
     ...repo, issue_number: number, per_page: 100,
   });
-  const existing = comments.find(c => c.body && c.body.includes(MARKER));
+  const login = await getBotLogin(github);
+  const existing = comments.find(c => isOurs(c, login) && c.body && c.body.includes(MARKER));
   if (existing) {
     await github.rest.issues.updateComment({ ...repo, comment_id: existing.id, body });
   } else {
@@ -251,13 +292,14 @@ async function evaluate({ github, context, core, pr, action, index }) {
   const author = pr.user.login;
   const number = pr.number;
 
-  // Maintainers do infra work here; everyone else is here for the wall, so
-  // their PRs are gated even when the entry landed in the wrong file.
-  if (MAINTAINERS.includes(pr.author_association)) {
-    console.log(`#${number} is by a maintainer (${pr.author_association}) — skipping the gate.`);
+  // Non-writers are only here for the wall, so their PRs are gated even when
+  // the entry landed in the wrong file.
+  const { files, entry, patch } = await entryPatch(github, repo, number);
+  const exempt = await exemptReason(github, repo, pr, !!entry);
+  if (exempt) {
+    console.log(`#${number}: ${exempt} — skipping the gate.`);
     return null;
   }
-  const { files, patch } = await entryPatch(github, repo, number);
 
   index = index || await buildIndex(github, repo);
   const others = index.prs.filter(p => p.number !== number);
@@ -317,7 +359,8 @@ async function evaluate({ github, context, core, pr, action, index }) {
   // Duplicate art: same art block as another open PR, or already on the wall.
   let dupOf = null;
   if (a.fingerprint) {
-    const twin = others.find(p => p.fingerprint === a.fingerprint);
+    // Only the later PR is the copy — the original keeps passing.
+    const twin = others.find(p => p.fingerprint === a.fingerprint && p.number < number);
     if (twin) dupOf = `#${twin.number}`;
     else if (a.artLines.every(l => index.baseLines.has(l))) dupOf = 'an entry already on the wall';
   }
@@ -430,10 +473,17 @@ async function evaluate({ github, context, core, pr, action, index }) {
 async function sweep({ github, context, core, recheck, dryRun }) {
   const repo = context.repo;
   const index = await buildIndex(github, repo);
-  const candidates = index.prs.filter(p => !MAINTAINERS.includes(p.association));
+  const candidates = index.prs.filter(p => !p.exempt);
 
-  if (recheck) {
-    for (const p of candidates) {
+  // Daily, re-check every red PR (someone may have starred since, or the rules
+  // changed); `recheck` widens that to every open PR. Comment edits don't
+  // notify, and labels only change on a real flip. A dry run only re-checks
+  // when asked to.
+  if (recheck || !dryRun) {
+    const toCheck = recheck
+      ? candidates
+      : candidates.filter(p => p.pr.labels.some(l => l.name === LABEL_FAIL));
+    for (const p of toCheck) {
       try {
         await evaluate({ github, context, core, pr: p.pr, action: 'sweep', index });
       } catch (e) {
@@ -445,9 +495,10 @@ async function sweep({ github, context, core, recheck, dryRun }) {
   const now = Date.now();
   const DAY = 864e5;
   let nudged = 0, closed = 0;
-  for (const p of candidates) {
+  // One flaky API call shouldn't stop the rest of the backlog being handled.
+  const followUp = async p => {
     const { data: fresh } = await github.rest.pulls.get({ ...repo, pull_number: p.number });
-    if (fresh.state !== 'open' || !fresh.labels.some(l => l.name === LABEL_FAIL)) continue;
+    if (fresh.state !== 'open' || !fresh.labels.some(l => l.name === LABEL_FAIL)) return;
 
     // The clock starts at whichever is later: being flagged, or the last push.
     // Any push resets it, so only follow-ups since then count.
@@ -467,18 +518,20 @@ async function sweep({ github, context, core, recheck, dryRun }) {
     const comments = await github.paginate(github.rest.issues.listComments, {
       ...repo, issue_number: p.number, per_page: 100,
     });
+    const login = await getBotLogin(github);
     const followups = comments
-      .filter(c => c.body && c.body.includes(FOLLOWUP_MARKER) && Date.parse(c.created_at) > since)
+      .filter(c => isOurs(c, login) && c.body && c.body.includes(FOLLOWUP_MARKER) &&
+        Date.parse(c.created_at) > since)
       .map(c => Date.parse(c.created_at));
     const sent = followups.length;
     const redDays = (now - since) / DAY;
 
     // Still owed a follow-up: nudge once it's due.
     if (sent < FOLLOWUP_DAYS.length) {
-      if (redDays < FOLLOWUP_DAYS[sent]) continue;
+      if (redDays < FOLLOWUP_DAYS[sent]) return;
       const last = sent === FOLLOWUP_DAYS.length - 1;
       console.log(`${dryRun ? '[dry run] would nudge' : 'Nudging'} #${p.number} (${sent + 1}/${FOLLOWUP_DAYS.length}) — red for ${Math.floor(redDays)}d.`);
-      if (dryRun) continue;
+      if (dryRun) return;
       await github.rest.issues.createComment({
         ...repo, issue_number: p.number,
         body: `${FOLLOWUP_MARKER}\n👋 @${p.author}, friendly nudge — your entry still has failing checks ` +
@@ -491,15 +544,15 @@ async function sweep({ github, context, core, recheck, dryRun }) {
           `\n\nStuck? Ask on ${DISCORD_LINK} — someone will help.`,
       });
       nudged++;
-      continue;
+      return;
     }
 
     // Every follow-up went unanswered: close once the final grace period is up.
     const sinceLast = (now - Math.max(...followups)) / DAY;
-    if (sinceLast < CLOSE_DAYS_AFTER_LAST) continue;
+    if (sinceLast < CLOSE_DAYS_AFTER_LAST) return;
 
     console.log(`${dryRun ? '[dry run] would close' : 'Closing'} #${p.number} — no push after ${sent} follow-ups.`);
-    if (dryRun) continue;
+    if (dryRun) return;
     await github.rest.issues.createComment({
       ...repo, issue_number: p.number,
       body: `Closing this for now, @${p.author} — the checks are still failing and there's been no new ` +
@@ -508,6 +561,10 @@ async function sweep({ github, context, core, recheck, dryRun }) {
     });
     await github.rest.pulls.update({ ...repo, pull_number: p.number, state: 'closed' });
     closed++;
+  };
+  for (const p of candidates) {
+    try { await followUp(p); }
+    catch (e) { core.warning(`Follow-up for #${p.number} failed: ${e.message}`); }
   }
   console.log(`Sweep done: ${candidates.length} open entry PR(s), ${nudged} nudged, ${closed} closed.`);
 }

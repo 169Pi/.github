@@ -1,28 +1,39 @@
-# .github/workflows/verify-star.yml
-name: Verify Star
+# .github/workflows/wall-sweep.yml
+name: Wall Sweep
 
+# Daily: re-check every PR sitting on `needs-changes` (picks up late stars and
+# rule changes), nudge the ones still red (day 3, day 7 after the last push),
+# and close them if the final nudge goes unanswered (day 10). Run it by hand
+# with `recheck` to put every open PR through the checks, not just red ones
+# (it labels + comments, it doesn't fail anything). PRs labelled `wall-exempt`
+# are left alone.
 on:
-  pull_request_target:
-    # `edited` so a title fix re-runs the title check.
-    types: [opened, synchronize, reopened, edited]
+  schedule:
+    - cron: '30 3 * * *'   # 09:00 IST
+  workflow_dispatch:
+    inputs:
+      recheck:
+        description: 'Re-check every open PR first (otherwise only red ones, and not on a dry run)'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Log which PRs would be nudged or closed, without acting'
+        type: boolean
+        default: true
 
-# Explicitly declare token permissions (principle of least privilege)
 permissions:
-  pull-requests: write   # Comment, label, and close duplicate PRs
-  issues: write          # Create the needs-changes / ready-for-review labels
-  contents: read         # Read the base branch's check script
+  pull-requests: write
+  issues: write
+  contents: read
 
-# One run per PR at a time, so a fast push doesn't race the previous comment.
 concurrency:
-  group: verify-star-${{ github.event.pull_request.number }}
-  cancel-in-progress: true
+  group: wall-sweep
+  cancel-in-progress: false
 
 jobs:
-  check-star:
+  sweep:
     runs-on: ubuntu-latest
     steps:
-      # pull_request_target checks out the BASE branch, never the fork — the
-      # PR's content is only ever read through the API inside the script.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           sparse-checkout: .github/scripts
@@ -45,7 +56,7 @@ jobs:
           permission-issues: write
           permission-pull-requests: write
 
-      - name: Check the entry and update the checklist
+      - name: Re-check and close stale PRs
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           # Whose comments count as the bot's: the App's account, plus the
@@ -59,9 +70,10 @@ jobs:
           # labels wouldn't trigger slack-pr-notify — so App token, else the PAT.
           github-token: ${{ steps.app-token.outputs.token || secrets.STAR_CHECK_TOKEN }}
           script: |
-            const { evaluate } = require('./.github/scripts/wall-checks.js');
-            await evaluate({
+            const { sweep } = require('./.github/scripts/wall-checks.js');
+            // Scheduled runs have no inputs: re-check red PRs, then nudge/close for real.
+            await sweep({
               github, context, core,
-              pr: context.payload.pull_request,
-              action: context.payload.action,
+              recheck: ${{ inputs.recheck == true }},
+              dryRun: ${{ inputs.dry_run == true }},
             });

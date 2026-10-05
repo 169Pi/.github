@@ -22,7 +22,7 @@ jobs:
     if: github.event.label.name == 'ready-for-review' && github.event.pull_request.draft == false
     steps:
       - name: Post PR creative to Slack
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
         env:
           # Add this repo/org secret: an Incoming Webhook URL from your Slack app.
           # https://api.slack.com/messaging/webhooks

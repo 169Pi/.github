@@ -1,0 +1,50 @@
+# .github/workflows/wall-sweep.yml
+name: Wall Sweep
+
+# Daily: close wall-entry PRs that have sat on `needs-changes` for 72h with no
+# new push. Run it by hand with `recheck` to put the current backlog through
+# the latest checks (it labels + comments, it doesn't fail anything).
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 09:00 IST
+  workflow_dispatch:
+    inputs:
+      recheck:
+        description: 'Re-run the checks on every open entry PR first'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Log which PRs would be closed, without closing them'
+        type: boolean
+        default: true
+
+permissions:
+  pull-requests: write
+  issues: write
+  contents: read
+
+concurrency:
+  group: wall-sweep
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+          persist-credentials: false
+
+      - name: Re-check and close stale PRs
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.STAR_CHECK_TOKEN }}
+          script: |
+            const { sweep } = require('./.github/scripts/wall-checks.js');
+            // Scheduled runs have no inputs: no recheck, and closes for real.
+            await sweep({
+              github, context, core,
+              recheck: ${{ inputs.recheck == true }},
+              dryRun: ${{ inputs.dry_run == true }},
+            });

@@ -142,7 +142,7 @@ gap between you and your creative essence. It is where your creative essence bre
 
 ---
 
-*What it represents:* Alpie-Core's open reasoning applied to creative synthesis — four inputs, one reflective portrait, hosted as a live experience. A small model doing something genuinely considered with what you give it. Built in India. Reasoning openly.
+What it represents: Alpie-Core's open reasoning applied to creative synthesis — four inputs, one reflective portrait, hosted as a live experience. A small model doing something genuinely considered with what you give it. Built in India. Reasoning openly.
 
 Contributed by [@growcr8](https://github.com/growcr8)
 Find me: growcreateproductions.com | growcr8direction.netlify.app/

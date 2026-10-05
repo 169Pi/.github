@@ -34,17 +34,41 @@ jobs:
   sweep:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           sparse-checkout: .github/scripts
           persist-credentials: false
 
+      # Act as the 169pi wall bot (a GitHub App) instead of a personal account.
+      # Skipped until the App is set up, in which case we fall back to the PAT.
+      # App tokens also trigger downstream workflows (slack-pr-notify on labels).
+      - name: Mint the wall bot token
+        id: app-token
+        if: vars.WALL_BOT_CLIENT_ID != ''
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.WALL_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.WALL_BOT_PRIVATE_KEY }}
+          owner: 169Pi
+          # Alpie-Core for the stargazer check, .github for everything else.
+          repositories: .github,Alpie-Core
+          permission-contents: read
+          permission-issues: write
+          permission-pull-requests: write
+
       - name: Re-check and close stale PRs
-        uses: actions/github-script@v7
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
+        env:
+          # Whose comments count as the bot's: the App's account, plus the
+          # account that posted them before the App existed.
+          BOT_LOGIN: ${{ steps.app-token.outputs.app-slug && format('{0}[bot]', steps.app-token.outputs.app-slug) || '' }}
+          LEGACY_BOT_LOGINS: kindavishal
         with:
           # Retry transient API errors (5xx, rate limits) instead of failing the run.
           retries: 3
-          github-token: ${{ secrets.STAR_CHECK_TOKEN }}
+          # The built-in GITHUB_TOKEN can't read Alpie-Core's stargazers, and its
+          # labels wouldn't trigger slack-pr-notify — so App token, else the PAT.
+          github-token: ${{ steps.app-token.outputs.token || secrets.STAR_CHECK_TOKEN }}
           script: |
             const { sweep } = require('./.github/scripts/wall-checks.js');
             // Scheduled runs have no inputs: re-check red PRs, then nudge/close for real.

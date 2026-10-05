@@ -203,22 +203,36 @@ async function canWrite(github, repo, username) {
 // opts it out with the exempt label.
 async function exemptReason(github, repo, pr, touchesEntry) {
   if ((pr.labels || []).some(l => l.name === LABEL_EXEMPT)) return `labelled \`${LABEL_EXEMPT}\``;
+  if (!touchesEntry && pr.user.type === 'Bot') return `infra PR by a bot (e.g. Dependabot)`;
   if (!touchesEntry && await canWrite(github, repo, pr.user.login)) return `infra PR by a writer`;
   return null;
 }
 
 // The account the workflow token acts as, so we only ever edit or count our
-// own comments — a contributor pasting our marker can't hijack them.
+// own comments — a contributor pasting our marker can't hijack them. The
+// workflow passes the App's `<slug>[bot]` login, since App tokens can't call
+// /user; with a personal token we ask GitHub who we are.
 let botLogin;
 async function getBotLogin(github) {
   if (botLogin === undefined) {
-    try { botLogin = (await github.rest.users.getAuthenticated()).data.login; }
-    catch (e) { botLogin = null; } // GitHub App installation tokens can't call /user
+    botLogin = process.env.BOT_LOGIN || null;
+    if (!botLogin) {
+      try { botLogin = (await github.rest.users.getAuthenticated()).data.login; }
+      catch (e) { /* unknown — fall back to any bot account */ }
+    }
   }
   return botLogin;
 }
+
+// Accounts that posted as the bot before it moved to a GitHub App. Their
+// comments still count, so the switch-over doesn't duplicate checklists or
+// reset the follow-up count.
+const LEGACY_BOT_LOGINS = (process.env.LEGACY_BOT_LOGINS || '')
+  .split(',').map(s => s.trim()).filter(Boolean);
+
 function isOurs(comment, login) {
   if (!comment.user) return false;
+  if (LEGACY_BOT_LOGINS.includes(comment.user.login)) return true;
   return login ? comment.user.login === login : comment.user.type === 'Bot';
 }
 
@@ -277,10 +291,16 @@ async function upsertComment(github, repo, number, body) {
   const login = await getBotLogin(github);
   const existing = comments.find(c => isOurs(c, login) && c.body && c.body.includes(MARKER));
   if (existing) {
-    await github.rest.issues.updateComment({ ...repo, comment_id: existing.id, body });
-  } else {
-    await github.rest.issues.createComment({ ...repo, issue_number: number, body });
+    try {
+      await github.rest.issues.updateComment({ ...repo, comment_id: existing.id, body });
+      return;
+    } catch (e) {
+      // A legacy comment we may not be allowed to edit as the App — post fresh.
+      if (existing.user.login === login) throw e;
+      console.log(`Could not edit legacy comment ${existing.id} (${e.status}); posting a new one.`);
+    }
   }
+  await github.rest.issues.createComment({ ...repo, issue_number: number, body });
 }
 
 // ── Evaluate one PR ──────────────────────────────────────────────────────────

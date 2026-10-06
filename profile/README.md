@@ -52,7 +52,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-'''███████╗███████╗██╗     ██╗███╗   ██╗ █████╗ 
+```███████╗███████╗██╗     ██╗███╗   ██╗ █████╗ 
   ██╔════╝██╔════╝██║     ██║████╗  ██║██╔══██╗
   ███████╗█████╗  ██║     ██║██╔██╗ ██║███████║
   ╚════██║██╔══╝  ██║     ██║██║╚██╗██║██╔══██║
@@ -63,7 +63,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
        ██║  ██║██║██║   ██║███████║
        ██║  ██║██║╚██╗ ██╔╝██╔══██║
        ██████╔╝██║ ╚████╔╝ ██║  ██║
-       ╚═════╝ ╚═╝  ╚═══╝  ╚═╝  ╚═╝'''
+       ╚═════╝ ╚═╝  ╚═══╝  ╚═╝  ╚═╝```
 *It shows selinadiva*
 **Contributed by [@selinaholic19-dotcom](https://github.com/selinaholic19-dotcom)**
 **Club:** CodingClubSATI

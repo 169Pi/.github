@@ -66,8 +66,8 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
        ╚═════╝ ╚═╝  ╚═══╝  ╚═╝  ╚═╝
 *It shows selinadiva*
 **Contributed by [@selinaholic19-dotcom](https://github.com/selinaholic19-dotcom)**
-**Club:** CodingClubSATI <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
-*Find me:* optional — site, socials, or however you want to be reachable.
+**Club:** CodingClubSATI
+*Find me:* optional — _selina.core_
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

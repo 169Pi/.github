@@ -472,7 +472,7 @@ async function evaluate({ github, context, core, pr, action, index }) {
       `With no new push after that, the PR is closed — no hard feelings, just open a fresh one once it's fixed.`;
 
   const footer = firstTimer
-    ? `New here? The full guide is in ${CONTRIB_LINK}. We review once a month — hang out on ${DISCORD_LINK} while you wait. 🧠`
+    ? `New here? The full guide is in ${CONTRIB_LINK}. We review at the end of each month — hang out on ${DISCORD_LINK} while you wait. 🧠`
     : `You know the drill — ${CONTRIB_LINK} if you need a refresher, and the crew's on ${DISCORD_LINK}. 🧠`;
 
   const body = [MARKER, greeting, '', statusLine, '', items.map(renderItem).join('\n'), '', footer].join('\n');

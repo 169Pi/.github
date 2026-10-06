@@ -69,7 +69,7 @@ it's not there yet.
 5. 🚀 **Open a PR** titled `@your-github-handle: Your entry's title`
    (e.g. `@ada-lovelace: A tiny quantization diagram`)
 
-We review once a month. When your PR merges, we'll ship you **169pi swag**
+We review at the end of each month. When your PR merges, we'll ship you **169pi swag**
 as a thank-you 🎁 — and shout you out on Discord.
 
 New to our work? Poke around
@@ -162,7 +162,7 @@ without a new push.
 
 ## 🗓️ Review cadence
 
-**Monthly merges.** Next merge: **November 6, 2026**.
+**Monthly merges** on the last day of each month. Next merge: **October 31, 2026**.
 Get your PR in before then to be on the next drop.
 
 ---

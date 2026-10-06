@@ -31,7 +31,7 @@ Pick anything we've built at 169pi — a model, a capability, a benchmark — an
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
-> 🗓️ **Monthly merges.** Next merge: **November 6, 2026**.
+> 🗓️ **Monthly merges** on the last day of each month. Next merge: **October 31, 2026**.
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 > 🏫 **Contributing with a club, campus group or meetup?** Add one line —

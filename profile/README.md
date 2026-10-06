@@ -35,7 +35,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 > 🏫 **Contributing with a club, campus group or meetup?** Add one line — 
-> `**Club:** Your Club Name -
+> `**Club: CodingClubSATI
 > member's PR then counts toward your club on the live
 > **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
 >

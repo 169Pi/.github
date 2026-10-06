@@ -34,8 +34,8 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 > 🗓️ **Bi-weekly merges.** Next merge: **October 6, 2026**.
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
-> 🏫 **Contributing with a club, campus group or meetup?** Add one line — club
-> `**Club:** Your Club Name` — CodingClubSATI
+> 🏫 **Contributing with a club, campus group or meetup?** Add one line — 
+> `**Club:** Your Club Name` —
 > member's PR then counts toward your club on the live
 > **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
 >

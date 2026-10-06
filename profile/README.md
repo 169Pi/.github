@@ -54,8 +54,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 ### @adityaraikwar-01 — Freedom to Think
-
-
                          .-=================-.
                       .-'                     '-.
                     .'       .-----------.       '.

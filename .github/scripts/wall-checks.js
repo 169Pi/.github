@@ -24,7 +24,7 @@ const WRITERS = ['admin', 'maintain', 'write'];
 const RETURNING = ['CONTRIBUTOR', 'OWNER', 'MEMBER', 'COLLABORATOR'];
 // Red PRs get follow-ups (days since flagged / last push), then close if the
 // last one goes unanswered — 3 + 7 + 3 = closed on day 10, inside one
-// bi-weekly merge cycle. A push at any point resets the clock.
+// monthly merge cycle. A push at any point resets the clock.
 const FOLLOWUP_MARKER = '<!-- wall-followup -->';
 const FOLLOWUP_DAYS = [3, 7];
 const CLOSE_DAYS_AFTER_LAST = 3;
@@ -472,7 +472,7 @@ async function evaluate({ github, context, core, pr, action, index }) {
       `With no new push after that, the PR is closed — no hard feelings, just open a fresh one once it's fixed.`;
 
   const footer = firstTimer
-    ? `New here? The full guide is in ${CONTRIB_LINK}. We review every two weeks — hang out on ${DISCORD_LINK} while you wait. 🧠`
+    ? `New here? The full guide is in ${CONTRIB_LINK}. We review once a month — hang out on ${DISCORD_LINK} while you wait. 🧠`
     : `You know the drill — ${CONTRIB_LINK} if you need a refresher, and the crew's on ${DISCORD_LINK}. 🧠`;
 
   const body = [MARKER, greeting, '', statusLine, '', items.map(renderItem).join('\n'), '', footer].join('\n');
@@ -555,7 +555,7 @@ async function sweep({ github, context, core, recheck, dryRun }) {
       await github.rest.issues.createComment({
         ...repo, issue_number: p.number,
         body: `${FOLLOWUP_MARKER}\n👋 @${p.author}, friendly nudge — your entry still has failing checks ` +
-          `(see the checklist above), and we only review green PRs at the bi-weekly merge. ` +
+          `(see the checklist above), and we only review green PRs at the monthly merge. ` +
           `Push a fix to this branch and it re-checks automatically.` +
           (last
             ? `\n\n> ⏳ **Last reminder:** if there's no new push in the next ${CLOSE_DAYS_AFTER_LAST} days, ` +

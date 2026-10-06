@@ -198,11 +198,17 @@ async function canWrite(github, repo, username) {
   return permissionCache.get(username);
 }
 
+// Maintainers whose PRs always skip the gate, wall edits included (cadence
+// banners, template tweaks). Set by the workflows.
+const EXEMPT_AUTHORS = (process.env.EXEMPT_AUTHORS || '')
+  .split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+
 // Infra PRs from people with write access skip the gate. Anything that touches
 // the wall is checked for everyone, teammates included, unless a maintainer
-// opts it out with the exempt label.
+// opts it out with the exempt label or is listed in EXEMPT_AUTHORS.
 async function exemptReason(github, repo, pr, touchesEntry) {
   if ((pr.labels || []).some(l => l.name === LABEL_EXEMPT)) return `labelled \`${LABEL_EXEMPT}\``;
+  if (EXEMPT_AUTHORS.includes(pr.user.login.toLowerCase())) return `by exempt maintainer @${pr.user.login}`;
   if (!touchesEntry && pr.user.type === 'Bot') return `infra PR by a bot (e.g. Dependabot)`;
   if (!touchesEntry && await canWrite(github, repo, pr.user.login)) return `infra PR by a writer`;
   return null;

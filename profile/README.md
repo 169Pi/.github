@@ -70,7 +70,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 *Find me: _selina.core_
 ### @169pi — the first brick 🧱
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
+This wall is yours to build on. Fork the repo,@selinadivaa and
 open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
 
 *What it represents:* the open, collaborative spirit behind everything at 169pi.

@@ -3,8 +3,12 @@
 name: Slack PR Notify
 
 on:
-  pull_request:
-    types: [opened, reopened, ready_for_review]
+  # Only announce entries once verify-star has passed them and applied
+  # `ready-for-review` (a maintainer can also add the label by hand).
+  # pull_request_target so fork PRs get the webhook secret and don't wait on
+  # workflow approval; nothing from the fork is checked out or executed.
+  pull_request_target:
+    types: [labeled]
 
 # Least privilege: we only read PR metadata; the Slack post goes out over a webhook.
 permissions:
@@ -15,10 +19,10 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     # Skip drafts — announce a PR to the channel once it's ready for eyes.
-    if: github.event.pull_request.draft == false
+    if: github.event.label.name == 'ready-for-review' && github.event.pull_request.draft == false
     steps:
       - name: Post PR creative to Slack
-        uses: actions/github-script@v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           # Add this repo/org secret: an Incoming Webhook URL from your Slack app.
           # https://api.slack.com/messaging/webhooks
@@ -26,6 +30,8 @@ jobs:
           # Which file's creative we care about (this is the "make it yours" canvas).
           TARGET_FILE: profile/README.md
         with:
+          # Retry transient API errors (5xx, rate limits) instead of failing the run.
+          retries: 3
           script: |
             if (!process.env.SLACK_WEBHOOK_URL) {
               core.setFailed('SLACK_WEBHOOK_URL secret is not set — add it in repo/org secrets.');
@@ -102,7 +108,7 @@ jobs:
             const renderable = images.filter(i => RASTER.test(i.url)).slice(0, 8);
 
             const blocks = [
-              { type: 'header', text: { type: 'plain_text', text: `🎨 New PR: ${pr.title}`.slice(0, 150), emoji: true } },
+              { type: 'header', text: { type: 'plain_text', text: `🎨 Ready for review: ${pr.title}`.slice(0, 150), emoji: true } },
               {
                 type: 'section',
                 fields: [
@@ -137,7 +143,7 @@ jobs:
             const res = await fetch(process.env.SLACK_WEBHOOK_URL, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ text: `New PR #${pr.number}: ${pr.title}`, blocks }),
+              body: JSON.stringify({ text: `Ready for review #${pr.number}: ${pr.title}`, blocks }),
             });
 
             if (!res.ok) {

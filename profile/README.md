@@ -53,6 +53,19 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @14pri_07 — <hello>
+
+  ___ ___         .__  .__          
+ /   |   \   ____ |  | |  |   ____  
+/    ~    \_/ __ \|  | |  |  /  _ \ 
+\    Y    /\  ___/|  |_|  |_(  <_> )
+ \___|_  /  \___  >____/____/\____/ 
+       \/       \/                  
+
+*What it represents:* hello
+**Contributed by [@14pri_07](https://github.com/14pri_07)**
+**Club:** CodingClubSATI  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
+*Find me:* optional — site, socials, or however you want to be reachable.
 
 ### @169pi — the first brick 🧱
 

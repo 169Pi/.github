@@ -6,7 +6,7 @@ name: Wall Sweep
 # and close them if the final nudge goes unanswered (day 10). Run it by hand
 # with `recheck` to put every open PR through the checks, not just red ones
 # (it labels + comments, it doesn't fail anything). PRs labelled `wall-exempt`
-# are left alone.
+# or opened by an EXEMPT_AUTHORS maintainer are left alone.
 on:
   schedule:
     - cron: '30 3 * * *'   # 09:00 IST
@@ -63,6 +63,8 @@ jobs:
           # account that posted them before the App existed.
           BOT_LOGIN: ${{ steps.app-token.outputs.app-slug && format('{0}[bot]', steps.app-token.outputs.app-slug) || '' }}
           LEGACY_BOT_LOGINS: kindavishal
+          # Maintainers whose PRs are never gated, nudged or auto-closed.
+          EXEMPT_AUTHORS: kindavishal
         with:
           # Retry transient API errors (5xx, rate limits) instead of failing the run.
           retries: 3

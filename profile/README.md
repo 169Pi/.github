@@ -54,7 +54,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @rishabh-cs: Rishabh Singh Patel
+### @rishabh-cs
 
 ```
  ____  _     _           _     _       ____  _             _       ____       _       _ 

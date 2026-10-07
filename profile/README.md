@@ -56,7 +56,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 ### @rishabh-cs: Rishabh Singh Patel
 
-```text
+```
  ____  _     _           _     _       ____  _             _       ____       _       _ 
 |  _ \(_)___| |__   __ _| |__ | |__   / ___|(_)_ __   __ _| |__   |  _ \ __ _| |_ ___| |
 | |_) | / __| '_ \ / _` | '_ \| '_ \  \___ \| | '_ \ / _` | '_ \  | |_) / _` | __/ _ \ |
@@ -66,10 +66,10 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
 
-*What it represents:* Last HOPE.
+*What it represents:* My Name
 **Contributed by [@rishabh-cs](https://github.com/rishabh-cs)**
 **Club:** CodingClubSATI  <!-- optional — only if you're contributing as part of a club/group; solo contributors: delete this line -->
-*Find me:* optional — site, socials, or however 0you want to be reachable.
+*Find me:* [LinkedIn](https://www.linkedin.com/in/rishabh-singh-patel-433ab4429)
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

@@ -54,6 +54,25 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @sayandeep-the-coder — Open Reasoning, Built in India 🇮🇳
+
+<p align="center">
+  <img
+    src="./169pi-sayandeep-contributor.svg"
+    alt="Open Reasoning, Built in India — Sayandeep Saha × 169Pi"
+    width="700"
+  />
+</p>
+
+<p align="center">
+  <strong>Open models. Local reasoning. Built from India.</strong>
+</p>
+
+*What it represents:* 169pi's vision of building open reasoning models from India — making powerful AI more accessible, experimental, and collaborative for the community.
+
+**Contributed by [@sayandeep-the-coder](https://github.com/Sayandeep-the-coder)**  
+**Club:** Developers' Community KGEC
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

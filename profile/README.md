@@ -1,3 +1,4 @@
+
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -53,6 +54,34 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @Shiva-ui18 — What it gives. What it takes.
+
+```
+            ┌────────────────────────────────────────────────────┐
+            │  A L P I E - C O R E                               │
+            │  everything it knows · 32B parameters · 65K ctx    │
+            │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+            └─────────────────────────┬──────────────────────────┘
+                                      │
+                                   ┌──┴──┐
+                                   │ 4b  │ ◄── ~16 GB. the size of a die.
+                                   └──┬──┘
+       ═══════════════════════════════╧═══════════════════════════════
+                         one desk.  one computer.  yours.
+```
+
+Look at what is holding it up.
+
+Everything this model knows, and the whole weight of it rests on something the
+size of a die. One computer. The kind you can already own.
+
+The slab is not balanced. It is supported. This is not a large model cut down
+until it wobbles. It is a large model that turned out to need far less
+underneath it than anyone was paying for.
+
+*What it represents:* Alpie-Core's 4-bit quantization — a 32B reasoning model that runs in ~16 GB on one machine, which is what makes it possible to be truly open.
+**Contributed by [@Shiva-ui18](https://github.com/Shiva-ui18)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
@@ -62,28 +91,6 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 **Contributed by [@169pi](https://github.com/169Pi)**
 
 <!-- ENTRIES:END -->
-
----
-
-### What it gives. What it takes.
-
-**[@Shiva-ui18](https://github.com/Shiva-ui18)** · illustration
-
-<img width="2816" height="1536" alt="Gemini_Generated_Image_1egcsw1egcsw1egc" src="https://github.com/user-attachments/assets/db28f667-3b7e-4554-9c97-0f88dec8d65f" />
-
-Look at what is holding it up.
-
-Everything this model knows, and the whole weight of it rests on something the
-size of a die. One computer. The kind you can already own.
-
-I kept redrawing this until it stopped looking precarious, because precarious is
-the wrong word. The slab is not balanced. It is supported. This is not a large
-model cut down until it wobbles. It is a large model that turned out to need far
-less underneath it than anyone was paying for.
-
-That gap is the only reason any of this can be open. A model that needs a server
-room belongs to whoever owns the server room. A model that needs a desk belongs
-to whoever has a desk.
 
 ---
 

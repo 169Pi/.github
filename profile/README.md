@@ -1,4 +1,3 @@
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -54,6 +53,23 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### 🍂 Hacktoberfest x Alpie-Core
+
+```python
+import alpie
+from sys import getsizeof
+
+# Initializing the 32B 4-bit reasoning engine
+model = alpie.Core(params="32B", quant="4-bit")
+
+def open_reasoning():
+    response = model.generate(prompt="Hello Hacktoberfest!")
+    print(f"Memory-efficient reasoning unlocked. RAM Stack Size: {getsizeof(model)} bytes")
+    return response
+```
+*What it represents:* A nod to Alpie-Core's efficient 4-bit quantization, allowing a 32B reasoning model to execute locally without massive memory overhead.
+**Contributed by [@YOUR_GITHUB_HANDLE](https://github.com/YOUR_GITHUB_HANDLE)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
@@ -69,3 +85,4 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 <p align="center">
   Made with curiosity by the <strong>169pi</strong> team
 </p>
+

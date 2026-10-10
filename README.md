@@ -1,34 +1,86 @@
-# 169pi · `.github`
+# 👋 Hey, you found us!
 
-This is the **community health repository** for the [169pi](https://github.com/169Pi)
-GitHub organization. It holds the org-wide defaults GitHub picks up automatically:
+We're **169pi** — building open reasoning models out of India.
+This is our org profile; the good stuff lives across our repos and model hubs.
 
-- **`profile/README.md`** → the public landing page you see at
-  [github.com/169Pi](https://github.com/169Pi)
-- **`PULL_REQUEST_TEMPLATE.md`** → the default PR template applied across org repos
-- **`.github/workflows/`** → shared automation (e.g. the star-verification bot for the
-  community README contest)
-- **`CONTRIBUTING.md`** → how to add your entry to the profile README
-
-> Looking to represent something we've built at 169pi and earn swag? Head to
-> [`CONTRIBUTING.md`](CONTRIBUTING.md).
-
----
-
-## What lives here
-
-| File | Purpose |
-|---|---|
-| [`profile/README.md`](profile/README.md) | Org profile page — hosts the community README |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guide for adding your entry |
-| [`PULL_REQUEST_TEMPLATE.md`](PULL_REQUEST_TEMPLATE.md) | Default PR checklist |
-| [`.github/workflows/verify-star.yml`](.github/workflows/verify-star.yml) | Verifies PR authors have starred `169Pi/Alpie-Core` |
+<p align="center">
+  <a href="https://github.com/169Pi/Alpie-Core" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/github/stars/169Pi/Alpie-Core?style=social&label=Star%20Alpie-Core" alt="Star Alpie-Core"></a>
+  <a href="https://discord.gg/GwJP7MsZp7" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Discord-Join%20us-5865F2?logo=discord&logoColor=white" alt="Join our Discord"></a>
+  <a href="https://169pi.ai/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🌐%20Website-169Pi%20AI-blue" alt="Website"></a>
+  <a href="https://huggingface.co/169Pi/Alpie-Core" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🤗-Hugging%20Face-yellow" alt="Hugging Face"></a>
+  <a href="https://ollama.com/169pi" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/🦙-Ollama-000000" alt="Ollama"></a>
+  <a href="https://www.kaggle.com/169pi" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/📊-Kaggle-20BEFF?logo=kaggle&logoColor=white" alt="Kaggle"></a>
+</p>
 
 ---
 
-## Links
+## 🧠 Alpie-Core
 
-- 🌐 Website — [169pi.ai](https://169pi.ai/)
-- 🧠 Flagship model — [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
-- 🤗 Weights — [huggingface.co/169Pi/Alpie-Core](https://huggingface.co/169Pi/Alpie-Core)
-- 💬 Community — [Discord](https://discord.gg/GwJP7MsZp7)
+Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
+
+| GSM8K | MMLU | SWE-Bench Verified | Context Length | VRAM |
+|---|---|---|---|---|
+| **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
+
+---
+
+## 🎨 Make this README yours
+
+Pick anything we've built at 169pi — a model, a capability, a benchmark — and
+turn it into something that belongs on our front door: art, a diagram, a demo,
+a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+
+> 🗓️ **Monthly merges.** Next merge: **November 6, 2026**.
+> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
+> 🏫 **Contributing with a club, campus group or meetup?** Add one line —
+> `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
+> member's PR then counts toward your club on the live
+> **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
+>
+> **Flying solo? Ignore this — just add your entry. No club required.** 🧱
+
+<!-- ────────────────────────────────────────────────────────────────── -->
+<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
+<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
+<!--     Don't edit anything outside the markers. Attribution required:  -->
+<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
+<!--     ASCII art goes inside a ``` code fence, or it won't render.    -->
+<!--     A bot checks all of this on every push — see CONTRIBUTING.md.  -->
+<!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
+<!--     Contributing on your own? Ignore it — no club needed.           -->
+<!-- ────────────────────────────────────────────────────────────────── -->
+
+<!-- ENTRIES:START -->
+
+### @ashishkumarjaiswal999 — 32B brain, 16 GB budget
+
+Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the memory:
+
+```
+ 32B params @ 16-bit  ≈ 64 GB  ████████████████████████████████
+ 32B params @  4-bit  ≈ 16 GB  ████████
+                                 └─ fits on a single consumer GPU 🎉
+
+   GSM8K 92.75%  │  MMLU 81.28%  │  SWE-Bench 57.8%
+        …and it still reasons like a big model.
+```
+
+*What it represents:* open reasoning models that don't need a data center.
+**Contributed by [@ashishkumarjaiswal999](https://github.com/ashishkumarjaiswal999)**
+
+### @169pi — the first brick 🧱
+
+This wall is yours to build on. Fork the repo, add your entry right here, and
+open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@169pi](https://github.com/169Pi)**
+
+<!-- ENTRIES:END -->
+
+---
+
+<p align="center">
+  Made with curiosity by the <strong>169pi</strong> team
+</p>

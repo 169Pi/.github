@@ -1,4 +1,3 @@
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -53,6 +52,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+
 ### @ashishkumarjaiswal999 — 32B brain, 16 GB budget
 
 Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the memory:
@@ -76,6 +76,7 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**
+
 <!-- ENTRIES:END -->
 
 ---

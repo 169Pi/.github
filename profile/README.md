@@ -1,4 +1,3 @@
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -53,6 +52,22 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+
+### @your-handle: 32B brain, 16 GB budget 🧠
+
+Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the memory:
+
+```
+ 32B params @ 16-bit  ≈ 64 GB  ████████████████████████████████
+ 32B params @  4-bit  ≈ 16 GB  ████████
+                                 └─ fits on a single consumer GPU 🎉
+
+   GSM8K 92.75%  │  MMLU 81.28%  │  SWE-Bench 57.8%
+        …and it still reasons like a big model.
+```
+
+*What it represents:* open reasoning models that don't need a data center.
+**Contributed by [@your-handle](https://github.com/your-handle)**
 
 ### @169pi — the first brick 🧱
 

@@ -53,7 +53,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @your-handle: 32B brain, 16 GB budget 🧠
+### @ashishkumarjaiswal999: 32B brain, 16 GB budget 🧠
 
 Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the memory:
 
@@ -67,7 +67,7 @@ Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the
 ```
 
 *What it represents:* open reasoning models that don't need a data center.
-**Contributed by [@your-handle](https://github.com/your-handle)**
+**Contributed by [@ashishkumarjaiswal999](https://github.com/ashishkumarjaiswal999)**
 
 ### @169pi — the first brick 🧱
 

@@ -55,6 +55,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 
 ### @169pi — the first brick 🧱
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/1107d666-fab4-4e3a-a5b1-3108f3dc2c85" />
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
 open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.

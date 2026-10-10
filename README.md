@@ -6,6 +6,22 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
 - **`profile/README.md`** → the public landing page you see at
   [github.com/169Pi](https://github.com/169Pi)
 - **`PULL_REQUEST_TEMPLATE.md`** → the default PR template applied across org repos
+- 
+### @ashishkumarjaiswal999 — 32B brain, 16 GB budget
+
+Alpie-Core packs 32B parameters into 4-bit weights. Same brain, a quarter of the memory:
+
+```
+ 32B params @ 16-bit  ≈ 64 GB  ████████████████████████████████
+ 32B params @  4-bit  ≈ 16 GB  ████████
+                                 └─ fits on a single consumer GPU 🎉
+
+   GSM8K 92.75%  │  MMLU 81.28%  │  SWE-Bench 57.8%
+        …and it still reasons like a big model.
+```
+
+*What it represents:* open reasoning models that don't need a data center.
+**Contributed by [@ashishkumarjaiswal999](https://github.com/ashishkumarjaiswal999)**
 - **`.github/workflows/`** → shared automation (e.g. the star-verification bot for the
   community README contest)
 - **`CONTRIBUTING.md`** → how to add your entry to the profile README

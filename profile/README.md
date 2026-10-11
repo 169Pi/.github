@@ -1,1 +1,1 @@
-![img](D:\Open Source\169pi\assets\img.png)
+![img](../assets/img.png)

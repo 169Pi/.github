@@ -31,4 +31,4 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
 - 🌐 Website — [169pi.ai](https://169pi.ai/)
 - 🧠 Flagship model — [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
 - 🤗 Weights — [huggingface.co/169Pi/Alpie-Core](https://huggingface.co/169Pi/Alpie-Core)
-- 💬 Community — [Discord](https://discord.gg/REPLACE_WITH_INVITE)
+- 💬 Community — [Discord](https://discord.gg/GwJP7MsZp7)

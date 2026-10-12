@@ -1,68 +1,69 @@
-name: Verify Alpie-Core star
+# .github/workflows/verify-star.yml
+name: Verify Star
 
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    # `edited` so a title fix re-runs the title check.
+    types: [opened, synchronize, reopened, edited]
 
+# Explicitly declare token permissions (principle of least privilege)
 permissions:
-  contents: read
-  pull-requests: write
+  pull-requests: write   # Comment, label, and close duplicate PRs
+  issues: write          # Create the needs-changes / ready-for-review labels
+  contents: read         # Read the base branch's check script
+
+# One run per PR at a time, so a fast push doesn't race the previous comment.
+concurrency:
+  group: verify-star-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 jobs:
-  verify-star:
+  check-star:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if PR author starred 169Pi/Alpie-Core
-        uses: actions/github-script@v7
+      # pull_request_target checks out the BASE branch, never the fork — the
+      # PR's content is only ever read through the API inside the script.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          sparse-checkout: .github/scripts
+          persist-credentials: false
+
+      # Act as the 169pi wall bot (a GitHub App) instead of a personal account.
+      # Skipped until the App is set up, in which case we fall back to the PAT.
+      # App tokens also trigger downstream workflows (slack-pr-notify on labels).
+      - name: Mint the wall bot token
+        id: app-token
+        if: vars.WALL_BOT_CLIENT_ID != ''
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          client-id: ${{ vars.WALL_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.WALL_BOT_PRIVATE_KEY }}
+          owner: 169Pi
+          # Alpie-Core for the stargazer check, .github for everything else.
+          repositories: .github,Alpie-Core
+          permission-contents: read
+          permission-issues: write
+          permission-pull-requests: write
+
+      - name: Check the entry and update the checklist
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          # Whose comments count as the bot's: the App's account, plus the
+          # account that posted them before the App existed.
+          BOT_LOGIN: ${{ steps.app-token.outputs.app-slug && format('{0}[bot]', steps.app-token.outputs.app-slug) || '' }}
+          LEGACY_BOT_LOGINS: kindavishal
+          # Maintainers whose PRs are never gated, nudged or auto-closed.
+          EXEMPT_AUTHORS: kindavishal
+        with:
+          # Retry transient API errors (5xx, rate limits) instead of failing the run.
+          retries: 3
+          # The built-in GITHUB_TOKEN can't read Alpie-Core's stargazers, and its
+          # labels wouldn't trigger slack-pr-notify — so App token, else the PAT.
+          github-token: ${{ steps.app-token.outputs.token || secrets.STAR_CHECK_TOKEN }}
           script: |
-            const author = context.payload.pull_request.user.login;
-            const owner = "169Pi";
-            const repo = "Alpie-Core";
-
-            let starred = false;
-            for await (const response of github.paginate.iterator(
-              github.rest.activity.listStargazersForRepo,
-              { owner, repo, per_page: 100 }
-            )) {
-              if (response.data.some((user) => user.login.toLowerCase() === author.toLowerCase())) {
-                starred = true;
-                break;
-              }
-            }
-
-            const label = "starred-alpie-core";
-            const { data: labels } = await github.rest.issues.listLabelsOnIssue({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
+            const { evaluate } = require('./.github/scripts/wall-checks.js');
+            await evaluate({
+              github, context, core,
+              pr: context.payload.pull_request,
+              action: context.payload.action,
             });
-            const hasLabel = labels.some((l) => l.name === label);
-
-            if (starred) {
-              if (!hasLabel) {
-                await github.rest.issues.addLabels({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  labels: [label],
-                });
-              }
-              console.log(`@${author} has starred 169Pi/Alpie-Core.`);
-            } else {
-              if (hasLabel) {
-                await github.rest.issues.removeLabel({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                  issue_number: context.issue.number,
-                  name: label,
-                });
-              }
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
-                body: `Hey @${author} — looks like you haven't starred [169Pi/Alpie-Core](https://github.com/169Pi/Alpie-Core) yet! ⭐ Star it and I'll re-check automatically on your next push.`,
-              });
-              core.setFailed(`@${author} has not starred 169Pi/Alpie-Core yet.`);
-            }

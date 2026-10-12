@@ -43,8 +43,9 @@ Well-executed entries tend to look like:
 - **A runnable micro-demo** — a short, self-contained snippet that computes,
   simulates, or visualises a real property of the model and prints something
   delightful
-- **Structured ASCII art** — multi-line, actually depicting something (the
-  model, a curve, a metaphor), not a one-liner
+- **Structured ASCII art** — multi-line, drawn by you, actually depicting
+  something (the model, a curve, a metaphor), inside a ```` ``` ```` code fence.
+  Photos run through an image→ASCII converter don't count
 - **Writing with a visual layout** — a poem, story, or metaphor where the
   formatting, typography, and imagery carry as much weight as the words
 - **Something we haven't imagined yet** — surprise us
@@ -58,15 +59,17 @@ it's not there yet.
 
 1. ⭐ **Star** [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
    *(a bot checks this — we like knowing who's on the wall)*
-2. 💬 **Join** our [Discord](https://discord.gg/REPLACE_WITH_INVITE) — this is
+2. 💬 **Join** our [Discord](https://discord.gg/GwJP7MsZp7) — this is
    where the community actually hangs out, and where we celebrate merges
 3. 🍴 **Fork** this repo *(button, top-right of the GitHub page)*
-4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) inside the
-   **Make this README yours** section, keeping the surrounding structure intact
-5. 🚀 **Open a PR** titled `@your-github-handle: <what you're calling it>`
+4. ✍️ **Add your entry** to [`profile/README.md`](profile/README.md) between the
+   `<!-- ENTRIES:START -->` and `<!-- ENTRIES:END -->` markers in the
+   **Make this README yours** section — newest entries go at the top, right under
+   `ENTRIES:START`. Don't touch anything outside those markers
+5. 🚀 **Open a PR** titled `@your-github-handle: Your entry's title`
    (e.g. `@ada-lovelace: A tiny quantization diagram`)
 
-We review every two weeks. When your PR merges, we'll ship you **169pi swag**
+We review once a month. When your PR merges, we'll ship you **169pi swag**
 as a thank-you 🎁 — and shout you out on Discord.
 
 New to our work? Poke around
@@ -77,20 +80,65 @@ your entry reflects something you actually connected with.
 
 ## 📝 Entry format
 
-Add your entry as its own block inside the "Make this README yours" section.
-A minimal template:
+Add your entry as its own block **between the `<!-- ENTRIES:START -->` and
+`<!-- ENTRIES:END -->` markers**, at the top of the list. Copy this template,
+replace `your-github-handle` and `Your entry's title`, and fill in each
+`<!-- … -->` comment:
 
-```markdown
-### @your-github-handle — <what you're calling it>
+````markdown
+### @your-github-handle — Your entry's title
 
-<!-- Your representation goes here: SVG, code, ASCII, diagram, whatever. -->
+<!-- Replace this comment with your work: inline SVG, a diagram, Markdown,
+     or ASCII art inside a ``` code fence. -->
 
-*What it represents:* one line on the 169pi model, capability, or feature this reflects.
-*Find me:* optional — site, socials, or however you want to be reachable.
-```
+*What it represents:* <!-- one line on the 169pi model, capability, or feature this shows -->
+**Contributed by [@your-github-handle](https://github.com/your-github-handle)**
+<!-- Optional — in a club? Uncomment: **Club:** Your Club Name -->
+<!-- Optional — want to be found? Uncomment: *Find me:* your site or socials -->
+````
+
+The **Contributed by** line is required — it's how you get publicly credited on
+the wall. Link it to **your own GitHub profile** (the account opening the PR).
+
+The **Club** line is optional — include it only if you're contributing as part of a
+club, campus group, or meetup. When you do, every member's PR counts toward your club
+on the live **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the
+top club wins prizes. Contributing on your own? Leave it out — nothing about the wall
+requires a club.
 
 Keep entries self-contained — no external images that could break, no scripts,
-no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal.
+no tracking pixels, no image files or base64 `data:image` pictures. Inline SVG,
+ASCII, Markdown, and plain code fences are ideal.
+
+---
+
+## 🤖 What the bot checks
+
+Every PR gets a checklist comment that updates on each push. A maintainer only
+looks at your entry once **every item is green** — until then the PR is labelled
+`needs-changes` and the check fails.
+
+- ⭐ You've starred [`169Pi/Alpie-Core`](https://github.com/169Pi/Alpie-Core)
+- The PR title is `@your-handle: Your entry's title` (your own handle, no `< >`)
+- Only `profile/README.md` changed, and only between the `ENTRIES` markers —
+  nothing existing edited or deleted
+- The template is filled in: no leftover template text, and a real
+  *What it represents* line
+- **Contributed by** links to the GitHub account that opened the PR
+- ASCII art sits inside a ```` ``` ```` code fence (otherwise GitHub turns `#`
+  lines into headings and the art falls apart)
+- It isn't a photo run through an image→ASCII converter
+- It isn't a copy of another open PR or an entry already on the wall
+- It's self-contained — no extra files, external images, or embedded pictures
+- It's your only open PR
+
+**To fix a failing check, push to the same branch** — don't open a new PR (a
+second PR from you is closed automatically). If your PR stays red, the bot
+follows up **3 and 7 days** after your last push; if there's still no new push
+**3 days after the final reminder**, the PR is closed. Every push resets the
+clock, and once it's fixed you can always open a fresh one. Red PRs are also
+re-checked once a day, so a star added after you opened the PR is picked up
+without a new push.
 
 ---
 
@@ -102,7 +150,8 @@ no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal
 - Be **respectful and inclusive**. No harassment, slurs, or targeted content.
   We follow the [Contributor Covenant](https://www.contributor-covenant.org/)
   spirit.
-- One open PR per person at a time — put your best foot forward.
+- One open PR per person at a time — put your best foot forward, and push
+  fixes to that same PR.
 - Star + Discord are how we know who's on the wall; we're not chasing metrics,
   we're building a room.
 - Entries stay in the repo permanently. As the wall grows, older ones may
@@ -113,7 +162,7 @@ no tracking pixels. Inline SVG, ASCII, Markdown, and plain code fences are ideal
 
 ## 🗓️ Review cadence
 
-**Bi-weekly merges.** Next merge: **October 6, 2026**.
+**Monthly merges.** Next merge: **November 6, 2026**.
 Get your PR in before then to be on the next drop.
 
 ---
@@ -122,9 +171,9 @@ Get your PR in before then to be on the next drop.
 
 Stuck on your entry, the setup, or just what to build?
 
-- 🧭 **Docs & guides:** [169pi-kappa.vercel.app](https://169pi-kappa.vercel.app)
+- 🧭 **Docs & guides:** [goodfirst.alpie.ai](https://goodfirst.alpie.ai)
 - 🤖 **Ask Alpie:** [Alpie.ai](https://alpie.ai) — our own model can walk you through it
-- 💬 **Talk to a human:** [Discord](https://discord.gg/REPLACE_WITH_INVITE)
+- 💬 **Talk to a human:** [Discord](https://discord.gg/GwJP7MsZp7)
 - 🐛 **Bug or repo issue:** open an [issue](../../issues)
 - 🌐 [169pi.ai](https://169pi.ai/)
 

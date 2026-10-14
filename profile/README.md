@@ -1,4 +1,4 @@
-<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/241903ac-9a7d-4134-a0cd-99e0bf445a03" /><img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/6cea44ea-8dda-4dd2-bbee-7a2e38f8304b" /># 👋 Hey, you found us!
+# 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
 This is our org profile; the good stuff lives across our repos and model hubs.

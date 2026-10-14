@@ -53,15 +53,24 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @mayanksingh-7974 — Chai Terminal
 
-### @169pi — the first brick 🧱
+```text
+       ( (
+        ) )
+      _______
+     /       \
+    |  CHAI   |
+    |  > _    |
+    | OFFLINE |
+    |   AI    |
+     \_______/
+       |___|
+```
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+*What it represents:* A chai cup and terminal symbolize my interest in coding and 169Pi's work on compact, locally runnable AI models.
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
-
+**Contributed by [@mayanksingh-7974](https://github.com/mayanksingh-7974)**
 <!-- ENTRIES:END -->
 
 ---

@@ -1,3 +1,4 @@
+
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -53,30 +54,13 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-
+<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/27587b16-ce96-465c-a643-8f09ebf8852b" />
 
 ### @ShreyasSJ23: Vision of Alpie-Core
 
-<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/27587b16-ce96-465c-a643-8f09ebf8852b" />
+A visual concept showing 169Pi's open reasoning ecosystem, with Alpie-Core connecting models, tools, and applications.
 
-# Vision of 169Pi — Open Reasoning AI
-
-A visual story of **169Pi's open reasoning ecosystem**  with reasoning at the core and tools, products, and applications growing around it.
-
-### What it represents
-
-- **Alpie-Core** : Reasoning, coding, math, and research.
-- **Alpie** : Chat, research, tools, files, and web.
-- **Pi169-SDK** : APIs, SDKs, and integrations.
-- **AlpieCode** : Reasoning for software development.
-- **alpie-rag** : Grounded knowledge from data and documents.
-- **Deploy Anywhere** : Bringing AI into real applications.
-
-The connected paths show these capabilities working together.
-
-**Ideas → Reasoning → Applications → Impact**
-
-**Open Today → A More Open Tomorrow**
+*What it represents:* 169Pi's open reasoning ecosystem, with Alpie-Core at the center and its tools connecting reasoning to real-world applications.
 
 **Contributed by [@ShreyasSJ23](https://github.com/ShreyasSJ23)**
 

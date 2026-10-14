@@ -25,7 +25,35 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 
 ---
 
+## 🎨 Make this README yours
+
+Pick anything we've built at 169pi — a model, a capability, a benchmark — and
+turn it into something that belongs on our front door: art, a diagram, a demo,
+a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
+
+> 🗓️ **Monthly merges.** Next merge: **November 6, 2026**.
+> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+
+> 🏫 **Contributing with a club, campus group or meetup?** Add one line —
+> `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
+> member's PR then counts toward your club on the live
+> **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
+>
+> **Flying solo? Ignore this — just add your entry. No club required.** 🧱
+
+<!-- ────────────────────────────────────────────────────────────────── -->
+<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
+<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
+<!--     Don't edit anything outside the markers. Attribution required:  -->
+<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
+<!--     ASCII art goes inside a ``` code fence, or it won't render.    -->
+<!--     A bot checks all of this on every push — see CONTRIBUTING.md.  -->
+<!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
+<!--     Contributing on your own? Ignore it — no club needed.           -->
+<!-- ────────────────────────────────────────────────────────────────── -->
+
 <!-- ENTRIES:START -->
+
 
 ### @ShreyasSJ23: Vision of Alpie-Core
 
@@ -59,4 +87,3 @@ The connected paths show these capabilities working together.
 <p align="center">
   Made with curiosity by the <strong>169pi</strong> team
 </p>
-

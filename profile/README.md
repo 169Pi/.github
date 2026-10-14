@@ -47,33 +47,17 @@ The connected paths show these capabilities working together.
 
 **Open Today → A More Open Tomorrow**
 
-> 🏫 **Contributing with a club, campus group or meetup?** Add one line —
-> `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
-> member's PR then counts toward your club on the live
-> **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and the top club wins prizes.
->
-> **Flying solo? Ignore this — just add your entry. No club required.** 🧱
-
-<!-- ────────────────────────────────────────────────────────────────── -->
-<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
-<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
-<!--     Don't edit anything outside the markers. Attribution required:  -->
-<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
-<!--     ASCII art goes inside a ``` code fence, or it won't render.    -->
-<!--     A bot checks all of this on every push — see CONTRIBUTING.md.  -->
-<!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
-<!--     Contributing on your own? Ignore it — no club needed.           -->
-<!-- ────────────────────────────────────────────────────────────────── -->
-
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @ShreyasSJ23: Vision of Alpie Core
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+A visual contribution representing 169Pi's open reasoning ecosystem, with Alpie-Core at the center and connected tools, products, and applications.
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+*What it represents:* The connection between Alpie-Core, Alpie, Pi169-SDK, AlpieCode, alpie-rag, and deployment tools. Together, they show how open reasoning turns ideas into real-world applications.
+
+**Ideas → Reasoning → Applications → Impact**
+
+**Contributed by [@ShreyasSJ23](https://github.com/ShreyasSJ23)**
 
 <!-- ENTRIES:END -->
 

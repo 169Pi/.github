@@ -24,7 +24,10 @@ Our first-generation reasoning model — **32B params, 4-bit**, Apache 2.0.
 | **92.75%** | **81.28%** | **57.8%** | 65K | ~16 GB |
 
 ---
-## Vision of Alpie-Core
+
+<!-- ENTRIES:START -->
+
+### @ShreyasSJ23: Vision of Alpie-Core
 
 ![Alpie-Core Concept](../assets/hero.png)
 
@@ -46,34 +49,6 @@ The connected paths show these capabilities working together.
 **Ideas → Reasoning → Applications → Impact**
 
 **Open Today → A More Open Tomorrow**
-
-> 🏫 **Contributing with a club, campus group or meetup?** Add one line —
-> `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
-> member's PR then counts toward your club on the live
-> **[Clubs Leaderboard]([https://goodfirst.alpie.ai/leaderboard)**](https://goodfirst.alpie.ai/leaderboard\)**), and the top club wins prizes.
->
-> **Flying solo? Ignore this — just add your entry. No club required.** 🧱
-
-<!-- ────────────────────────────────────────────────────────────────── -->
-<!-- ✍️  ADD YOUR ENTRY BELOW — put it between the two ENTRIES markers.   -->
-<!--     Newest entries go at the TOP, right under ENTRIES:START.        -->
-<!--     Don't edit anything outside the markers. Attribution required:  -->
-<!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
-<!--     ASCII art goes inside a ``` code fence, or it won't render.    -->
-<!--     A bot checks all of this on every push — see CONTRIBUTING.md.  -->
-<!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
-<!--     Contributing on your own? Ignore it — no club needed.           -->
-<!-- ────────────────────────────────────────────────────────────────── -->
-
-<!-- ENTRIES:START -->
-
-### @169pi — the first brick 🧱
-
-A visual contribution representing 169Pi's open reasoning ecosystem, with Alpie-Core at the center and connected tools, products, and applications.
-
-*What it represents:* The connection between Alpie-Core, Alpie, Pi169-SDK, AlpieCode, alpie-rag, and deployment tools. Together, they show how open reasoning turns ideas into real-world applications.
-
-**Ideas → Reasoning → Applications → Impact**
 
 **Contributed by [@ShreyasSJ23](https://github.com/ShreyasSJ23)**
 

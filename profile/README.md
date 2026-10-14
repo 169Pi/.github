@@ -54,6 +54,16 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/27587b16-ce96-465c-a643-8f09ebf8852b" />
+
+### @ShreyasSJ23: Vision of Alpie-Core
+
+A visual concept showing 169Pi's open reasoning ecosystem, with Alpie-Core connecting models, tools, and applications.
+
+*What it represents:* 169Pi's open reasoning ecosystem, with Alpie-Core at the center and its tools connecting reasoning to real-world applications.
+
+**Contributed by [@ShreyasSJ23](https://github.com/ShreyasSJ23)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

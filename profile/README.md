@@ -1,5 +1,4 @@
-
-# 👋 Hey, you found us!
+<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/241903ac-9a7d-4134-a0cd-99e0bf445a03" /><img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/6cea44ea-8dda-4dd2-bbee-7a2e38f8304b" /># 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
 This is our org profile; the good stuff lives across our repos and model hubs.
@@ -55,8 +54,10 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 
 
+
 ### @ShreyasSJ23: Vision of Alpie-Core
 
+<img width="1983" height="793" alt="hero" src="https://github.com/user-attachments/assets/27587b16-ce96-465c-a643-8f09ebf8852b" />
 
 # Vision of 169Pi — Open Reasoning AI
 
@@ -78,6 +79,14 @@ The connected paths show these capabilities working together.
 **Open Today → A More Open Tomorrow**
 
 **Contributed by [@ShreyasSJ23](https://github.com/ShreyasSJ23)**
+
+### @169pi — the first brick 🧱
+
+This wall is yours to build on. Fork the repo, add your entry right here, and
+open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@169pi](https://github.com/169Pi)**
 
 <!-- ENTRIES:END -->
 

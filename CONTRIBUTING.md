@@ -106,9 +106,11 @@ on the live **[Clubs Leaderboard](https://goodfirst.alpie.ai/leaderboard)**, and
 top club wins prizes. Contributing on your own? Leave it out — nothing about the wall
 requires a club.
 
-Keep entries self-contained — no external images that could break, no scripts,
-no tracking pixels, no image files or base64 `data:image` pictures. Inline SVG,
-ASCII, Markdown, and plain code fences are ideal.
+Keep entries self-contained — no scripts, no tracking pixels, no image files
+committed to the repo, and no base64 `data:image` pictures. Inline SVG, ASCII,
+Markdown, and plain code fences are ideal. If your entry is a picture, drag it
+into GitHub's editor so it's uploaded to `github.com/user-attachments` — images
+hosted anywhere else are rejected.
 
 ---
 
@@ -129,7 +131,8 @@ looks at your entry once **every item is green** — until then the PR is labell
   lines into headings and the art falls apart)
 - It isn't a photo run through an image→ASCII converter
 - It isn't a copy of another open PR or an entry already on the wall
-- It's self-contained — no extra files, external images, or embedded pictures
+- It's self-contained — no extra files, scripts, or embedded pictures, and any
+  image is a GitHub upload (`github.com/user-attachments`), not hosted elsewhere
 - It's your only open PR
 
 **To fix a failing check, push to the same branch** — don't open a new PR (a

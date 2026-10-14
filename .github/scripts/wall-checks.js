@@ -150,11 +150,25 @@ function analyzePatch(patch, author) {
     attributionOk: !!attributedTo && attributedTo.toLowerCase() === author.toLowerCase(),
     externalAsset: lines.some(l =>
       /<script\b/i.test(l) ||
-      /<img\b[^>]*src\s*=\s*["']https?:/i.test(l) ||
-      /!\[[^\]]*\]\(https?:\/\//.test(l)),
+      imageUrls(l).some(u => !isGitHubUpload(u))),
     embeddedRaster: /data:image\//i.test(text),
     ...a,
   };
+}
+
+// Absolute image URLs on a line, from `<img src>` and `![](…)`.
+function imageUrls(line) {
+  const urls = [];
+  for (const m of line.matchAll(/<img\b[^>]*src\s*=\s*["'](https?:[^"']*)/gi)) urls.push(m[1]);
+  for (const m of line.matchAll(/!\[[^\]]*\]\(\s*<?(https?:\/\/[^\s)>]+)/g)) urls.push(m[1]);
+  return urls;
+}
+
+// Images dragged into GitHub's editor are hosted by GitHub itself, so they
+// won't rot or track viewers the way an arbitrary external host can.
+function isGitHubUpload(url) {
+  return /^https:\/\/github\.com\/user-attachments\/assets\/[0-9a-f-]+\/?(?:[?#]|$)/i.test(url) ||
+    /^https:\/\/(?:private-)?user-images\.githubusercontent\.com\//i.test(url);
 }
 
 function titleCheck(title, author) {
@@ -443,12 +457,12 @@ async function evaluate({ github, context, core, pr, action, index }) {
     },
     {
       status: !extraFiles.length && !a.externalAsset && !a.embeddedRaster ? 'pass' : 'fail',
-      label: `Self-contained — only \`${ENTRY_FILE}\` changed; inline SVG / ASCII / Markdown, no external or embedded images`,
+      label: `Self-contained — only \`${ENTRY_FILE}\` changed; inline SVG / ASCII / Markdown, images only as GitHub uploads`,
       note: extraFiles.length
         ? `remove ${extraFiles.join(', ')} — everything goes inline in \`${ENTRY_FILE}\``
         : a.embeddedRaster
           ? 'a base64 `data:image` is a pasted picture, not inline art — draw it as SVG/ASCII instead'
-          : 'remove external images/scripts and inline your work',
+          : 'remove scripts and externally hosted images — to add a picture, drag it into GitHub\'s editor so it\'s uploaded to `github.com/user-attachments`',
     },
     {
       status: mineOlder.length ? 'fail' : 'pass',

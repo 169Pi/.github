@@ -58,7 +58,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <img width="1254" height="1254" alt="Python contributor tile" src="https://github.com/user-attachments/assets/d36191a7-0116-43ff-981f-ad2d959da207" />
 
-**Contributed by [@ankitashantannacs25-afk](https://github.com/ankitashantannacs25-afk)**
+**Contributed by [@ankitashantannacs25-afk](ankitashantannacs25-afk)**
 <!-- ENTRIES:END -->
 
 ---

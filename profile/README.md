@@ -1,4 +1,3 @@
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -54,13 +53,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @169pi — Individual Contribution 🧱
+<img width="2752" height="1536" alt="Gemini_Generated_Image_bm1i3wbm1i3wbm1i" src="https://github.com/user-attachments/assets/267ee559-b515-4ec6-899c-11a7cbbfd30c" />
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+**Contributed by [@ankush-cloud3](https://github.com/ankush-cloud3) - student of **BMSCE****
 
 <!-- ENTRIES:END -->
 

@@ -53,8 +53,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
-
-
 ### @zameernagaral — Visualizing Alpie-Core
 
 <img width="1024" height="1024" alt="Alpie-Core visualization" src="https://github.com/user-attachments/assets/e04e0b66-f974-4347-a73a-a5fe6bb67631" />
@@ -63,7 +61,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 **Contributed by [@zameernagaral](https://github.com/zameernagaral)**
 **Club:** BMS College 
-
 
 
 <!-- ENTRIES:END -->

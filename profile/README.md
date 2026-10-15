@@ -1,3 +1,4 @@
+
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -54,9 +55,10 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 
 ### @169pi — Individual Contribution 🧱
+
 <img width="2752" height="1536" alt="Gemini_Generated_Image_bm1i3wbm1i3wbm1i" src="https://github.com/user-attachments/assets/267ee559-b515-4ec6-899c-11a7cbbfd30c" />
 
-
+*What it represents:*  a descriptive image about the models of 169pi
 **Contributed by [@ankush-cloud3](https://github.com/ankush-cloud3) - student of **BMSCE****
 
 <!-- ENTRIES:END -->

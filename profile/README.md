@@ -54,14 +54,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @ankitashantannacs25-afk: Python
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+<img width="1254" height="1254" alt="Python contributor tile" src="https://github.com/user-attachments/assets/d36191a7-0116-43ff-981f-ad2d959da207" />
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
-
+**Contributed by [@ankitashantannacs25-afk](https://github.com/ankitashantannacs25-afk)**
 <!-- ENTRIES:END -->
 
 ---

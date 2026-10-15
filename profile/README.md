@@ -54,13 +54,15 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @Anshuman-bmsce — Learning Alpie
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
 open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+<img width="1254" height="1254" alt="Designer" src="https://github.com/user-attachments/assets/9cc6bf7a-63cd-4ea8-8acc-1e3967365226" />
+*What it represents:*  just a model
+**Contributed by [@Anshuman-bmsce](https://github.com/Anshuman-bmsce)**
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+
 
 <!-- ENTRIES:END -->
 

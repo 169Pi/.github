@@ -56,7 +56,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 <img width="1254" height="1254" alt="766bfda4-917b-4771-8146-86fd2d37b00f" src="https://github.com/user-attachments/assets/f466e549-0b4c-4acf-9a40-2f49b0191f73" />
 
-**Contributed by [@AbhirBee](https://github.com/AbhirBee)**
+Contributed by [@AbhirBee](https://github.com/AbhirBee) `**Club: ** BMS College`
 
 <!-- ENTRIES:END -->
 

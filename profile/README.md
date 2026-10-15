@@ -54,7 +54,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-
 ### @subramanya150827-source — Subramanya's Contributor Tile
 
 ```text
@@ -68,8 +67,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 |   [ 169Pi Local AI Station ]    |
 |_________________________________|
           Subramanya
-
-
 <!-- ENTRIES:END -->
 
 ---

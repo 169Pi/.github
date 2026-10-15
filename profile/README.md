@@ -54,11 +54,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @ankitashantannacs25-afk — Python
 
-<img width="1254" height="1254" alt="c10d7feb-dcfc-461b-8175-4b1929208726" src="https://github.com/user-attachments/assets/bce5690c-2dc4-435c-8b6a-275794ee30aa" />
+<img width="1254" height="1254" alt="9075425b-5642-458e-a201-50890068391c" src="https://github.com/user-attachments/assets/d36191a7-0116-43ff-981f-ad2d959da207" />
 
-**Contributed by [@169pi](https://ankitashantannacs25-afk)**
+**Contributed by [@ankitashantannacs25-afk](https://github.com/ankitashantannacs25-afk)**
 
 <!-- ENTRIES:END -->
 

@@ -59,7 +59,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 **Contributed by [@nanjhana](https://github.com/nanjhana)** from Club: BMSCE
 
-*What it represents*: My entry for the 169pi wall.
+*What it represents*: This is a test PR.
 
 ### @169pi – the first brick 🧱
 

@@ -55,8 +55,13 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 <img width="1254" height="1254" alt="Ornate Indian Tech Mandala Tile" src="https://github.com/user-attachments/assets/8352dc56-a45c-4728-b954-7de4571be4cb" />
 
-CONTRIBUTED BY @varun-07-hi
-THIS WAS MY FIRST CONTRIBUTION I MADE FOR THE README.md
+### @varun-07-hi — Alpie-Core 🤖
+
+My first contribution to open source! Exploring AI development and building Alpie-Core.
+
+*What it represents:* My first step into open-source collaboration and my journey in AI development.
+
+**Contributed by [@varun-07-hi](https://github.com/varun-07-hi)**
 <!-- ENTRIES:END -->
 
 ---

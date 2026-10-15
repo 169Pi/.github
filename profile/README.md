@@ -54,6 +54,9 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+<img src="https://raw.githubusercontent.com/furyolen/.github/main/profile/text.svg" width="200" height="200" alt="furyolen contributor tile"/>
+
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

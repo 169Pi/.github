@@ -53,6 +53,43 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="#134E4A" rx="12"/>
+
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="184" height="184" fill="none"
+        stroke="#10B981" stroke-width="1" stroke-opacity="0.3" rx="8"/>
+
+  <!-- Terminal cursor block (accent highlight) -->
+  <rect x="72" y="62" width="22" height="30" fill="#10B981" rx="2"/>
+
+  <!-- Underscore / cursor base line -->
+  <rect x="72" y="96" width="56" height="5" fill="#10B981" opacity="0.5" rx="1"/>
+
+  <!-- Prompt symbol: > -->
+  <text x="50" y="90" font-family="monospace" font-size="28"
+        fill="#0284C7" font-weight="bold">&#x3E;_</text>
+
+  <!-- Accent dot - India saffron as single highlight -->
+  <circle cx="156" cy="44" r="5" fill="#F97316"/>
+
+  <!-- 169Pi wordmark hint -->
+  <text x="50" y="130" font-family="monospace" font-size="9"
+        fill="#10B981" opacity="0.6" letter-spacing="2">169Pi</text>
+
+  <!-- Contributor name label -->
+  <text x="50" y="152" font-family="sans-serif" font-size="10"
+        fill="#ffffff" font-weight="600" letter-spacing="1">Nelaturu</text>
+
+  <!-- GoodFirstAlpie tag -->
+  <rect x="38" y="162" width="124" height="18" fill="#0284C7"
+        fill-opacity="0.15" rx="4"/>
+  <text x="100" y="175" font-family="sans-serif" font-size="8"
+        fill="#0284C7" text-anchor="middle" letter-spacing="0.5">#GoodFirstAlpie</text>
+
+</svg>
 
 ### @169pi — the first brick 🧱
 

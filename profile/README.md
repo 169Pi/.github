@@ -54,6 +54,16 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+<img width="1200" height="896" alt="hashhade" src="https://github.com/user-attachments/assets/ca0be63a-bb52-49e7-a929-5a54f93c4f30" />
+
+### @Varun04-pixel: 169Pi Architecture Overview & Ecosystem
+
+A decentralized offline AI ecosystem built on local reasoning models like Alpie. Designed for privacy-first, low-latency execution and seamless developer integration. From foundational architecture to deployable local intelligence, bridging open-source innovation from India to the world.
+
+*What it represents:* It visually maps out 169Pi’s local-first AI ecosystem, showcasing how privacy-centric, low-latency reasoning engines like Alpie operate completely on-device. It highlights key developer tools, model specifications, and secure architecture designed to empower open-source innovation.
+
+**Contributed by [@Varun04-pixel](https://github.com/Varun04-pixel)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

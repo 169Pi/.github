@@ -53,14 +53,15 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @zameernagaral — Visualizing Alpie-Core
 
-### @169pi — the first brick 🧱
+<img width="1024" height="1024" alt="Alpie-Core visualization" src="https://github.com/user-attachments/assets/e04e0b66-f974-4347-a73a-a5fe6bb67631" />
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+**What it represents:** An artistic visualization of the Alpie-Core 32B open reasoning model.
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+**Contributed by [@zameernagaral](https://github.com/zameernagaral)**
+**Club:** BMS College 
+
 
 <!-- ENTRIES:END -->
 

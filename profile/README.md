@@ -54,11 +54,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @zameernagaral — the first brick 🧱
-
-**Contributed by [@zameernagaral](https://github.com/zameernagaral)** from **club**: BMS College
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e04e0b66-f974-4347-a73a-a5fe6bb67631" />
+
+Contributed by [@zameernagaral](https://github.com/kindavishal) from **Club:** BMS College
+
 
 <!-- ENTRIES:END -->
 

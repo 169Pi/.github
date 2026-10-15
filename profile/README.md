@@ -54,14 +54,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
-
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
-
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
-
+A small square "book" tile for the 169Pi open-source contributor wall, representing sharath. Build it around a personal motif —rocket— that nods to something real about 169Pi (local & offline-first AI models built in India). Use 169Pi's teal and emerald palette #134E4Awith green as a single highlight. Add a tiny "#GoodFirstAlpie" tag and a small label reading "[your name]". Minimal and crisp, generous negative space, no photorealism, no clutter, no misspelled text. Flat vector illustration style, square 1:1 aspect ratio, sized for a README contributor wall.
 <!-- ENTRIES:END -->
 
 ---

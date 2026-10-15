@@ -62,6 +62,14 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**
 
+### @ayush-code-ally — alpie
+
+<img width="1024" height="1024" alt="84bcf104-18a7-49fb-8f7d-8f8e9990b6a3" src="https://github.com/user-attachments/assets/e5329bcd-2b20-4d88-901e-a15bd9b60bdf" />
+
+What it represents: 
+It represents Ayush's contribution to the 169Pi open-source project for local AI models, symbolized by a rocket launching.
+**Contributed by [@ayush-code-ally](https://github.com/ayush-code-ally)**
+
 <!-- ENTRIES:END -->
 
 ---

@@ -54,14 +54,19 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @subramanya150827-source — Subramanya's Contributor Tile
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
-
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
-
+```text
+ #GoodFirstAlpie                [+]
+ _________________________________
+|       .---.      ,---.          |
+|      /     \    /     \   /|    |
+|     |  O O  |  |  >_   | ( |    |
+|      \  ^  /    \     /   \|    |
+|       '---'      `---'          |
+|   [ 169Pi Local AI Station ]    |
+|_________________________________|
+          Subramanya
 <!-- ENTRIES:END -->
 
 ---

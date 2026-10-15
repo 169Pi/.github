@@ -61,7 +61,8 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 This wall is yours to build on. Fork the repo, add your entry right here, and
 open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
 
-Contributed by [@VineethAD007](https://github.com/VineethAD007) from **club** BMS College
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@VineethAD007](https://github.com/VineethAD007)** from **club** BMS College
 
 <!-- ENTRIES:END -->
 

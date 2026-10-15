@@ -53,6 +53,8 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+<img width="1280" height="1170" alt="WhatsApp Image 2026-10-15 at 8 21 27 PM" src="https://github.com/user-attachments/assets/49501c15-7bb4-41d9-91b3-237bd1566c38" />
+**Contributed by [@vishruth-08](https://github.com/vishruth-08)**
 
 ### @169pi — the first brick 🧱
 

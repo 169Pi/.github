@@ -1,3 +1,4 @@
+<img width="1254" height="1254" alt="766bfda4-917b-4771-8146-86fd2d37b00f" src="https://github.com/user-attachments/assets/e156a3e5-6b58-4cad-a730-a2d1160ff3fa" />
 
 # 👋 Hey, you found us!
 
@@ -53,14 +54,9 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+<img width="1254" height="1254" alt="766bfda4-917b-4771-8146-86fd2d37b00f" src="https://github.com/user-attachments/assets/f466e549-0b4c-4acf-9a40-2f49b0191f73" />
 
-### @169pi — the first brick 🧱
-
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
-
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+Contributed by [@AbhirBee](https://github.com/AbhirBee) `**Club: ** BMS College`
 
 <!-- ENTRIES:END -->
 

@@ -1,5 +1,4 @@
 
-
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -55,8 +54,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
-
+### @zameernagaral — the first brick 🧱
 
 **Contributed by [@zameernagaral](https://github.com/zameernagaral)** from **club**: BMS College
 

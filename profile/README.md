@@ -53,8 +53,6 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
-
-A small square "book" tile for the 169Pi open-source contributor wall, representing sharath. Build it around a personal motif —rocket— that nods to something real about 169Pi (local & offline-first AI models built in India). Use 169Pi's teal and emerald palette #134E4Awith green as a single highlight. Add a tiny "#GoodFirstAlpie" tag and a small label reading "[your name]". Minimal and crisp, generous negative space, no photorealism, no clutter, no misspelled text. Flat vector illustration style, square 1:1 aspect ratio, sized for a README contributor wall.
 <!-- ENTRIES:END -->
 
 ---

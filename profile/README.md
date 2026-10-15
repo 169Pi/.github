@@ -53,7 +53,12 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @vishruth-08 — Alpie-Core Visualizer
 
+<img width="1280" height="1170" alt="Alpie-Core Contribution" src="https://github.com/user-attachments/assets/9c8c1ed4-ba00-4f6e-b9b3-7961f8119f4b" />
+
+*What it represents:* A visual tribute to Alpie-Core and my first open-source contribution to the README.
+**Contributed by [@vishruth-08](https://github.com/vishruth-08)**
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

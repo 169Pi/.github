@@ -1,4 +1,5 @@
 
+
 # 👋 Hey, you found us!
 
 We're **169pi** — building open reasoning models out of India.
@@ -61,6 +62,8 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**
+
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/e04e0b66-f974-4347-a73a-a5fe6bb67631" />
 
 <!-- ENTRIES:END -->
 

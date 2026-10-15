@@ -1,7 +1,6 @@
-
 # 👋 Hey, you found us!
 
-We're **169pi** — building open reasoning models out of India.
+We're **169pi** — building open reasoning models out of India.  
 This is our org profile; the good stuff lives across our repos and model hubs.
 
 <p align="center">
@@ -31,7 +30,7 @@ Pick anything we've built at 169pi — a model, a capability, a benchmark — an
 turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
-> 🗓️ **Monthly merges.** Next merge: **November 6, 2026**.
+> 🗓️ **Monthly merges.** Next merge: **November 6, 2026**.  
 > Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
 
 > 🏫 **Contributing with a club, campus group or meetup?** Add one line —
@@ -54,13 +53,41 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### 🧠 Inside Alpie-Core — From Question to Reasoning
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+```text
+               .-----------------------.
+               |     YOUR QUESTION     |
+               '-----------+-----------'
+                           |
+                           v
+              +-------------------------+
+              |       ALPIE-CORE        |
+              |                         |
+              |   +-----------------+   |
+              |   |   UNDERSTAND    |   |
+              |   +--------+--------+   |
+              |            |            |
+              |   +--------v--------+   |
+              |   |     REASON      |   |
+              |   +--------+--------+   |
+              |            |            |
+              |   +--------v--------+   |
+              |   |     RESPOND     |   |
+              |   +-----------------+   |
+              '------------+------------'
+                           |
+                           v
+               .-----------------------.
+               |     USEFUL ANSWER     |
+               '-----------------------'
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+          OPEN MODELS. OPEN MINDS. OPEN POSSIBILITIES.
+```
+
+*What it represents:* A visual tribute to Alpie-Core and the journey from a question to a useful answer. Understanding, reasoning, and responding come together to show how AI can help turn complex ideas into something meaningful. Open-source AI becomes stronger when people build and learn together.
+
+**Contributed by [@YourGitHubHandle](https://github.com/YourGitHubHandle)**
 
 <!-- ENTRIES:END -->
 

@@ -54,6 +54,34 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @Shiva-ui18 — What it gives. What it takes.
+
+```
+            ┌────────────────────────────────────────────────────┐
+            │  A L P I E - C O R E                               │
+            │  everything it knows · 32B parameters · 65K ctx    │
+            │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  │
+            └─────────────────────────┬──────────────────────────┘
+                                      │
+                                   ┌──┴──┐
+                                   │ 4b  │ ◄── ~16 GB. the size of a die.
+                                   └──┬──┘
+       ═══════════════════════════════╧═══════════════════════════════
+                         one desk.  one computer.  yours.
+```
+
+Look at what is holding it up.
+
+Everything this model knows, and the whole weight of it rests on something the
+size of a die. One computer. The kind you can already own.
+
+The slab is not balanced. It is supported. This is not a large model cut down
+until it wobbles. It is a large model that turned out to need far less
+underneath it than anyone was paying for.
+
+*What it represents:* Alpie-Core's 4-bit quantization — a 32B reasoning model that runs in ~16 GB on one machine, which is what makes it possible to be truly open.
+**Contributed by [@Shiva-ui18](https://github.com/Shiva-ui18)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

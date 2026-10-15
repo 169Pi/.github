@@ -53,6 +53,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+Sathya Nagendra
 
 ### @169pi — the first brick 🧱
 

@@ -54,7 +54,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-<img src="furyolen.svg" width="200" height="200" alt="furyolen contributor tile"/>
+<img src="profile/text.svg" width="200" height="200" alt="furyolen contributor tile"/>
 
 ### @169pi — the first brick 🧱
 

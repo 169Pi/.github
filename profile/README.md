@@ -61,6 +61,9 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 <img width="1254" height="1254" alt="Designer" src="https://github.com/user-attachments/assets/9cc6bf7a-63cd-4ea8-8acc-1e3967365226" />
 *What it represents:*just a model
 **Contributed by [@Anshuman-bmsce](https://github.com/Anshuman-bmsce)**
+
+
+
 <!-- ENTRIES:END -->
 
 ---

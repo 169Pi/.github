@@ -56,7 +56,12 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/4178cfd6-35ff-444c-bb76-7ac5e31e7f4a" />
 Contributed by [@nanjhana](https://github.com/nanjhana) from Club: BMSCE 
+### @169pi - the first brick 🧱
 
+This wall is yours to build on. Fork the repo, add your entry right here, and open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@169pi](https://github.com/169Pi)**
 <!-- ENTRIES:END -->
 
 ---

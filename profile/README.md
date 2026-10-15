@@ -55,7 +55,19 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ENTRIES:START -->
 
 
-</a><img width="1024" height="1024" alt="2e93094f-aa6c-4359-a542-e33567776d5c" src="https://github.com/user-attachments/assets/c69caa3c-6cf3-4b94-8fd0-8bcb2e39b390" />
+### @subramanya150827-source — Subramanya's Contributor Tile
+
+```text
+ #GoodFirstAlpie                [+]
+ _________________________________
+|       .---.      ,---.          |
+|      /     \    /     \   /|    |
+|     |  O O  |  |  >_   | ( |    |
+|      \  ^  /    \     /   \|    |
+|       '---'      `---'          |
+|   [ 169Pi Local AI Station ]    |
+|_________________________________|
+          Subramanya
 
 
 <!-- ENTRIES:END -->

@@ -53,15 +53,19 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+<!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+<img width="1254" height="1254" alt="Ornate Indian Tech Mandala Tile" src="YOUR_IMAGE_URL" />
 
-This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+### @varun-07-hi — Alpie-Core 🤖
 
-*What it represents:* the open, collaborative spirit behind everything at 169pi.
-**Contributed by [@169pi](https://github.com/169Pi)**
+My first contribution to open source! Exploring AI development and building Alpie-Core.
 
+*What it represents:* My first step into open-source collaboration and my journey in AI development.
+
+**Contributed by [@varun-07-hi](https://github.com/varun-07-hi)**
+
+<!-- ENTRIES:END -->
 <!-- ENTRIES:END -->
 
 ---

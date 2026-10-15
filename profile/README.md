@@ -56,6 +56,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <img width="1254" height="1254" alt="Ornate Golden 169Pi Neural Mandala" src="https://github.com/user-attachments/assets/8c4273b9-f2aa-4f1e-b985-8a2b59ea6bc5" />
 
+### @169pi — the first brick 🧱
+
+This wall is yours to build on. Fork the repo, add your entry right here, and
+open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
 Contributed by [@VineethAD007](https://github.com/VineethAD007) from **club** BMS College
 
 <!-- ENTRIES:END -->

@@ -54,11 +54,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-### @169pi — the first brick 🧱
+### @shauravj24 — STEP 1🧱
 
 <img width="1024" height="1024" alt="65ec2cea-4136-477a-8f80-d684b5ecb98f" src="https://github.com/user-attachments/assets/d2736aa5-1780-4f73-a4fc-3984c4602702" />
 
-**Contributed by Shaurav J** from BMSCE
+**Contributed by [@shauravj24](https://github.com/shauravj24)**
 
 <!-- ENTRIES:END -->
 

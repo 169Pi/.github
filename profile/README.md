@@ -53,10 +53,12 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @nanjhana: 169pi Temporary
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/4178cfd6-35ff-444c-bb76-7ac5e31e7f4a" />
-### @nanjhana: 169pi Temporary
+
 This is temporary edit for a pull request.
+
 *What it represents:* This is a logo created by an AI for this temporary pull request.
 
 **Contributed by [@nanjhana](https://github.com/nanjhana)** from Club: BMSCE

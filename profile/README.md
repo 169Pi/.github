@@ -54,6 +54,18 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @kumaranurag00748-byte — Entry Image
+
+```text
++----------------------+
+|      169Pi AI        |
+|  Think. Build. Share.|
++----------------------+
+```
+
+*What it represents:* A visual tribute to the open reasoning work and collaborative spirit of 169pi.
+**Contributed by [@kumaranurag00748-byte](https://github.com/kumaranurag00748-byte)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

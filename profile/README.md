@@ -54,6 +54,34 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @tanishkaa9010-code — Small Models, Big Reasoning
+
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="270" viewBox="0 0 600 270" role="img" aria-label="An illustration of local AI reasoning, with a compact model connected to a reasoning path and an answer">
+  <rect width="600" height="270" rx="18" fill="#102D2B"/>
+  <circle cx="75" cy="60" r="34" fill="#134E4A"/>
+  <rect x="55" y="42" width="40" height="36" rx="7" fill="none" stroke="#10B981" stroke-width="2"/>
+  <path d="M62 53h26M62 60h18M62 67h22" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <text x="125" y="54" fill="#FFFFFF" font-size="19" font-weight="700">Small model.</text>
+  <text x="125" y="78" fill="#10B981" font-size="19" font-weight="700">Thoughtful reasoning.</text>
+  <path d="M75 100V135H150V155M150 155H280V135M280 135H405V155M405 155H520V125" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-dasharray="5 6"/>
+  <circle cx="150" cy="155" r="7" fill="#10B981"/>
+  <circle cx="280" cy="135" r="7" fill="#0284C7"/>
+  <circle cx="405" cy="155" r="7" fill="#10B981"/>
+  <rect x="105" y="175" width="90" height="38" rx="9" fill="#134E4A" stroke="#10B981"/>
+  <rect x="235" y="175" width="90" height="38" rx="9" fill="#134E4A" stroke="#0284C7"/>
+  <rect x="360" y="175" width="90" height="38" rx="9" fill="#134E4A" stroke="#10B981"/>
+  <text x="150" y="199" text-anchor="middle" fill="#FFFFFF" font-size="12">Reason</text>
+  <text x="280" y="199" text-anchor="middle" fill="#FFFFFF" font-size="12">Evaluate</text>
+  <text x="405" y="199" text-anchor="middle" fill="#FFFFFF" font-size="12">Respond</text>
+  <text x="30" y="245" fill="#A7F3D0" font-size="12">LOCAL • OPEN • ACCESSIBLE</text>
+  <text x="570" y="245" text-anchor="end" fill="#67E8F9" font-size="12">169Pi × AI</text>
+</svg>
+
+*What it represents:* Alpie-Core demonstrates how a compact, open reasoning model can tackle challenging tasks. The connected reasoning path represents the journey from a problem to an evaluated response, reflecting 169Pi's work on making capable AI models more accessible.
+
+**Contributed by [@tanishkaa9010-code](https://github.com/tanishkaa9010-code)**
+
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

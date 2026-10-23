@@ -62,6 +62,15 @@ open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**
 
+---
+
+### @DeepakNegi13 — Building the Future of Open AI 🚀
+
+Exploring open-source AI reasoning models and contributing to modern developer tooling. Excited to support the Alpie-Core ecosystem!
+
+*What it represents:* Curiosity, collaboration, and learning open-source step-by-step.  
+**Contributed by [@DeepakNegi13](https://github.com/DeepakNegi13)**
+
 <!-- ENTRIES:END -->
 
 ---

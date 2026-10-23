@@ -53,16 +53,13 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
-@Sanjana-N-hola: My ART
+### @Sanjana-N-hola — My Art 🧱
 
 <img width="1248" height="832" alt="OIG1 dS" src="https://github.com/user-attachments/assets/e58b0988-7eed-4515-806d-fbc6877823f2" />
-What it represents: A connection brick 
 
-**Contributed by [@Sanjana-N-hola](https://github.com/Sanjana-N-hola)**from **club:** BMSCE
-@169pi — the first brick 🧱
-This wall is yours to build on. Fork the repo, add your entry right here, and open a PR — see CONTRIBUTING.md for the 5-step guide.
-
-What it represents: the open, collaborative spirit behind everything at 169pi. Contributed by @169pi
+*What it represents:* A connection brick
+**Contributed by [@Sanjana-N-hola](https://github.com/Sanjana-N-hola)**
+**Club:** BMSCE
 <!-- ENTRIES:END -->
 
 ---

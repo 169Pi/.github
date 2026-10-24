@@ -29,7 +29,7 @@ const FOLLOWUP_MARKER = '<!-- wall-followup -->';
 const FOLLOWUP_DAYS = [3, 7];
 const CLOSE_DAYS_AFTER_LAST = 3;
 
-const CONTRIB_LINK = '[`CONTRIBUTING.md`](https://github.com/169Pi/.github/blob/main/CONTRIBUTING.md)';
+const CONTRIB_LINK = '[Good First Alpie](https://goodfirst.alpie.ai)';
 const DISCORD_LINK = '[Discord](https://discord.gg/GwJP7MsZp7)';
 
 // Template text that should never survive into a real entry. Includes the

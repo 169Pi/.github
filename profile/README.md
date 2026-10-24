@@ -32,7 +32,7 @@ turn it into something that belongs on our front door: art, a diagram, a demo,
 a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 > 🗓️ **Monthly merges** on the last day of each month. Next merge: **October 31, 2026**.
-> Get your PR in before then to qualify → **[CONTRIBUTING.md](../CONTRIBUTING.md)**
+> Get your PR in before then to qualify → **[Good First Alpie](https://goodfirst.alpie.ai)**
 
 > 🏫 **Contributing with a club, campus group or meetup?** Add one line —
 > `**Club:** Your Club Name` — to your entry below (and to your PR description). Every
@@ -47,7 +47,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!--     Don't edit anything outside the markers. Attribution required:  -->
 <!--     end your block with `**Contributed by [@handle](profile URL)**`. -->
 <!--     ASCII art goes inside a ``` code fence, or it won't render.    -->
-<!--     A bot checks all of this on every push — see CONTRIBUTING.md.  -->
+<!--     A bot checks all this on every push — see goodfirst.alpie.ai.  -->
 <!--     In a club? Add an optional `**Club:** Your Club Name` line too.  -->
 <!--     Contributing on your own? Ignore it — no club needed.           -->
 <!-- ────────────────────────────────────────────────────────────────── -->
@@ -57,7 +57,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
-open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+open a PR — see **[Good First Alpie](https://goodfirst.alpie.ai)** for the step-by-step guide.
 
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**

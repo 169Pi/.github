@@ -8,10 +8,9 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
 - **`PULL_REQUEST_TEMPLATE.md`** → the default PR template applied across org repos
 - **`.github/workflows/`** → shared automation (e.g. the star-verification bot for the
   community README contest)
-- **`CONTRIBUTING.md`** → how to add your entry to the profile README
 
-> Looking to represent something we've built at 169pi and earn swag? Head to
-> [`CONTRIBUTING.md`](CONTRIBUTING.md).
+> Making your first open-source contribution? Plant a flag on our org profile and earn
+> swag — follow the step-by-step guide at **[Good First Alpie](https://goodfirst.alpie.ai)**.
 
 ---
 
@@ -20,7 +19,6 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
 | File | Purpose |
 |---|---|
 | [`profile/README.md`](profile/README.md) | Org profile page — hosts the community README |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Guide for adding your entry |
 | [`PULL_REQUEST_TEMPLATE.md`](PULL_REQUEST_TEMPLATE.md) | Default PR checklist |
 | [`.github/workflows/verify-star.yml`](.github/workflows/verify-star.yml) | Verifies PR authors have starred `169Pi/Alpie-Core` |
 

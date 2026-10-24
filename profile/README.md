@@ -53,15 +53,24 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
-### @zameernagaral — Visualizing Alpie-Core
 
 <img width="1024" height="1024" alt="Alpie-Core visualization" src="https://github.com/user-attachments/assets/e04e0b66-f974-4347-a73a-a5fe6bb67631" />
 
-**What it represents:** An artistic visualization of the Alpie-Core 32B open reasoning model.
+### @zameernagaral: Visualizing Alpie-Core
+
+A decentralized offline AI ecosystem built on local reasoning models like Alpie. Designed for privacy-first, low-latency execution and seamless developer integration. From foundational architecture to deployable local intelligence, bridging open-source innovation from India to the world.
+
+*What it represents:* It visually maps out 169Pi’s local-first AI ecosystem, showcasing how privacy-centric, low-latency reasoning engines like Alpie operate completely on-device. It highlights key developer tools, model specifications, and secure architecture designed to empower open-source innovation.
 
 **Contributed by [@zameernagaral](https://github.com/zameernagaral)**
-**Club:** BMS College 
 
+### @169pi — the first brick 🧱
+
+This wall is yours to build on. Fork the repo, add your entry right here, and
+open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
+
+*What it represents:* the open, collaborative spirit behind everything at 169pi.
+**Contributed by [@169pi](https://github.com/169Pi)**
 
 <!-- ENTRIES:END -->
 

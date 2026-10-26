@@ -14,6 +14,7 @@ GitHub organization. It holds the org-wide defaults GitHub picks up automaticall
 > [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ---
+<img width="1254" height="1254" alt="85df1114-fc25-44c4-9350-43009f9f8e7c" src="https://github.com/user-attachments/assets/19e95fe4-6ba0-4189-a2d9-afca663e9fcc" />
 
 ## What lives here
 

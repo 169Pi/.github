@@ -53,6 +53,12 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @ayush-code-ally — Ayush's Edge-Compute Rebel Starfighter
+
+<img src="[https://github.com/user-attachments/assets/d5b2e8bf-9383-4efc-bdcb-0e8a0809c5fb](https://github.com/user-attachments/assets/d5b2e8bf-9383-4efc-bdcb-0e8a0809c5fb)" width="400" alt="Ayush's Edge-Compute Rebel Starfighter" />
+
+*What it represents:* Alpie-Core as an agile "local AI" starfighter using 4-bit edge intelligence to operate autonomously against sprawling, resource-heavy centralized "monopolies."
+**Contributed by [@ayush-code-ally](https://github.com/ayush-code-ally)**
 
 ### @169pi — the first brick 🧱
 

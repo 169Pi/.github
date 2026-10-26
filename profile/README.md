@@ -53,6 +53,12 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @ayush-code-ally — Aman's first alpie
+
+<img src="https://github.com/user-attachments/assets/9e58aec1-bdcb-4ac1-9d8a-f57e62de8d27" width="400" alt="Aman's Edge-Compute Rebel Starfighter" />
+
+*What it represents:* Alpie-Core as an agile "local AI" starfighter using 4-bit edge intelligence to operate autonomously against sprawling, resource-heavy centralized "monopolies."
+**Contributed by [@AmAnKuMaR061006](https://github.com/AmAnKuMaR061006)**
 
 ### @169pi — the first brick 🧱
 

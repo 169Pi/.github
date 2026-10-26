@@ -54,8 +54,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
-<img width="2400" height="1792" alt="Gemini_Generated_Image_av4kk5av4kk5av4k" src="https://github.com/user-attachments/assets/6a8a580f-a1fa-4cc2-9665-c27b2cfbe597" />
-
+<img width="2048" height="2048" alt="Gemini_Generated_Image_jcnk5ljcnk5ljcnk" src="https://github.com/user-attachments/assets/4cc33f77-dcb8-4702-8307-90ff45be27d4" />
 
 Contributed by [@kindavishal](https://github.com/kindavishal) from **Club:** Alpie Club
 

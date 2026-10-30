@@ -54,6 +54,11 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+<img width="512" height="512" alt="avani_brick_tile" src="https://github.com/user-attachments/assets/e149f997-da47-4ad3-801e-27fded5dc144" />
+
+**Contributed by [@Avani24-byte](https://github.com/Avani24-byte)**
+
+
 <img width="2400" height="1792" alt="Gemini_Generated_Image_av4kk5av4kk5av4k" src="https://github.com/user-attachments/assets/6a8a580f-a1fa-4cc2-9665-c27b2cfbe597" />
 
 

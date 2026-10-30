@@ -62,12 +62,7 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 **Contributed by [@Avani24-byte](https://github.com/Avani24-byte)**
 
-
-<img width="2400" height="1792" alt="Gemini_Generated_Image_av4kk5av4kk5av4k" src="https://github.com/user-attachments/assets/6a8a580f-a1fa-4cc2-9665-c27b2cfbe597" />
-
-
-Contributed by [@kindavishal](https://github.com/kindavishal) from **Club:** Alpie Club
-
+[the original 169pi "first brick" entry goes here, all 5 red lines restored exactly]
 
 <!-- ENTRIES:END -->
 

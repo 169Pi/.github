@@ -53,6 +53,13 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+### @Sanjana-N-hola — My Art 🧱
+
+<img width="1248" height="832" alt="OIG1 dS" src="https://github.com/user-attachments/assets/e58b0988-7eed-4515-806d-fbc6877823f2" />
+
+*What it represents:* A connection brick
+**Contributed by [@Sanjana-N-hola](https://github.com/Sanjana-N-hola)**
+**Club:** BMSCE
 
 ### @169pi — the first brick 🧱
 

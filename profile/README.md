@@ -54,6 +54,14 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 
 <!-- ENTRIES:START -->
 
+### @Avani24-byte — Brick tile of a girl riding toward her dreams
+
+<img width="512" height="512" alt="avani_brick_tile" src="https://github.com/user-attachments/assets/e149f997-da47-4ad3-801e-27fded5dc144" />
+
+*What it represents:* A girl riding toward her dreams, with a glowing </> laptop behind her. The laptop stands for Alpie-Core, a 169Pi model that runs locally and offline-first, built in India. The road is the open-source journey that Good First Alpie starts.
+
+**Contributed by [@Avani24-byte](https://github.com/Avani24-byte)**
+
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and

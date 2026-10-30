@@ -53,14 +53,22 @@ a visualization. **Merged PRs get exclusive 169pi swag. 🎁**
 <!-- ────────────────────────────────────────────────────────────────── -->
 
 <!-- ENTRIES:START -->
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/e81db173-20d4-44c1-afd8-e7a9d9ab1808" />
 
+### @chinmayrmm-a11y - The Digital Creator
+
+A creative representation of technology, imagination, and innovation. This contribution highlights the connection between creativity and modern technology.
+
+*What it represents:* The power of creativity, independent thinking, and continuous learning. It represents how simple ideas can become meaningful creations through imagination and technology.
+
+**Contributed by [@chinmayrmm-a11y](https://github.com/chinmayrmm-a11y)**
 ### @169pi — the first brick 🧱
 
 This wall is yours to build on. Fork the repo, add your entry right here, and
 open a PR — see **[CONTRIBUTING.md](../CONTRIBUTING.md)** for the 5-step guide.
-
 *What it represents:* the open, collaborative spirit behind everything at 169pi.
 **Contributed by [@169pi](https://github.com/169Pi)**
+
 
 <!-- ENTRIES:END -->
 
